@@ -1,0 +1,11 @@
+---
+title: "Introducción a los Proyectos de Inversión"
+author: "Luis Mendoza"
+format:
+    revealjs:
+        theme: solarized
+---
+
+## Tipos de Proyectos de Inversión
+
+Tenemos
