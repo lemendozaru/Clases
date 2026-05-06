@@ -6,6 +6,181 @@ format:
         theme: solarized
 ---
 
+## Encuadre Unidad 1
+
+**Introducción a los Proyectos de Inversión**
+
+Se evalúa con:
+
+- **EP1**: Cuadro comparativo entre los tipos de proyectos de inversión.
+- **EC2**: Cuestionario sobre conceptos básicos de proyectos de inversión.
+- Tienen dos oportunidades para cumplir con sus evidencias.
+- El mínimo de asistencia es el 80%. Por debajo de ese porcentaje Moodle les bloqueará la entrega.
+
+## Encuadre Unidad 2
+
+**Presupuesto y construcción de flujos de caja**
+
+Se evalúa con:
+
+- **EP3**: Construcción de un flujo de caja para proyecto de inversión.
+- Tienen dos oportunidades para cumplir con su evidencia.
+- El mínimo de asistencia es el 80%. Por debajo de ese porcentaje Moodle les bloqueará la entrega.
+
+## Encuadre Unidad 3
+
+**Estructura financiera y el costo capital**
+
+Se evalúa con:
+
+- **EP4**: Determinación del costo del capital requerido para un proyecto de inversión.
+- Tienen dos oportunidades para cumplir con su evidencia.
+- El mínimo de asistencia es el 80%. Por debajo de ese porcentaje Moodle les bloqueará la entrega.
+
+## Encuadre Unidad 4
+
+**Evaluación financiera del proyecto de inversión**
+
+Se evalúa con:
+
+- **EP5**: Valoración financiera del proyecto de inversión.
+- Tienen dos oportunidades para cumplir con su evidencia.
+- El mínimo de asistencia es el 80%. Por debajo de ese porcentaje Moodle les bloqueará la entrega.
+
+## Encuadre Unidad 5
+
+**Análisis de riesgo en los proyectos de inversión**
+
+Se evalúa con:
+
+- **EP6**: Análisis de riesgo del proyecto de inversión.
+- Tienen dos oportunidades para cumplir con su evidencia.
+- El mínimo de asistencia es el 80%. Por debajo de ese porcentaje Moodle les bloqueará la entrega.
+
+## Conceptos básicos
+
+Un proyecto de inversión es:
+
+> "Un plan, al que si se le asigna un determinado monto de capital y se le proporcionan insumos de varios tipos, podrá producir un bien o servicio útil a la sociedad."
+
+Podemos decir que se considera una *propuesta de inversión*.
+
+Pero no necesariamente se habla de dinero.
+
+## Orígenes
+
+- Satisfacción de necesidades individuales y colectivas.
+- Aprovechamiento de una oportunidad de negocio.
+- Crecimiento del mercado.
+- Cambio en gustos y preferencias del consumidor.
+- Cambio en el nivel de ingresos del consumidor.
+- Cambio en el precio de bienes y servicios.
+- Innovación tecnológica.
+
 ## Tipos de Proyectos de Inversión
 
-Tenemos
+Por lo general, se clasifican en tres tipos:
+
+- Por categoría: bienes o servicios.
+- Por rubro: industrial, agrícola, turístico y demás.
+- Por entidad o carácter: privado o público.
+
+## Ciclo de los proyectos
+
+Analogía del ciclo de vida: hay un principio (la idea), etapas intermedias (la pre-inversión y la inversión) y un fin (la operación).
+
+Pero cada paso de una etapa a otra es el resultado de una toma de decisiones.
+
+```{mermaid}
+flowchart LR
+  A[Idea] --> B[Preinversión]
+  B --> C[Perfil]
+  C --> D[Anteproyecto]
+  D --> E[Factibilidad]
+  B --> F[Inversión]
+  E --> F[Inversión]
+  F --> G[Operación]
+```
+
+## La idea
+
+Se identifican los problemas a resolverse y las oportunidades de negocio que pueden aprovecharse.
+
+¿Un problema social puede volverse una oportunidad de negocio y posteriormente en un proyecto productivo?
+
+## Preinversión
+
+Consiste en los estudios a realizar para obtener la información necesaria para decidir invertir o no.
+
+Se divide en dos etapas: la Formulación y la Evaluación.
+
+## La Formulación
+
+Parte del planteamiento del problema y permite definir los bienes o servicios a producir para solucionarlo.
+
+Determina el monto de la inversión, los ingresos y egresos del proyecto a partir de estudios tanto de [mercado](clase.html#/estudio-de-mercado), como [técnico](clase.html#/estudio-técnico), [administrativo](clase.html#/estudio-organizacional) y [financiero](clase.html#/estudio-financiero).
+
+Se realiza en tres niveles: *Perfil*, *Anteproyecto* y *Factibilidad*.
+
+## Perfil
+
+Estudio de preinversión a nivel de fuentes secundarias o bibliográficas relacionadas con el proyecto.
+
+Los elementos a analizarse son el [estudio de mercado](clase.html#/estudio-de-mercado), el tamaño y localización del proyecto, tecnología necesaria, monto de las inversiones y marco institucional.
+
+## Anteproyecto
+
+También se le conoce como el estudio de *Prefactibilidad*.
+
+Aquí ya se profundiza en fuentes primarias, es decir, se entra a investigaciones de campo.
+
+## Factibilidad o proyecto definitivo
+
+Se realizan de nuevo estudios de mercado, organizacional, técnico y financiero, pero ahora incluyendo estrategias bien definidas para materializar el proyecto.
+
+## Inversión
+
+Se ejecutan las acciones que permiten la producción de bienes o servicios, lo cual implica la materialización de lo definido en el estudio técnico: compra y/o construcción de obra operacional, compra de maquinaria o equipos, adquisición de materia prima, enseres, muebles, desarrollo de programas, capacitación de personal y demás elementos.
+
+## Operación
+
+Es cuando el proyecto comienza a generar beneficios. Aquí se da la compra y transformación de materia prima, distribución, promoción y venta del producto o servicio y demás actividades administrativas necesarias para el funcionamiento de la organización.
+
+## Estudio de mercado {.smaller}
+
+Debe contener:
+
+- Caracterización del bien o servicio.
+- Determinación del segmento de mercado o área de cobertura
+- Realización de diagnósticos relativos a oferta y demanda.
+- Proyección o pronóstico de oferta y demanda.
+- Cuantificación de la demanda insatisfecha, si es que existe.
+- Determinación de los canales de comercialización que se emplearán para hacer llegar el bien o servicio al consumidor final.
+- Definición de las políticas de ventas que regirán la comercialización en cuanto a precio y condiciones de ventas.
+
+## Estudio técnico
+
+El objetivo principal de este estudio es determinar si es posible lograr producir y vender el producto o servicio con la calidad, cantidad (definida en el estudio de mercado) y costo requerido; para ello es necesario identificar tecnologías, maquinarias, equipos, insumos, materias primas, procesos, recursos humanos, etc.
+
+Consiste pues en la localización, determinación de tamaño óptimo, ingeniería del proyecto y selección de tecnología.
+
+## Estudio organizacional {.smaller}
+
+Consiste en seleccionar la forma de organización que requiere, a través de una estructura organizacional, cuya implementación tendrá efectos financieros tanto en el monto de la inversión inicial como en los costos operacionales.
+
+La estructura se representa con el organigrama, el cual persigue:
+
+1. Mostrar los principales cargos (quién hace qué).
+2. Los principales canales de comunicación (quién reporta a quién).
+3. Mostrar los niveles jerárquicos.
+4. Mostrar las principales unidades de organización.
+
+## Estudio financiero
+
+Una vez que se han realizado las etapas anteriores, se puede saber si existe
+mercado para el bien o servicio y que no existen impedimentos de orden técnico y legal para la implementación del proyecto.
+
+Ya se procede a cuantificar el monto de las inversiones necesarias para que el proyecto entre en operación y a definir los ingresos y costos durante el período de evaluación del proyecto. Con esta información se realiza, a través de indicadores de rentabilidad, la evaluación financiera del proyecto.
+
+
+
