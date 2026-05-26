@@ -1,0 +1,76 @@
+---
+title: "Construcción del flujo de caja"
+author: "Luis Mendoza"
+format:
+    revealjs:
+        theme: solarized
+---
+
+## Objetivo buscado
+
+La forma de construir el flujo de caja depende de la información que se desea obtener:
+
+- Rentabilidad del proyecto.
+- Rentabilidad de los recursos invertidos.
+- Capacidad de pago del financiamiento de la inversión.
+
+La estructura depende pues del objetivo perseguido.
+
+## Horizonte de evaluación
+
+Idealmente debería ser igual a la vida útil real del proyecto, activo o sistema que origina el estudio. Esto permite que la estructura de costos y beneficios quede asociada directamente con la ocurrencia esperada de los ingresos y egresos proyectados.
+
+Sin embargo, no siempre se puede trabajar con esta situación, debido a que las tecnologías necesarias pueden tener vidas útiles muy diferentes entre sí o estas últimas pueden ser alteradas mediante reinversiones o resulta muy difícil cambiarlas bajo la marcha.
+
+## Estructura general
+
+Consiste en varias columnas que representan los momentos en que se generan los costos y beneficios del proyecto.
+
+Cada momento refleja dos elementos:
+
+- Movimientos de caja ocurridos durante un periodo.
+- Desembolsos necesarios para que los eventos del siguiente periodo puedan darse.
+
+## Etapas de la construción del flujo de caja
+
+```{dot}
+//| file: files/flujoCaja.dot
+```
+
+## Los ingresos y egresos afectos a impuestos
+
+Incluyen todos los movimientos de caja que puedan alterar el estado de pérdidas y ganancias (o estado de resultados) de la empresa y, por lo tanto, la cuantía de los impuestos a las utilidades que se podrán generar por la implementación del proyecto.
+
+Los ingresos contemplados son los obtenidos por las ventas del producto o servicio, ahorros de costos o la venta de activos.
+
+Los egresos que se incluyen son las remuneraciones, alquileres e insumos.
+
+## Los gastos no desembolsables
+
+Se corresponden a gastos que, sin ser salidas de caja, es posible agregar a los costos de la empresa con fines contables, permitiendo reducir la utilidad sobre la cual se deberá calcular el monto de los impuestos a pagar.
+
+Estas cuentas de gastos contables incluyen la depreciación de activos fijos, amortización de activos intangibles y los valores libro de activos vendidos.
+
+## Cálculo del impuesto
+
+Después de calcular la utilidad tras sumar y restar ingresos y egresos, corresponde aplicar la tasa tributaria porcentual sobre aquella para determinar el monto impositivo, que sí es un egreso efectivo necesario en la construcción del flujo de caja. Después de calculado y restado el impuesto, se obtiene la utilidad neta.
+
+## Ajustes por gastos no desembolsables
+
+Después de obtener la utilidad neta se deberán efectuar los ajustes por gastos no desembolsables. Aquí, todos los gastos que no constituyen egresos se volverán a sumar para anular su efecto directo en el flujo de caja, pero dejando incorporado su efecto tributario.
+
+## Ingresos y egresos no afectos a impuestos
+
+Aquí se deberán incluir aquellos movimientos de caja que no modifican la riqueza contable de la empresa y que, por lo tanto, no están sujetos a impuestos.
+
+Como ejemplo de egreso no afecto a impuestos, tenemos las inversiones, las cuales son un cambio de *activo corriente* por un *activo fijo*.
+
+Como un ingreso no afecto a impuestos se deja el remanente de la inversión realizada y ocupada, el cual se refleja en el *valor de desecho*.
+
+## Ejemplo 1: Creación de una empresa
+
+Remítase al documento correspondiente en la plataforma.
+
+## Ejemplo 2: Rentabilidad y capacidad de pago.
+
+Remítase al documento correspondiente en la plataforma.

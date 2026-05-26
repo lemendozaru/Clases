@@ -1,0 +1,15 @@
+digraph L {
+
+bgcolor="transparent";
+node [style="filled", fillcolor="white"];
+node [shape=record]
+
+  A [label="Ingresos y egresos\n afectos a impuestos"]
+  B[label= "Gastos no desembolsables"]
+  C[label="Cálculo del impuesto"]
+  D[label="Ajuste por gastos \n no desembolsables"]
+  E[label="Ingresos y egresos \n no afectos a impuestos"]
+  F[label="Flujo de Caja"]
+
+  A -> B -> C -> D -> E -> F
+}
