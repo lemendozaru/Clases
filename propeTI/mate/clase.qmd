@@ -22,7 +22,7 @@ format:
 
 # Nivelación aritmética
 
-## Números reales (1) {.scrollable}
+## 1.1 Números reales (1) {.scrollable}
 
 ### Jerarquía de las operaciones
 
@@ -35,7 +35,7 @@ format:
 - $(-)(+)=(-)$
 - $(-)(-)=(+)$
 
-## Números reales (2) {.scrollable}
+## 1.1 Números reales (2) {.scrollable}
 
 ### Ejemplo aplicado:
 
