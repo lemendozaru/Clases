@@ -67,6 +67,32 @@ Como ejemplo de egreso no afecto a impuestos, tenemos las inversiones, las cuale
 
 Como un ingreso no afecto a impuestos se deja el remanente de la inversión realizada y ocupada, el cual se refleja en el *valor de desecho*.
 
+## En resumen {.scrollable}
+
+El flujo de caja o Flujo Neto de Efectivo se obtiene considerando lo siguiente:
+
+| Flujo | Concepto | Observaciones |
+|:-----:|----------|---------------|
+| + | Ingresos | Precio * unidades |
+| - | Costos de producción | Costo por producir |
+| = | Utilidad marginal | |
+| + | Venta de activos | |
+| - | Costos administrativos | |
+| - | Costos de venta | |
+| - | Costos financieros | |
+| - | Depreciaciones | |
+| - | Valor libro | |
+| = | Utilidad bruta | |
+| - | Impuestos | ISR |
+| - | RUT | Reparto de utilidades |
+| = | Utilidad neta | |
+| + | Depreciaciones| |
+| + | Valor libro | |
+| - | Capital de trabajo | |
+| - | Pago a principal | |
+| + | Valor de desecho |
+| = | Flujo de caja | |
+
 ## Ejemplo 1: Creación de una empresa
 
 Remítase al documento correspondiente en la plataforma.
