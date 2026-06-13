@@ -1,0 +1,545 @@
+---
+title: "Curso propedéutico"
+author: "Luis Mendoza"
+format:
+    revealjs:
+        theme: solarized
+---
+
+## Contenido
+
+### Nivelación aritmética
+
+- Números reales y sus operadores
+- Lenguaje algebraico y sus expresiones
+
+### Nivelación algebraica
+
+- Ecuaciones lineales
+- Sistemas de ecuaciones lineales
+- Ecuaciones cuadráticas
+- Desigualdades
+
+# Nivelación aritmética
+
+## Números reales (1) {.scrollable}
+
+### Jerarquía de las operaciones
+
+- PEMDAS (Paréntesis - Exponentes - Multiplicación/División - Adición/Sustracción)
+
+### Leyes de los signos
+
+- $(+)(+)=(+)$
+- $(+)(-)=(-)$
+- $(-)(+)=(-)$
+- $(-)(-)=(+)$
+
+## Números reales (2) {.scrollable}
+
+### Ejemplo aplicado:
+
+Fórmula de normalización min-max:
+
+$$
+x' = \frac{x - \min(x)}{\max(x) - \min(x)}
+$$
+
+**Ejemplo numérico:**
+
+Datos: `[2, 5, 8, 10]`
+
+Para `x = 5`:
+
+$$
+x' = \frac{5 - 2}{10 - 2} = \frac{3}{8} = 0.375
+$$
+
+### Ejercicio 1 (resuelto)
+
+Calcula el resultado usando jerarquía:
+
+$$
+\frac{8 + (-3) \times 2 + 10}{4}
+$$
+
+**Solución paso a paso:**
+
+1. Multiplicación: $(-3) \times 2 = -6$
+2. Suma en numerador: $8 + (-6) + 10 = 12$
+3. División final: $12 / 4 = 3$
+
+**Respuesta:** $3$
+
+### Ejercicio 2 (propuesto)
+
+Calcula la varianza manual (usando jerarquía):
+
+Datos: `4, 6, 8`
+
+Media = `6`
+
+Fórmula:
+
+$$
+\frac{(4-6)^2 + (6-6)^2 + (8-6)^2}{3}
+$$
+
+### Ejercicio 3 (resuelto)
+Calcula paso a paso:
+
+$$
+(5 - 2) \times 3^2 - 8 \div 2
+$$
+
+**Solución:**
+
+1. Paréntesis: $5 - 2 = 3$
+2. Exponente: $3^2 = 9$
+3. Multiplicación: $3 \times 9 = 27$
+4. División: $8 \div 2 = 4$
+5. Resta final: $27 - 4 = 23$
+
+**Respuesta:** `23`
+
+### Ejercicio 4 (propuesto)
+
+Calcula respetando jerarquía:
+
+$$
+12 \div (2 + 4) \times 3 - 5
+$$
+
+### Ejercicio 5 (propuesto)
+
+Calcula:
+
+$$
+(-4)^2 - 3 \times (8 - 10) + 6 \div (-2)
+$$
+
+## 1.2 Uso correcto de la calculadora para expresiones aritméticas {.scrollable}
+
+### Cómo evitar errores al introducir operaciones
+
+####  Error común #1: Olvidar paréntesis en el denominador
+
+**Expresión:**
+$$
+\frac{8 + 4}{3 - 1}
+$$
+
+**Forma incorrecta en calculadora básica:**
+
+`8 + 4 ÷ 3 - 1` → La calculadora hace $4 \div 3$ primero.
+
+**Forma correcta:**
+
+`(8 + 4) ÷ (3 - 1)` = $12 \div 2 = 6$
+
+#### Error común #2: Signos negativos y exponentes
+
+**Expresión:**
+
+$$
+(-3)^2 \quad \text{vs} \quad -3^2
+$$
+
+**En calculadora:**
+
+- `(-3)^2` = 9
+- `-3^2` = -9 (primero eleva, luego aplica el signo)
+
+#### Error común #3: Falta de paréntesis en raíces o fracciones largas
+
+**Expresión:**
+
+$$
+\frac{5 + 7}{2 \times 3}
+$$
+
+**Correcto:** `(5 + 7) ÷ (2 × 3)` = $12 \div 6 = 2$
+
+### Ejemplo práctico con calculadora científica
+
+**Expresión:**
+
+$$
+\frac{10 + 2 \times 3}{4 - (6 \div 2)} + (-2)^3
+$$
+
+**Secuencia de tecleo (modo lineal o natural):**
+
+1. Numerador: `10 + 2 × 3 = 16`
+2. Denominador: `4 - (6 ÷ 2) = 4 - 3 = 1`
+3. Fracción: `16 ÷ 1 = 16`
+4. Exponente: `(-2)^3 = -8`
+5. Suma final: `16 + (-8) = 8`
+
+**Respuesta:** `8`
+
+**Secuencia directa**
+`((10 + 2 × 3) ÷ (4 - (6 ÷ 2))) + (-2)^3`
+
+### Ejercicio 5 (resuelto - uso de calculadora)
+
+Introduce correctamente en tu calculadora:
+
+$$
+\frac{15 - 3 \times 2}{3 + (-1)^2}
+$$
+
+**Secuencia correcta:**
+
+`(15 - 3 × 2) ÷ (3 + (-1)^2)`
+= `(15 - 6) ÷ (3 + 1)` = `9 ÷ 4 = 2.25`
+
+### Ejercicio 6 (propuesto - para practicar con calculadora)
+
+Escribe la secuencia correcta y calcula:
+
+$$
+\frac{20 \div 4 + 2 \times (-3)}{5 - (8 - 6)^2}
+$$
+
+## 1.3 Lenguaje algebraico → Expresiones numéricas {.scrollable}
+
+### Traducción inversa: de frase a expresión aritmética
+
+| Frase en español | Expresión numérica |
+|------------------|--------------------|
+| El doble de 8 más 3 | $2 \times 8 + 3 = 19$ |
+| La mitad de (10 menos 4) | $(10 - 4) \div 2 = 3$ |
+| El cuadrado de la suma de 2 y 5 | $(2 + 5)^2 = 49$ |
+
+### Ejercicio 7 (resuelto)
+
+Traduce y calcula:
+
+*"La suma de 12 y el producto de 3 por -4, todo dividido entre 2"*
+
+**Expresión:**
+
+$$
+\frac{12 + 3 \times (-4)}{2} = \frac{12 - 12}{2} = \frac{0}{2} = 0
+$$
+
+### Ejercicio 8 (propuesto)
+
+Traduce y calcula:
+
+*"Al triple de -5 se le resta el resultado de 8 dividido entre -2"*
+
+### Ejercicio 9 (resuelto)
+
+Calcula respetando jerarquía y usando calculadora solo para verificar:
+
+$$
+\frac{(-4)^2 - 3 \times (5 - 9)}{2 + (-6) \div 3}
+$$
+
+**Solución manual:**
+
+1. $(-4)^2 = 16$
+2. $5 - 9 = -4$
+3. $3 \times (-4) = -12$
+4. Numerador: $16 - (-12) = 28$
+5. Denominador: $2 + (-6) \div 3 = 2 + (-2) = 0$
+6. **¡Cuidado!** División entre 0 → No definida.
+
+**Respuesta:** Indefinida (o error en calculadora)
+
+### Ejercicio 10 (propuesto)
+
+Calcula paso a paso:
+
+$$
+\frac{10 + 2 \times (-3)^2}{4 - (8 \div 2^2)}
+$$
+
+
+# Nivelación algebraica
+
+## 2.1 Ecuaciones lineales {.scrollable}
+
+### Concepto clave
+
+Una ecuación lineal tiene la forma:
+
+$$
+ax + b = c
+$$
+
+Despejar significa aislar la variable usando operaciones inversas.
+
+### Ejemplo aplicado: Regresión lineal simple
+
+Modelo predictivo:
+
+$$
+y = \beta_0 + \beta_1 x
+$$
+
+Si la recta debe pasar por el punto de medias $(\bar{x}, \bar{y})$:
+
+$$
+\bar{y} = \beta_0 + \beta_1 \bar{x}
+$$
+
+Despejamos $\beta_0$:
+
+$$
+\beta_0 = \bar{y} - \beta_1 \bar{x}
+$$
+
+### Ejercicio 1 (resuelto)
+
+Dados $\bar{x} = 4$, $\bar{y} = 10$ y $\beta_1 = 1.5$, encuentra $\beta_0$.
+
+**Solución:**
+
+$$
+\beta_0 = 10 - (1.5 \times 4) = 10 - 6 = 4
+$$
+
+### Ejercicio 2 (propuesto)
+
+Despeja $r$ en la fórmula del interés compuesto:
+
+$$
+A = P(1 + r)^t
+$$
+
+### Ejercicio 3 (resuelto - con fracciones)
+
+Resuelve para \(x\):
+
+$$
+\frac{2x - 1}{3} = 5
+$$
+
+**Solución:**
+
+1. Multiplicar por 3:
+    $$
+    2x - 1 = 15
+    $$
+2. Sumar 1:
+    $$
+    2x = 16
+    $$
+3. Dividir por 2:
+    $$
+    x = 8
+    $$
+
+### Ejercicio 4 (propuesto)
+
+Resuelve para $y$:
+
+$$
+\frac{3y + 2}{4} = y - 1
+$$
+
+## 2.2 Sistemas de ecuaciones lineales (2x2) {.scrollable}
+
+### Aplicación directa: Balanceo de recursos o recomendaciones
+
+**Ejemplo:** Un sistema de recomendación usa dos factores $a$ y $b$:
+
+$$
+2a + 3b = 4.5
+$$
+
+$$
+a - b = 0.5
+$$
+
+**Método de reducción (resuelto paso a paso):**
+
+1. Multiplicamos la segunda ecuación por 3:
+   $$
+   3a - 3b = 1.5
+   $$
+
+2. Sumamos con la primera ecuación:
+   $$
+   (2a + 3b) + (3a - 3b) = 4.5 + 1.5
+   $$
+
+   $$
+   5a = 6 \implies a = 1.2
+   $$
+
+3. Sustituimos $a$ en $a - b = 0.5$:
+   $$
+   1.2 - b = 0.5 \implies b = 0.7
+   $$
+
+**Solución:** $a = 1.2$, $\ b = 0.7$
+
+### Ejercicio 5 (resuelto)
+Resuelve el siguiente sistema usando sustitución:
+
+$$
+x + 2y = 5
+$$
+$$
+3x - y = 1
+$$
+
+**Solución:**
+
+1. De la primera: $x = 5 - 2y$
+2. Sustituir en segunda: $3(5 - 2y) - y = 1$
+3. $15 - 6y - y = 1 \implies 15 - 7y = 1$
+4. $-7y = -14 \implies y = 2$
+5. $x = 5 - 2(2) = 1$
+
+**Respuesta:** $x = 1, y = 2$
+
+### Ejercicio 6 (propuesto)
+
+Resuelve usando el método que prefieras:
+
+$$
+4x - y = 10
+$$
+$$
+2x + 3y = 12
+$$
+
+### Ejercicio 7 (propuesto - con fracciones)
+
+Resuelve:
+
+$$
+\frac{x}{2} + \frac{y}{3} = 4
+$$
+
+$$
+\frac{x}{3} - \frac{y}{2} = 0
+$$
+
+## 2.3 Ecuaciones cuadráticas {.scrollable}
+
+### Forma general:
+
+$$
+ax^2 + bx + c = 0
+$$
+
+### Vértice (mínimo o máximo):
+
+$$
+x_v = -\frac{b}{2a}
+$$
+
+### Fórmula general (raíces):
+
+$$
+x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+$$
+
+### Ejemplo aplicado: Función de costo
+
+$$
+C(x) = x^2 - 6x + 9
+$$
+
+**Encontrar el mínimo:**
+
+$$
+x_v = -\frac{-6}{2 \times 1} = \frac{6}{2} = 3
+$$
+
+**Valor mínimo:**
+
+$$
+C(3) = 9 - 18 + 9 = 0
+$$
+
+### Ejercicio 8 (resuelto)
+
+Encuentra el mínimo de:
+
+$$
+C(x) = 2x^2 - 8x + 5
+$$
+
+**Solución:**
+
+$$
+x_v = -\frac{-8}{2 \times 2} = \frac{8}{4} = 2
+$$
+
+$$
+C(2) = 2(4) - 16 + 5 = 8 - 16 + 5 = -3
+$$
+
+### Ejercicio 9 (propuesto)
+
+Resuelve la ecuación cuadrática (encuentra raíces):
+
+$$
+x^2 - 5x + 6 = 0
+$$
+
+### Ejercicio 10 (propuesto, aplicado)
+
+La función de error de un modelo es:
+
+$$
+E(w) = w^2 - 4w + 4
+$$
+
+¿En qué valor de $w$ se minimiza el error?
+
+## 2.4 Desigualdades lineales {.scrollable}
+
+### Ejemplo: Región factible
+
+Un problema de recursos tiene:
+
+$$
+3x + 2y \leq 12
+$$
+
+$$
+x \geq 0,\ y \geq 0
+$$
+
+**Interpretación geométrica:**
+
+- Si $y = 0 \rightarrow 3x \leq 12 \rightarrow x \leq 4$
+- Si $x = 0 \rightarrow 2y \leq 12 \rightarrow y \leq 6$
+
+La región factible es un triángulo con vértices en $(0,0)$, $(4,0)$ y $(0,6)$.
+
+### Ejercicio 11 (propuesto)
+
+Grafica conceptualmente la región factible de:
+
+$$
+x + y \leq 5
+$$
+
+$$
+x \geq 1
+$$
+
+$$
+y \geq 0
+$$
+
+### Ejercicio 12 (propuesto, aplicado a datos)
+
+En un modelo de clasificación, una restricción es:
+
+$$
+2x_1 + 3x_2 \geq 6
+$$
+
+con $x_1, x_2 \geq 0$. Encuentra dos puntos que cumplan la desigualdad.
+
+
