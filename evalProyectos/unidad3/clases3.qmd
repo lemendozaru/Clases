@@ -1,0 +1,101 @@
+---
+title: "Costo de capital"
+author: "Luis Mendoza"
+format:
+    revealjs:
+        theme: solarized
+---
+
+## Introducción
+
+Para poder formar una empresa es necesario contar con una inversión inicial. El capital que conforma esta inversión puede venir de varias fuentes: dinero solo de inversionistas (personas físicas), de otras empresas (personas morales), de instituciones crediticias (bancos) o una mezcla de todas.
+
+Lo que toca es calcular el costo asociado al capital aportado para así conocer el costo del capital de la empresa a formarse.
+
+## CASO I. Un solo inversor
+
+Se debe considerar una tasa aceptable de ganancia: la Tasa Mínima Aceptable de Rendimiento (**TMAR**). Fuera de otros criterios, la TMAR debe considerar que el primer factor de referencia debe ser la tasa inflacionaria, ya que es la única forma de asegurar que el dinero no pierda poder adquisitivo.
+
+Sin embargo, es necesario incluir otro factor. Un criterio es que la ganancia sobre la inflación debe rondar entre el $10$ y el $15\%$. Y otro criterio a considerarse es el mercado de valores.
+
+##
+
+Supongamos que deseamos invertir en una empresa de lácteos. Un buen punto de partida es acceder a la información de empresas que se dediquen al mismo giro. Pensemos en Lala, cuyos reportes están en la [Bolsa Mexicana de Valores](https://www.bmv.com.mx/). Entramos al enlace *Empresas Listadas -> Información XBRL*. Luego seleccionamos *Archivos estándar XBRL -> Capitales* y en Clave de Cotización localizamos la empresa en cuestión. La periodicidad la dejamos en *Anual* y la fecha final la designamos como la más reciente disponible. Presionamos*Buscar* y descargamos el primer documento.
+
+Accedemos al apartado *Información financiera* y ahí estarán los datos que buscamos.
+
+## Estado de la industria {.smaller}
+
+Lala ha tenido los siguientes rendimientos anuales durante 2023-2025:
+
+| Concepto              |       2023 |        2024 |        2025 |
+|:----------------------|-----------:|------------:|------------:|
+| Ingresos              | 98,987,000 | 100,677,000 | 106,938,000 |
+| Utilidad bruta        | 33,846,000 |  37,432,000 |  40,267,000 |
+| Utilidad de operación |  6,179,000 |   7,858,000 |   8,143,000 |
+| Capital contable      | 10,955,000 |  11,861,000 |  13,047,000 |
+| Utilidad neta         |  2,925,000 |   2,731,000 |   3,618,000 |
+
+Que expresados en términos de porcentaje, quedan como sigue:
+
+| Concepto              |   2023 |   2024 |   2025 |
+|:----------------------|-------:|-------:|-------:|
+| Utilidad bruta        | 34.19% | 37.18% | 37.65% |
+| Utilidad de operación |  6.24% |  7.81% |  7.61% |
+| Capital contable      | 11.07% | 11.78% | 12.20% |
+| Utilidad neta         |  2.95% |  2.71% |  3.38% |
+
+##
+
+No se promedian los valores, más bien se toman como extremos. Por ejemplo, podemos decir que Lala consigue utilidades mayores a $2.71\%$, pero menores a $3.38\%$. Por lo que una empresa que quiera dedicarse al mismo giro que Lala no puede esperar márgenes superiores al último dato, siempre y cuando la empresa se encuentre bien administrada.
+
+## Riesgo del mercado
+
+Y por último, consideremos el estudio de mercado. Un consumo histórico inestable del producto implica una inversión de alto riesgo. Con eso en mente, las tasas recomendadas para cada grado de riesgo quedan en:
+
+| Grado de riesgo | Tasa de premio |
+|:----------------|---------------:|
+| Bajo            | 1-10%          |
+| Medio           | 11-20%         |
+| Alto            | 20~$\infty$%  |
+
+## Fórmula
+
+Recapitulando, tenemos cuatro factores:
+
+- Tasa de inflación ($i$)
+- Premio al riesgo ($pr$)
+- Estado de la industria ($\beta$)
+- Riesgo de mercado ($rm$)
+
+El primero debe incluirse siempre, dejando esto al segundo a elección del inversor. Esto deja la fórmula, por ejemplo, así:
+
+$$
+TMAR = i+rm+i\cdot rm
+$$
+
+## CASO II. Varios inversores
+
+Cada inversor debe calcular su **TMAR** de manera individual, bajo sus propios criterios. La diferencia está en considerar el porcentaje de participación.
+
+Por ejemplo, consideremos un caso en el que una persona invertirá el $50\%$, una empresa aportará el $25\%$ y un banco lo restante.
+
+Cada actor calcula su respectiva TMAR. El banco solo agrega su tasa de interés. Cada TMAR se multiplica por el porcentaje de aportación para conocer su ponderación (o peso) y al final se suman los resultados. Al resultado final se le conoce como TMAR mixta global.
+
+## TMAR mixta global {.smaller}
+
+Considerando una inflación del $12\%$, un riesgo del $10\%$ para inversor y del $12\%$ para la empresa y una tasa de interés del $25\%$ para el préstamo bancario, calculemos la TMAR individual:
+
+- Inversionista: $0.12 + 0.10 + (0.12) (0.10) = 0.232$
+- Empresa: $0.12 + 0.12 + (0.12) (0.12) = 0.2544$
+- Banco: $0.25$
+
+Ponderamos:
+
+| Accionista    | % Aportación |     TMAR |     Peso |
+|:--------------|-------------:|---------:|---------:|
+| Inversionista |          0.50|     0.232|     0.116|
+| Empresa       |          0.25|    0.2544|    0.0636|
+| Banco         |          0.25|      0.25|    0.0625|
+|               |              |**Global**|**0.2421**|
+
