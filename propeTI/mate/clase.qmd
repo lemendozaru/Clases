@@ -277,29 +277,29 @@ Despejar significa aislar la variable usando operaciones inversas.
 Modelo predictivo:
 
 $$
-y = \beta_0 + \beta_1 x
+y = b_0 + b_1 x
 $$
 
 Si la recta debe pasar por el punto de medias $(\bar{x}, \bar{y})$:
 
 $$
-\bar{y} = \beta_0 + \beta_1 \bar{x}
+\bar{y} = b_0 + b_1 \bar{x}
 $$
 
-Despejamos $\beta_0$:
+Despejamos $b_0$:
 
 $$
-\beta_0 = \bar{y} - \beta_1 \bar{x}
+b_0 = \bar{y} - b_1 \bar{x}
 $$
 
 ### Ejercicio 1 (resuelto)
 
-Dados $\bar{x} = 4$, $\bar{y} = 10$ y $\beta_1 = 1.5$, encuentra $\beta_0$.
+Dados $\bar{x} = 4$, $\bar{y} = 10$ y $b_1 = 1.5$, encuentra $b_0$.
 
 **Solución:**
 
 $$
-\beta_0 = 10 - (1.5 \times 4) = 10 - 6 = 4
+b_0 = 10 - (1.5 \times 4) = 10 - 6 = 4
 $$
 
 ### Ejercicio 2 (propuesto)
