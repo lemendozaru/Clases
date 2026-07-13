@@ -1,0 +1,94 @@
+---
+title: "Evaluación financiera"
+author: "Luis Mendoza"
+format:
+    revealjs:
+        theme: solarized
+---
+
+## Introducción {.smaller}
+
+Es el procedimiento por el cual se compara si los flujos de caja proyectados permitirán al inversor obtener la rentabilidad deseada, además de recuperar la inversión misma.
+
+Existen varios métodos, a saber:
+
+- Valor Actual Neto (VAN)
+- Tasa Interna de Retorno (TIR)
+- Periodo de Recuperación de la Inversión (PRI)
+- Relación Beneficio-Costo (RBC)
+- Relación Costo-Efectividad (RCE)
+
+## Valor Actual Neto {.smaller}
+
+Mide el excedente resultante después de obtener la rentabilidad deseada y después de recuperar toda la inversión. Calcula el valor actual de los flujos de caja a futuro y le resta la inversión total expresada en el momento 0. Se presentan tres posibles situaciones:
+
+- $VAN > 0$: mostrará cuánto se gana, después de recuperar la inversión, por sobre la tasa de retorno exigida.
+- $VAN = 0$: indica que el proyecto reporta exactamente la tasa exigida.
+- $VAN < 0$: muestra el faltante para obtener la tasa que se deseaba obtener.
+
+## Valor Actual Neto (2)
+
+- Se interpreta en términos monetarios.
+- Supone la reinversión de todas las ganancias.
+- Su valor depende de la tasa aplicada, por lo tanto es definido por el evaluador.
+- El criterio es simple, un VAN negativo debe rechazarse.
+- Un VAN negativo no indica necesariamente que el proyecto no es rentable, solo que no cumple las expectativas del inversor.
+
+## Ejemplo de cálculo del VAN {.smaller}
+
+Supongamos un proyecto en el que se obtienen los siguientes flujos de caja. Para ello, tuvo que realizarse una inversión inicial de \$10,000 con una TMAR del 10%.
+
+| Periodo | Flujo de caja |
+|:-------:|:-------------:|
+| 1       | 2,000         |
+| 2       | 2,600         |
+| 3       | 3,200         |
+| 4       | 3,200         |
+| 5       | 3,200         |
+
+¿Cuál es el VAN de este proyecto?
+
+## Ejemplo de cálculo del VAN (2) {.smaller}
+
+Primero debemos calcular el valor actual de cada flujo de caja, considerando el periodo en el que se obtiene. Luego, sumamos cada resultado anterior y le restamos la inversión inicial.
+
+Fórmula para calcular el valor actual:
+
+$$
+VA = \frac{FC}{(1+TMAR)^n}
+$$
+
+Donde: $VA$: valor actual; $FC$: flujo de caja; $n$: periodo del flujo.
+
+Por ejemplo, los primeros dos valores actuales:
+
+$$
+VA_1=\frac{2000}{(1+0.1)^1}=1818.18
+$$
+
+$$
+VA_2=\frac{2600}{(1+0.1)^2}=2148.76
+$$
+
+## Ejemplo de cálculo del VAN (3) {.smaller}
+
+Al calcular y luego sumar todos los valores actuales, obtenemos:
+
+| Periodo | Flujo de caja | Valor actual |
+|:-------:|:-------------:|:------------:|
+| 1       | 2,000         |  1818.18     |
+| 2       | 2,600         |  2148.76     |
+| 3       | 3,200         |  2404.21     |
+| 4       | 3,200         |  2185.64     |
+| 5       | 3,200         |  1986.95     |
+|         | TOTAL =       | 10543.74     |
+
+Por último, restamos la inversión inicial:
+
+$$
+VAN=-10000+10543.74=543.74
+$$
+
+## Ejemplo de cálculo del VAN (4) {.smaller}
+
+El resultado implica que el inversor, tras haber aportado \$10,000, obtendrá, aparte del 10% de rentabilidad y la inversión inicial, un excedente de \$543.74.

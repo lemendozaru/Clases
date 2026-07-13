@@ -57,7 +57,7 @@ Y por último, consideremos el estudio de mercado. Un consumo histórico inestab
 |:----------------|---------------:|
 | Bajo            | 1-10%          |
 | Medio           | 11-20%         |
-| Alto            | 20~$\infty$%  |
+| Alto            | 20~$\infty$%   |
 
 ## Fórmula
 
