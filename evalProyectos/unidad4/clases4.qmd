@@ -18,9 +18,11 @@ Existen varios métodos, a saber:
 - Relación Beneficio-Costo (RBC)
 - Relación Costo-Efectividad (RCE)
 
-## Valor Actual Neto {.smaller}
+# El Valor Actual Neto
 
-Mide el excedente resultante después de obtener la rentabilidad deseada y después de recuperar toda la inversión. Calcula el valor actual de los flujos de caja a futuro y le resta la inversión total expresada en el momento 0. Se presentan tres posibles situaciones:
+## Valor Actual Neto (1) {.smaller}
+
+Mide el excedente resultante después de obtener la rentabilidad deseada y de recuperar toda la inversión. Calcula el valor actual de los flujos de caja a futuro y le resta la inversión total expresada en el momento 0. Se presentan tres posibles situaciones:
 
 - $VAN > 0$: mostrará cuánto se gana, después de recuperar la inversión, por sobre la tasa de retorno exigida.
 - $VAN = 0$: indica que el proyecto reporta exactamente la tasa exigida.
@@ -32,19 +34,16 @@ Mide el excedente resultante después de obtener la rentabilidad deseada y despu
 - Supone la reinversión de todas las ganancias.
 - Su valor depende de la tasa aplicada, por lo tanto es definido por el evaluador.
 - El criterio es simple, un VAN negativo debe rechazarse.
-- Un VAN negativo no indica necesariamente que el proyecto no es rentable, solo que no cumple las expectativas del inversor.
+- Un VAN negativo no indica necesariamente que el proyecto no sea rentable, solo que no cumple las expectativas del inversor.
 
-## Ejemplo de cálculo del VAN {.smaller}
+## Ejemplo de cálculo del VAN (1) {.smaller}
 
 Supongamos un proyecto en el que se obtienen los siguientes flujos de caja. Para ello, tuvo que realizarse una inversión inicial de \$10,000 con una TMAR del 10%.
 
-| Periodo | Flujo de caja |
-|:-------:|:-------------:|
-| 1       | 2,000         |
-| 2       | 2,600         |
-| 3       | 3,200         |
-| 4       | 3,200         |
-| 5       | 3,200         |
+|             |        |        |        |        |        |
+|:------------|:------:|:------:|:------:|:------:|:------:|
+|Periodo      |  1     |  2     |  3     | 4      |  5     |
+|Flujo de caja|2,000.00|2,600.00|3,200.00|3,200.00|3,200.00|
 
 ¿Cuál es el VAN de este proyecto?
 
@@ -55,10 +54,10 @@ Primero debemos calcular el valor actual de cada flujo de caja, considerando el 
 Fórmula para calcular el valor actual:
 
 $$
-VA = \frac{FC}{(1+TMAR)^n}
+VA = \frac{F}{(1+TMAR)^n}
 $$
 
-Donde: $VA$: valor actual; $FC$: flujo de caja; $n$: periodo del flujo.
+Donde: $VA$ = valor actual; $F$ = flujo de caja; $n$ = periodo del flujo.
 
 Por ejemplo, los primeros dos valores actuales:
 
@@ -74,14 +73,11 @@ $$
 
 Al calcular y luego sumar todos los valores actuales, obtenemos:
 
-| Periodo | Flujo de caja | Valor actual |
-|:-------:|:-------------:|:------------:|
-| 1       | 2,000         |  1818.18     |
-| 2       | 2,600         |  2148.76     |
-| 3       | 3,200         |  2404.21     |
-| 4       | 3,200         |  2185.64     |
-| 5       | 3,200         |  1986.95     |
-|         | TOTAL =       | 10543.74     |
+|              |        |        |        |        |        |         |
+|:-------------|-------:|-------:|-------:|-------:|-------:|--------:|
+|Periodo       |    1   |  2     |  3     |  4     |  5     | TOTAL   |
+|Flujo de caja |2,000.00|2,600.00|3,200.00|3,200.00|3,200.00|         |
+|Valor actual  |1,818.18|2,148.76|2,404.21|2,185.64|1,986.95|10,543.74|
 
 Por último, restamos la inversión inicial:
 
@@ -91,4 +87,66 @@ $$
 
 ## Ejemplo de cálculo del VAN (4) {.smaller}
 
+Podemos escribir la fórmula del VAN de manera más directa como sigue:
+
+$$
+VAN = -I_0 + \sum^{t}_{n=1} \frac{F_{n}}{(1+TMAR)^{n}}
+$$
+
+Donde: $I_0$ = inversión inicial y $t$ = número de periodos.
+
 El resultado implica que el inversor, tras haber aportado \$10,000, obtendrá, aparte del 10% de rentabilidad y la inversión inicial, un excedente de \$543.74.
+
+# La Tasa Interna de Retorno (TIR)
+
+## Tasa Interna de Retorno (1) {.smaller}
+
+Es el segundo criterio más utilizado, pero cada vez deja de recomendarse. Este mide la rentabilidad como un porcentaje. Retomemos el ejemplo anterior, en el que supimos que la tasa del 10% era cubierta e incluso había un excedente, por lo que el inversor puede exigir un rendimiento mayor. Ahora bien, ¿cuál es el porcentaje máximo que puede exigir? Básicamente la TIR responde esta pregunta.
+
+Para calcular la TIR repetimos el proceso del VAN, (pero asumiendo una tasa desconocida, ya que es lo que deseamos conocer) e igualando el propio VAN a 0.
+
+$$
+VAN=-I_0+ \sum^{t}_{n=1} \frac{F_{n}}{(1+TIR)^{n}}=0
+$$
+
+Al no conocer el valor de la TIR y ser una variable presente en varios términos de la sumatoria, no resulta sencillo despejarla, por lo que el método tradicional de calcularla es al tanteo. Otra manera es usando una planilla u hoja de cálculo con la función `=TIR()`.
+
+## TIR (2)
+
+El problema con la TIR no es que sea difícil de calcular (que puede serlo, sobretodo si los flujos de caja cambian demasiado), si no que al detectarse un flujo de caja negativo pierde validez. Es mejor usar el VAN como primer criterio. Sin embargo, como referencia, puede aún ser útil: quédese con el proyecto si la TIR es superior a la TMAR, siempre teniendo en cuenta la anterior desventaja.
+
+## Ejemplo de cálculo de la TIR
+
+Consiste simplemente en tomar la fórmula del VAN y utilizar la TMAR como punto de referencia. Luego pasamos a irla subiendo (o bajando) conforme nos vayamos acercando al 0. Cuando lleguemos a dicho valor nulo, nos detenemos y habremos encontrado la TIR.
+
+Por otro lado, si se cuenta con un programa de hoja de cálculo (como Excel), todo se reduce a vaciar los flujos de caja desde el periodo 0 (es decir, incluyendo la inversión inicial) hasta el último considerado en el horizonte de evaluación. Luego se inserta la función `TIR()` con dichos flujos como argumentos.
+
+# Periodo de Recuperación de la Inversión (PRI)
+
+## El PRI
+
+Es el tercer criterio más utilizado y mide el tiempo en el que se recupera la inversión, incluyendo el costo de capital. Importante tener en cuenta pues, que no considera la suma de los flujos de caja.
+
+## Ejemplo de cálculo del PRI {.smaller}
+
+Considere un proyecto que que exige un retorno del 10% con una inversión inicial de \$200,000 y presenta los siguientes flujos anuales:
+
+|             |         |         |         |         |         |
+|:------------|--------:|--------:|--------:|--------:|--------:|
+|Periodo      |     1   |   2     |   3     |   4     |   5     |
+|Flujo de caja|20,000.00|40,000.00|60,000.00|80,000.00|80,000.00|
+
+¿Cuántos periodos tardará en recuperarse la inversión?
+
+## Ejemplo de cálculo del PRI (2) {.smaller}
+
+Después de calcular la rentabilidad esperada a partir de la inversión inicial (multiplicando por la tasa) y restarla del flujo de caja correspondiente, obtenemos la recuperación de inversión. Esta se resta a la inversión inicial y arranca un nuevo periodo, para el cual calculamos de nuevo la rentabilidad y la restamos del flujo de caja. Este proceso iterativo nos conduce a la siguiente tabla:
+
+|             |         |         |         |         |         |          |
+|:------------|--------:|--------:|--------:|--------:|--------:|---------:|
+|Periodo      |     1   |   2     |   3     |   4     |   5     | TOTAL    |
+|Flujo de caja|20,000.00|40,000.00|60,000.00|80,000.00|80,000.00|          |
+|Rentabilidad |20,000.00|20,000.00|18,000.00|13,800.00| 7,180.00|          |
+|Recuperación |     0.00|20,000.00|42,000.00|66,200.00|72,820.00|201,020.00|
+
+Y es aquí donde podemos saber que la inversión inicial se recupera hasta el final del quinto periodo. Así, sabemos que el PRI es de 5 años.

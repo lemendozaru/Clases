@@ -153,9 +153,14 @@ Luis Mendoza
 <li>Relación Costo-Efectividad (RCE)</li>
 </ul>
 </section>
-<section id="valor-actual-neto" class="slide level2 smaller">
-<h2>Valor Actual Neto</h2>
-<p>Mide el excedente resultante después de obtener la rentabilidad deseada y después de recuperar toda la inversión. Calcula el valor actual de los flujos de caja a futuro y le resta la inversión total expresada en el momento 0. Se presentan tres posibles situaciones:</p>
+<section>
+<section id="el-valor-actual-neto" class="title-slide slide level1 center">
+<h1>El Valor Actual Neto</h1>
+
+</section>
+<section id="valor-actual-neto-1" class="slide level2 smaller">
+<h2>Valor Actual Neto (1)</h2>
+<p>Mide el excedente resultante después de obtener la rentabilidad deseada y de recuperar toda la inversión. Calcula el valor actual de los flujos de caja a futuro y le resta la inversión total expresada en el momento 0. Se presentan tres posibles situaciones:</p>
 <ul>
 <li><span class="math inline">\(VAN &gt; 0\)</span>: mostrará cuánto se gana, después de recuperar la inversión, por sobre la tasa de retorno exigida.</li>
 <li><span class="math inline">\(VAN = 0\)</span>: indica que el proyecto reporta exactamente la tasa exigida.</li>
@@ -169,39 +174,29 @@ Luis Mendoza
 <li>Supone la reinversión de todas las ganancias.</li>
 <li>Su valor depende de la tasa aplicada, por lo tanto es definido por el evaluador.</li>
 <li>El criterio es simple, un VAN negativo debe rechazarse.</li>
-<li>Un VAN negativo no indica necesariamente que el proyecto no es rentable, solo que no cumple las expectativas del inversor.</li>
+<li>Un VAN negativo no indica necesariamente que el proyecto no sea rentable, solo que no cumple las expectativas del inversor.</li>
 </ul>
 </section>
-<section id="ejemplo-de-cálculo-del-van" class="slide level2 smaller">
-<h2>Ejemplo de cálculo del VAN</h2>
+<section id="ejemplo-de-cálculo-del-van-1" class="slide level2 smaller">
+<h2>Ejemplo de cálculo del VAN (1)</h2>
 <p>Supongamos un proyecto en el que se obtienen los siguientes flujos de caja. Para ello, tuvo que realizarse una inversión inicial de $10,000 con una TMAR del 10%.</p>
 <table class="caption-top">
-<thead>
-<tr class="header">
-<th style="text-align: center;">Periodo</th>
-<th style="text-align: center;">Flujo de caja</th>
-</tr>
-</thead>
 <tbody>
 <tr class="odd">
+<td style="text-align: left;">Periodo</td>
 <td style="text-align: center;">1</td>
-<td style="text-align: center;">2,000</td>
-</tr>
-<tr class="even">
 <td style="text-align: center;">2</td>
-<td style="text-align: center;">2,600</td>
-</tr>
-<tr class="odd">
 <td style="text-align: center;">3</td>
-<td style="text-align: center;">3,200</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">5</td>
 </tr>
 <tr class="even">
-<td style="text-align: center;">4</td>
-<td style="text-align: center;">3,200</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">5</td>
-<td style="text-align: center;">3,200</td>
+<td style="text-align: left;">Flujo de caja</td>
+<td style="text-align: center;">2,000.00</td>
+<td style="text-align: center;">2,600.00</td>
+<td style="text-align: center;">3,200.00</td>
+<td style="text-align: center;">3,200.00</td>
+<td style="text-align: center;">3,200.00</td>
 </tr>
 </tbody>
 </table>
@@ -212,9 +207,9 @@ Luis Mendoza
 <p>Primero debemos calcular el valor actual de cada flujo de caja, considerando el periodo en el que se obtiene. Luego, sumamos cada resultado anterior y le restamos la inversión inicial.</p>
 <p>Fórmula para calcular el valor actual:</p>
 <p><span class="math display">\[
-VA = \frac{FC}{(1+TMAR)^n}
+VA = \frac{F}{(1+TMAR)^n}
 \]</span></p>
-<p>Donde: <span class="math inline">\(VA\)</span>: valor actual; <span class="math inline">\(FC\)</span>: flujo de caja; <span class="math inline">\(n\)</span>: periodo del flujo.</p>
+<p>Donde: <span class="math inline">\(VA\)</span> = valor actual; <span class="math inline">\(F\)</span> = flujo de caja; <span class="math inline">\(n\)</span> = periodo del flujo.</p>
 <p>Por ejemplo, los primeros dos valores actuales:</p>
 <p><span class="math display">\[
 VA_1=\frac{2000}{(1+0.1)^1}=1818.18
@@ -227,43 +222,33 @@ VA_2=\frac{2600}{(1+0.1)^2}=2148.76
 <h2>Ejemplo de cálculo del VAN (3)</h2>
 <p>Al calcular y luego sumar todos los valores actuales, obtenemos:</p>
 <table class="caption-top">
-<thead>
-<tr class="header">
-<th style="text-align: center;">Periodo</th>
-<th style="text-align: center;">Flujo de caja</th>
-<th style="text-align: center;">Valor actual</th>
-</tr>
-</thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">2,000</td>
-<td style="text-align: center;">1818.18</td>
+<td style="text-align: left;">Periodo</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">TOTAL</td>
 </tr>
 <tr class="even">
-<td style="text-align: center;">2</td>
-<td style="text-align: center;">2,600</td>
-<td style="text-align: center;">2148.76</td>
+<td style="text-align: left;">Flujo de caja</td>
+<td style="text-align: right;">2,000.00</td>
+<td style="text-align: right;">2,600.00</td>
+<td style="text-align: right;">3,200.00</td>
+<td style="text-align: right;">3,200.00</td>
+<td style="text-align: right;">3,200.00</td>
+<td style="text-align: right;"></td>
 </tr>
 <tr class="odd">
-<td style="text-align: center;">3</td>
-<td style="text-align: center;">3,200</td>
-<td style="text-align: center;">2404.21</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">4</td>
-<td style="text-align: center;">3,200</td>
-<td style="text-align: center;">2185.64</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">5</td>
-<td style="text-align: center;">3,200</td>
-<td style="text-align: center;">1986.95</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"></td>
-<td style="text-align: center;">TOTAL =</td>
-<td style="text-align: center;">10543.74</td>
+<td style="text-align: left;">Valor actual</td>
+<td style="text-align: right;">1,818.18</td>
+<td style="text-align: right;">2,148.76</td>
+<td style="text-align: right;">2,404.21</td>
+<td style="text-align: right;">2,185.64</td>
+<td style="text-align: right;">1,986.95</td>
+<td style="text-align: right;">10,543.74</td>
 </tr>
 </tbody>
 </table>
@@ -274,9 +259,125 @@ VAN=-10000+10543.74=543.74
 </section>
 <section id="ejemplo-de-cálculo-del-van-4" class="slide level2 smaller">
 <h2>Ejemplo de cálculo del VAN (4)</h2>
+<p>Podemos escribir la fórmula del VAN de manera más directa como sigue:</p>
+<p><span class="math display">\[
+VAN = -I_0 + \sum^{t}_{n=1} \frac{F_{n}}{(1+TMAR)^{n}}
+\]</span></p>
+<p>Donde: <span class="math inline">\(I_0\)</span> = inversión inicial y <span class="math inline">\(t\)</span> = número de periodos.</p>
 <p>El resultado implica que el inversor, tras haber aportado $10,000, obtendrá, aparte del 10% de rentabilidad y la inversión inicial, un excedente de $543.74.</p>
+</section></section>
+<section>
+<section id="la-tasa-interna-de-retorno-tir" class="title-slide slide level1 center">
+<h1>La Tasa Interna de Retorno (TIR)</h1>
 
 </section>
+<section id="tasa-interna-de-retorno-1" class="slide level2 smaller">
+<h2>Tasa Interna de Retorno (1)</h2>
+<p>Es el segundo criterio más utilizado, pero cada vez deja de recomendarse. Este mide la rentabilidad como un porcentaje. Retomemos el ejemplo anterior, en el que supimos que la tasa del 10% era cubierta e incluso había un excedente, por lo que el inversor puede exigir un rendimiento mayor. Ahora bien, ¿cuál es el porcentaje máximo que puede exigir? Básicamente la TIR responde esta pregunta.</p>
+<p>Para calcular la TIR repetimos el proceso del VAN, (pero asumiendo una tasa desconocida, ya que es lo que deseamos conocer) e igualando el propio VAN a 0.</p>
+<p><span class="math display">\[
+VAN=-I_0+ \sum^{t}_{n=1} \frac{F_{n}}{(1+TIR)^{n}}=0
+\]</span></p>
+<p>Al no conocer el valor de la TIR y ser una variable presente en varios términos de la sumatoria, no resulta sencillo despejarla, por lo que el método tradicional de calcularla es al tanteo. Otra manera es usando una planilla u hoja de cálculo con la función <code>=TIR()</code>.</p>
+</section>
+<section id="tir-2" class="slide level2">
+<h2>TIR (2)</h2>
+<p>El problema con la TIR no es que sea difícil de calcular (que puede serlo, sobretodo si los flujos de caja cambian demasiado), si no que al detectarse un flujo de caja negativo pierde validez. Es mejor usar el VAN como primer criterio. Sin embargo, como referencia, puede aún ser útil: quédese con el proyecto si la TIR es superior a la TMAR, siempre teniendo en cuenta la anterior desventaja.</p>
+</section>
+<section id="ejemplo-de-cálculo-de-la-tir" class="slide level2">
+<h2>Ejemplo de cálculo de la TIR</h2>
+<p>Consiste simplemente en tomar la fórmula del VAN y utilizar la TMAR como punto de referencia. Luego pasamos a irla subiendo (o bajando) conforme nos vayamos acercando al 0. Cuando lleguemos a dicho valor nulo, nos detenemos y habremos encontrado la TIR.</p>
+<p>Por otro lado, si se cuenta con un programa de hoja de cálculo (como Excel), todo se reduce a vaciar los flujos de caja desde el periodo 0 (es decir, incluyendo la inversión inicial) hasta el último considerado en el horizonte de evaluación. Luego se inserta la función <code>TIR()</code> con dichos flujos como argumentos.</p>
+</section></section>
+<section>
+<section id="periodo-de-recuperación-de-la-inversión-pri" class="title-slide slide level1 center">
+<h1>Periodo de Recuperación de la Inversión (PRI)</h1>
+
+</section>
+<section id="el-pri" class="slide level2">
+<h2>El PRI</h2>
+<p>Es el tercer criterio más utilizado y mide el tiempo en el que se recupera la inversión, incluyendo el costo de capital. Importante tener en cuenta pues, que no considera la suma de los flujos de caja.</p>
+</section>
+<section id="ejemplo-de-cálculo-del-pri" class="slide level2 smaller">
+<h2>Ejemplo de cálculo del PRI</h2>
+<p>Considere un proyecto que que exige un retorno del 10% con una inversión inicial de $200,000 y presenta los siguientes flujos anuales:</p>
+<table class="caption-top">
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Periodo</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Flujo de caja</td>
+<td style="text-align: right;">20,000.00</td>
+<td style="text-align: right;">40,000.00</td>
+<td style="text-align: right;">60,000.00</td>
+<td style="text-align: right;">80,000.00</td>
+<td style="text-align: right;">80,000.00</td>
+</tr>
+</tbody>
+</table>
+<p>¿Cuántos periodos tardará en recuperarse la inversión?</p>
+</section>
+<section id="ejemplo-de-cálculo-del-pri-2" class="slide level2 smaller">
+<h2>Ejemplo de cálculo del PRI (2)</h2>
+<p>Después de calcular la rentabilidad esperada a partir de la inversión inicial (multiplicando por la tasa) y restarla del flujo de caja correspondiente, obtenemos la recuperación de inversión. Esta se resta a la inversión inicial y arranca un nuevo periodo, para el cual calculamos de nuevo la rentabilidad y la restamos del flujo de caja. Este proceso iterativo nos conduce a la siguiente tabla:</p>
+<table class="caption-top" style="width:100%;">
+<colgroup>
+<col style="width: 19%">
+<col style="width: 13%">
+<col style="width: 13%">
+<col style="width: 13%">
+<col style="width: 13%">
+<col style="width: 13%">
+<col style="width: 14%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Periodo</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">TOTAL</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Flujo de caja</td>
+<td style="text-align: right;">20,000.00</td>
+<td style="text-align: right;">40,000.00</td>
+<td style="text-align: right;">60,000.00</td>
+<td style="text-align: right;">80,000.00</td>
+<td style="text-align: right;">80,000.00</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Rentabilidad</td>
+<td style="text-align: right;">20,000.00</td>
+<td style="text-align: right;">20,000.00</td>
+<td style="text-align: right;">18,000.00</td>
+<td style="text-align: right;">13,800.00</td>
+<td style="text-align: right;">7,180.00</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Recuperación</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">20,000.00</td>
+<td style="text-align: right;">42,000.00</td>
+<td style="text-align: right;">66,200.00</td>
+<td style="text-align: right;">72,820.00</td>
+<td style="text-align: right;">201,020.00</td>
+</tr>
+</tbody>
+</table>
+<p>Y es aquí donde podemos saber que la inversión inicial se recupera hasta el final del quinto periodo. Así, sabemos que el PRI es de 5 años.</p>
+
+</section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
