@@ -125,7 +125,7 @@ Por otro lado, si se cuenta con un programa de hoja de cálculo (como Excel), to
 
 ## El PRI
 
-Es el tercer criterio más utilizado y mide el tiempo en el que se recupera la inversión, incluyendo el costo de capital. Importante tener en cuenta pues, que no considera la suma de los flujos de caja.
+Es el tercer criterio más utilizado y mide el tiempo en el que se recupera la inversión, incluyendo el costo de capital. Importante tener en cuenta que no considera la suma de los flujos de caja.
 
 ## Ejemplo de cálculo del PRI {.smaller}
 
