@@ -1,0 +1,279 @@
+---
+title: "Módulo: Lógica"
+author: "Luis Mendoza"
+format:
+    revealjs:
+        theme: solarized
+---
+
+## Objetivo
+
+Comprender que un algoritmo es una secuencia finita, ordenada y precisa. Entrenar el ojo para detectar errores lógicos antes de escribir una sola línea de código real.
+
+# Bienvenidos (de nuevo)
+
+##
+
+Una computadora no piensa, solo obedece.
+
+Si le dices "ve más o menos por ahí", no sabrá qué hacer.
+
+Si le dices "ve 5 pasos al norte, gira 90° a la derecha", te obedece (siempre y cuándo ya le hayas explicado dónde queda el norte y cuál es su derecha).
+
+# Actividad 1: ¡Obedece! {.smaller}
+
+## {.smaller}
+
+Supongamos que debemos controlar un robot que solo entiende estas cuatro órdenes:
+
+1. AVANZAR: Da un paso adelante.
+2. GIRAR_IZQ: Gira 90° a la izquierda (sin avanzar).
+3. GIRAR_DER: Gira 90° a la derecha (sin avanzar).
+4. AGARRAR: Toma el objeto que tiene justo enfrente.
+
+### Reglas:
+
+- Si el robot no entiende una instrucción, se cae y el programa termina en fracaso.
+- Las instrucciones se ejecutan en el orden exacto en que las escribes.
+
+## Ejercicio 1
+
+Imaginemos que el "robot" está en el centro de la sala, mirando al frente. Debe recorrer exactamente un cuadrado de 3 metros de lado, y regresar al punto de partida, mirando hacia la misma dirección inicial.
+
+Escribe las instrucciones, que recordemos, solo son cuatro posibles.
+
+## Ejercicio 2
+
+Sentemos al "robot" (obviamente una persona) en una silla que se encuentra al frente. Pongamos un marcador en algún lugar cerca del pizarrón.
+
+Ahora escribe la lista de instrucciones (usando SOLO AVANZAR, GIRAR_IZQ, GIRAR_DER, AGARRAR) para que el "robot" vaya desde la silla hasta el marcador y lo agarre.
+
+Escribe tu lista en el cuaderno. Numera cada línea.
+
+# Actividad 2. El Flujo
+
+## {.smaller}
+
+Los símbolos oficiales para los diagramas de flujo (según la ISO 5807):
+
+- ÓVALO: Inicio / Fin del programa.
+- RECTÁNGULO: Proceso (cálculo, asignación de variable).
+- ROMBO: Decisión / Condición (Sí / No).
+- PARALELOGRAMO: Entrada de datos (leer) o Salida (imprimir), aunque también se usa un rectángulo redondeado.
+- FLECHA: Indica el flujo de ejecución (hacia abajo o derecha).
+
+Ejemplo de pseudocódigo (español estructurado):
+
+```bash
+INICIO
+  LEER numero
+  SI numero > 0 ENTONCES
+      IMPRIMIR "Es positivo"
+  SINO
+      IMPRIMIR "Es negativo o cero"
+  FIN SI
+FIN
+```
+
+##
+
+```{mermaid}
+flowchart LR
+    Start([Inicio]) --> Read(Leer número)
+    Read --> Process[Comparar]
+    Process --> Decide{Número > 0}
+    Decide --> |Sí| WriteYes(Positivo)
+    Decide --> |No| WriteNo(Negativo)
+    WriteNo --> End([Fin])
+    WriteYes --> End
+```
+
+## Ejercicio 3: Par o Impar {.smaller}
+
+Dado un número entero ingresado por el usuario, determina si es par o impar.
+
+Instrucciones:
+
+1. Dibuja el diagrama de flujo en tu cuaderno (usa los símbolos correctos).
+2. Escribe el pseudocódigo completo debajo del diagrama.
+3. Traza la ejecución con el número 7 y con el número 12 (tabla de valores).
+
+Pista: Recordemos que un número es par si el residuo de dividirlo entre 2 es cero. En pseudocódigo usamos: `residuo = numero MOD 2`   (o `numero % 2`).
+
+## Ejercicio 4: Suma acumulada del 1 al N {.smaller}
+
+El usuario ingresa un número `N`. El programa debe calcular la suma de todos los enteros desde 1 hasta `N`.
+
+Ejemplo: Si `N = 5`, la suma es `1 + 2 + 3 + 4 + 5 = 15`.
+
+Instrucciones:
+
+- Escribe el pseudocódigo usando un bucle MIENTRAS (WHILE).
+- Dibuja el diagrama de flujo.
+- Traza la ejecución para `N=4` (escribe la tabla de valores en cada iteración).
+
+Pista: Necesitas un contador `i` y un acumulador `suma`.
+
+## Ejercicio 5: El número es positivo, negativo o cero
+
+Lee un número entero y clasifícalo en tres categorías: Positivo, Negativo o Cero.
+
+Instrucciones:
+
+- Dibuja el diagrama de flujo (usa un rombo dentro de otro rombo = anidado).
+- Escribe el pseudocódigo.
+- Traza con el número -3.
+
+# Actividad 3. Beta Tester
+
+## {.smaller}
+
+Un *bug* es un error en el algoritmo que hace que la máquina haga algo distinto a lo que queremos.
+
+Los bugs pueden ser:
+
+1. Sintaxis (error de escritura) → Con práctica se arreglan.
+2. Lógica (el algoritmo está mal planteado) → Aquí es donde debes usar la cabeza.
+
+Ahora nos toca encontrar el error, explicarlo y corregirlo.
+
+## Ejercicio 6: La cuenta regresiva {.smaller}
+
+Este pseudocódigo pretende imprimir los números del 5 al 1 (5, 4, 3, 2, 1).
+
+```bash
+INICIO
+  contador = 5
+  MIENTRAS contador > 0 HACER
+      IMPRIMIR contador
+      // (Aquí falta algo)
+  FIN MIENTRAS
+FIN
+```
+
+Ahora les pregunto:
+
+1. ¿Qué imprime realmente este código? (tracemos sus resultados).
+2. ¿Cuál es el bug?
+3. Escribe la corrección completa.
+4. Traza la tabla de valores de la versión corregida.
+
+## Ejercicio 7: La calificación {.smaller}
+
+Este algoritmo pretende leer 3 calificaciones, calcular el promedio,
+y decir si el alumno está Aprobado (promedio >= 6) o Reprobado.
+
+```bash
+INICIO
+  LEER cal1, cal2, cal3
+  promedio = (cal1 + cal2 + cal3) / 3
+  SI promedio >= 6 ENTONCES
+      IMPRIMIR "Aprobado"
+  SI promedio < 6 ENTONCES
+      IMPRIMIR "Reprobado"
+  FIN SI
+FIN
+```
+
+Preguntas:
+
+1. ¿El algoritmo funciona correctamente? Pruébalo con `cal1=8, cal2=7, cal3=9`.
+2. Pruébalo con `cal1=5, cal2=4, cal3=6`.
+3. A pesar de que da el resultado correcto en estos casos, tiene un *bug* de estructura. ¿Cuál es?
+4. Reescribe el código de forma óptima y eficiente.
+
+## Ejercicio 8: El número mayor {.smaller}
+
+Este algoritmo pretende leer 3 números (A, B, C) e imprimir el mayor de ellos.
+
+```bash
+INICIO
+  LEER A, B, C
+  mayor = 0
+  SI A > mayor ENTONCES
+      mayor = A
+  SI B > mayor ENTONCES
+      mayor = B
+  SI C > mayor ENTONCES
+      mayor = C
+  IMPRIMIR mayor
+FIN
+```
+
+Preguntas:
+
+1. Pruébalo con A=5, B=8, C=2. ¿Funciona? (Sí, da 8).
+2. Pruébalo con A=-5, B=-2, C=-1. ¿Qué imprime? (¡Imprime 0!).
+3. ¿Cuál es el bug y por qué ocurre?
+4. Corrige el código sin usar condiciones anidadas (usa solo tres SI, pero cambia la inicialización).
+
+## Ejercicio 9: El contador
+
+Este código pretende imprimir los números pares del 2 al 10 (2, 4, 6, 8, 10).
+
+```bash
+INICIO
+  num = 0
+  MIENTRAS num <= 10 HACER
+      num = num + 2
+      IMPRIMIR num
+  FIN MIENTRAS
+FIN
+```
+
+Preguntas:
+
+1. Ejecuta mentalmente. ¿Qué imprime realmente?
+2. ¿El resultado es correcto? Si no, ¿qué error tiene?
+3. Corrígelo para que imprima EXACTAMENTE 2, 4, 6, 8, 10.
+
+# Cierre
+
+##
+
+Un algoritmo no es código. Es la receta. El código es solo el idioma en que le dices la receta a la máquina. Hoy aprendimos a escribir recetas. El resto de la carrera es solo aprender nuevos idiomas.
+
+## Extras {.smaller}
+
+### 1: Tabla de multiplicar
+
+Escribe un pseudocódigo que lea un número N e imprima su tabla de multiplicar del 1 al 10.
+
+Ejemplo: N=7 → imprime 7x1=7, 7x2=14, ..., 7x10=70.
+
+### 2: ¿Cuántos dígitos tiene?
+
+Lee un número entero positivo (ej: 987) y cuenta cuántos dígitos tiene (ej: 3).
+Pista: Ve dividiendo entre 10 hasta que el número sea 0.
+
+### 3: Número primo
+
+Lee un número *N* y determina si es primo (solo divisible entre 1 y sí mismo).
+Pista: Prueba dividir entre todos los números desde 2 hasta *N - 1*.
+Si alguno da residuo 0, no es primo.
+
+## Más extras {.smaller}
+
+### 4: El factorial equivocado
+
+Este código pretende calcular el factorial de 5 ($5! = 120$).
+
+```bash
+INICIO
+  resultado = 1
+  i = 1
+  MIENTRAS i <= 5 HACER
+      resultado = resultado * i
+      i = i + 1
+  FIN MIENTRAS
+  IMPRIMIR resultado
+FIN
+```
+
+¿Tiene algún bug? Si lo tiene, corrígelo. Si no, explica por qué.
+
+### 5: La máquina dispensadora
+
+Una máquina vende refrescos a \$15 cada uno.
+Lee la cantidad de dinero que ingresa el usuario (ej: \$50) y
+calcula cuántos refrescos puede comprar y cuánto es su cambio.
