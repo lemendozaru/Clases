@@ -1,0 +1,72 @@
+{
+ Escribir un algoritmo que pida las notas de N alumnos introducidos por el
+ usuario, las cuales pueden ser únicamente enteras entre 0 y 10. Debe decirse 
+ cuantos 0, 5 y 10 han aparecido. También deben decirse las notas introducidas 
+ que no sean 0, 5 o 10. 
+}
+
+algoritmo MAT07;
+
+variables
+  Notas, Otras son matrices de enteros;
+  Indice es entero;
+  Cero, Cinco, Diez, N son enteros;
+   
+inicio
+  // Inicializar los contadores
+  Cero = 0; 
+  Cinco = 0; 
+  Diez = 0;
+  
+  // Pedir la cantidad de notas
+  escribir "Entre la cantidad de notas: ";
+  leer N;
+  
+  // Fijar las dimensiones de las matrices
+  Dimension(Notas, N);
+  Dimension(Otras, N);
+
+  // Captar las notas
+  para Indice = 1 hasta N hacer
+  inicio
+    escribir "Introduzca la calificación ", Indice, ": ";       
+    leer Notas[Indice];
+    en caso Notas[Indice] sea
+      0: Cero = Cero + 1;
+      5: Cinco = Cinco + 1;
+      10: Diez = Diez + 1;
+      sino
+        Otras[Indice] = Notas[Indice]
+    final
+  final
+  
+  // Mostrar la cantidad de ceros
+  escribir "Ha habido ", Cero;
+  si Cero == 1 entonces 
+    escribir " cero.", nl 
+  sino
+    escribir " ceros.", nl;
+    
+  // Mostrar la cantidad de cincos
+  escribir "Ha habido ", Cinco;
+  si Cinco == 1 entonces
+    escribir " cinco.", nl
+  sino
+    escribir " cincos.", nl;
+    
+  // Mostrar la cantidad de dieces
+  escribir "Ha habido ", Diez;
+  si Diez == 1 entonces
+    escribir " diez.", nl
+  sino
+    escribir " dieces.", nl;
+    
+  // Mostrar la lista de notas desigual de 0, 5 o 10 
+  escribir "LAS NOTAS QUE NO SON 0, 5 o 10 SON: ", nl;
+  para Indice = 1 hasta N hacer
+    si Otras[Indice] <> 0 entonces
+      escribir Otras[Indice], ", ";
+final
+
+
+

@@ -1,0 +1,45 @@
+{
+ Escribir un algoritmo que determine si una persona es mayor o menor de edad. 
+ Se consideran personas mayores de edad a partir de 18 años.
+}
+
+algoritmo CON12;
+
+variables 
+  Edad es entero;
+inicio
+  escribir "Introduzca la edad: ";
+  leer Edad;
+  si Edad < 18 entonces
+    escribir "Es menor de edad"
+  sino  
+    escribir "Es mayor de edad"
+final
+
+
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     

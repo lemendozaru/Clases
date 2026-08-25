@@ -1,0 +1,45 @@
+{
+ Escribir un algoritmo que realice un bucle con "REPETIR" y muestre en pantalla 
+ los números del 1 al 10.
+}
+
+algoritmo REP02;
+
+variable 
+  I es entero;
+  
+inicio
+  I = 0;
+  repetir
+    I = I + 1;
+    escribir "I = ", I, nl;
+  hasta I == 10;
+final
+
+
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     

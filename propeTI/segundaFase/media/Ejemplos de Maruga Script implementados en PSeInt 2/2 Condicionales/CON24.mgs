@@ -1,0 +1,57 @@
+{
+ Escriba un algoritmo que lea tres números enteros y determine el menor valor positivo. 
+ Si los números positivos son iguales, dar como menor a cualquiera de ellos.
+}
+
+algoritmo CON24;
+
+variables 
+  A, B, C, Menor son enteros; 
+  Bandera es logico;
+
+inicio
+  escribir "Introduzca un número: ";
+  leer A;
+  escribir "Introduzca un número: ";
+  leer B;
+  escribir "Introduzca un número: ";
+  leer C;
+  
+  // Determinación del menor   
+  si A > 0 entonces
+  inicio
+    Menor = A;
+    si (B > 0) y (B < Menor) entonces
+      Menor = B;
+    si (C > 0) y (C < Menor) entonces  
+      Menor = C;
+    Bandera = verdadero;
+  final      
+  sino si B > 0 entonces
+  inicio 
+    Menor = B;
+    si (A > 0) y (A < Menor) entonces
+      Menor = A;
+    si (C > 0) y (C < Menor) entonces
+      Menor = C; 
+    Bandera = verdadero;
+  final  
+  sino si C > 0 entonces
+  inicio
+    Menor = C;
+    si (A > 0) y (A < Menor) entonces
+      Menor = A;
+    si (B > 0) y (B < Menor) entonces
+      Menor = B; 
+    Bandera = verdadero;
+  final
+  // No exiten números positivos
+  sino  
+    Bandera = falso;
+    
+  // Salida de resultados
+  si Bandera entonces
+    escribir "El menor valor positivos es: ", Menor;
+  sino
+    escribir "No se ha introducido ningún número positivo";
+final

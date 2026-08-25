@@ -1,0 +1,47 @@
+{
+ Escribir un algoritmo que realice la pregunta ¿Desea continuar S/N? 
+ y que no deje de hacerla hasta que el usuario teclee N.
+}
+
+algoritmo REP10;
+
+variable 
+  Respuesta es literal;
+  
+inicio
+  repetir
+    escribir "DESEA CONTINUAR (S/N)? ";
+    leer Respuesta;
+  hasta (Respuesta == "N") o (Respuesta == "n"); 
+  // Esta sentencia podria ser de esta forma 
+  // hasta mayuscula(Respuesta) == "N"; o
+  // hasta minuscula (Respuesta) == "n"; o
+final
+
+
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     

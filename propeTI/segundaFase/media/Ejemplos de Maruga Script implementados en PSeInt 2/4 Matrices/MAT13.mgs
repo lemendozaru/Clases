@@ -1,0 +1,48 @@
+{
+ Escribir un algoritmo que determine la posición en la que se encuentra el valor 
+ máximo de una matriz de 3x3.
+}
+
+algoritmo MAT13;
+
+constantes
+  dDimension = 3;
+
+variables
+  // Matriz cuadrada de 3x3
+  M es matriz[dDimension, dDimension] de enteros;
+  Fila, Columna son enteros;
+  Maximo, PosFila, PosColumna son enteros;
+   
+inicio
+  // Entrar los elemento de la matriz M
+  escribir "INTRODUZCA LOS ELEMENTOS DE LA MATRIZ", nl;
+  para Fila = 1 hasta dDimension hacer
+    para Columna = 1 hasta dDimension hacer
+    inicio
+      escribir "(", Fila, ", ", Columna, "): ";
+      leer M[Fila, Columna];
+    final;  
+
+  // Determinar la posición del máximo valor 
+  PosFila = 1;
+  PosColumna = 1;
+  Maximo = M[PosFila, PosColumna];
+  // Buscar en los restante uno mayor
+  para Fila = 1 hasta dDimension hacer
+    para Columna = 1 hasta dDimension hacer
+    inicio
+      si M[Fila, Columna] > Maximo entonces
+      inicio
+        Maximo = M[Fila, Columna];
+        PosFila = Fila;
+        PosColumna = Columna;
+      final  
+    final;  
+
+  // Escribir el resultado en la consola
+  escribir "El máximo valor es ", Maximo, " y está en la posición (", PosFila, ", ", PosColumna, "): ";
+final
+
+
+

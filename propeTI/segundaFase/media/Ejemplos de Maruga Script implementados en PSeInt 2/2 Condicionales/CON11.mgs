@@ -1,0 +1,53 @@
+{
+  Escribir un algoritmo que lea desde teclado el importe bruto de una factura 
+  y determine el importe neto según los siguientes criterios.
+
+ · Importe bruto menor de 20.000 - Sin descuento
+ · Importe bruto mayor de 20.000 - 15% de descuento
+}
+
+algoritmo CON11;
+
+variables 
+  Bruto, Neto son reales;
+  
+inicio
+  escribir "Introduzca el importe de la factura: ";
+  leer Bruto;
+  si Bruto <= 20000 entonces
+    Neto = Bruto
+  sino
+    Neto = Bruto - (Bruto * 0.15);   
+  // Especificar que la salidad de los números reales sea
+  // con dos dígitos después del punto (dos lugares decimales)
+  precision = 2;  
+  escribir "Importe a pagar: ", Neto, nl;
+final
+
+
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     

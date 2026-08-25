@@ -1,0 +1,52 @@
+{
+ Para ingresar a un cierto espectáculo se requiere ser varón mayor de 18 años. 
+ Escriba un algoritmo que decida si una persona puede o no ingresar al espectáculo.   
+}
+
+algoritmo CON14;
+
+variables 
+  Edad es entero;
+  Sexo es literal;
+  
+inicio
+  escribir "Introduzca la edad: ";
+  leer Edad;
+  escribir "Introduzca el sexo (F o M): ";
+  leer Sexo;
+  si Edad > 18 entonces
+    si (Sexo == "m") o (Sexo == "M") entonces
+      escribir "Puede ingresar: ", nl;
+    sino    
+      escribir "No puede ingresar: ", nl;
+  sino    
+    escribir "No puede ingresar: ", nl;
+final
+
+
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     

@@ -1,0 +1,20 @@
+{
+ Escribir un algoritmo que evalúe la siguiente expresión:
+ ((A+5)*3) / (2*B - B)
+}
+
+algoritmo SEC11;
+
+variables 
+  A, B son reales;
+
+inicio
+  escribir "Introduzca el valor de A: ";
+  leer A;
+  escribir "Introduzca el valor de B: ";
+  leer B;
+  // Mostrar el resultado de la evaluación 
+  escribir "((A + 5) * 3) / (2 * B - B) = ", ((A + 5) *3) / (2 * B - B), nl;
+final
+
+

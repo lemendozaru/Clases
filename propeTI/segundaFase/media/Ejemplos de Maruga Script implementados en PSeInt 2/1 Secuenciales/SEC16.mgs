@@ -1,0 +1,23 @@
+{
+ Escribir un algoritmo que calcule el área y el volumen de un tetraedro:
+ Área = Arista^2 * RaízCuadrada(3)
+ Volumen = ((Arista^3)/12) * RaízCuadrada(2)
+}
+
+algoritmo SEC16;
+
+variables 
+  Arista, Area, Volumen son reales;
+
+inicio
+  escribir "Introduzca el valor de la arista: ";
+  leer Arista;
+  // Area del tetraedro
+  Area = (Arista^2) * (3^(1/2));
+  escribir "El área del tetraedro es: ", Area, nl;
+  // Volumen del tetraedro
+  Volumen = ((Arista^3)/12) * (2^(1/2)); 
+  escribir "El volumen del tetraedro es: ", Volumen, nl;
+final
+
+

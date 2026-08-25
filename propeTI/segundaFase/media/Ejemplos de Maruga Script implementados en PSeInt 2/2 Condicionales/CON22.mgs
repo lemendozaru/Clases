@@ -1,0 +1,40 @@
+{
+ El promedio de prácticas de un curso se calcula en base a cuatro prácticas 
+ calificadas de las cuales se promedian las tres notas más altas eliminándose 
+ la nota menor. 
+ Escriba un algoritmo que determine el promedio de prácticas de un estudiante 
+ y la nota de práctica eliminada.
+}
+
+algoritmo CON22;
+
+variables 
+  PC1, PC2, PC3, PC4, Menor son enteros; 
+  Promedio es real;
+
+inicio
+  escribir "Introduzca la nota de la préctica 1: ";
+  leer PC1;
+  escribir "Introduzca la nota de la préctica 2: ";
+  leer PC2;
+  escribir "Introduzca la nota de la préctica 3: ";
+  leer PC3;
+  escribir "Introduzca la nota de la préctica 4: ";
+  leer PC4;
+ 
+  // Determina la nota menor
+  Menor = PC1;
+  si PC2 < Menor entonces
+    Menor = PC2;
+  si PC3 < Menor entonces
+    Menor = PC3;
+  si PC4 < Menor entonces
+    Menor = PC4;
+    
+  // Determina el promedio de prácticas más altas
+  Promedio = (PC1 + PC2 + PC3 + PC4 - Menor ) / 3.0;
+  
+  // Salida de resultados
+  escribir "Promedio de notas más altas: ", Promedio, nl;
+  escribir "Nota menor: ", Menor, nl;
+final

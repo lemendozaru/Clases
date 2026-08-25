@@ -1,0 +1,46 @@
+{
+ Escribir un algoritmo que visualice en pantalla los números pares entre 1 y 30.
+}
+
+algoritmo REP04;
+
+variable
+  N es entero;
+  
+inicio
+  N = 1;
+  mientras N <= 30 hacer
+  inicio
+    si N % 2 == 0 entonces
+      escribir N, nl;
+    N = N + 1;  
+  final
+final
+
+
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     

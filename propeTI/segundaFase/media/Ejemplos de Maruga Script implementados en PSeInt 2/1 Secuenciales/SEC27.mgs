@@ -1,0 +1,51 @@
+{
+ Un cohete se lanza verticalmente con una velocidad de V0 m/s. 
+ calcular la velocidad al cabo de T segundos mediante un algoritmo.
+ 
+ Velocidad instantánea = (Velocidad inicial) - (Aceleración de caida libre * Tiempo)
+}
+
+algoritmo SEC27;
+
+constantes
+  Gravedad = 9.8;
+
+variables 
+  V0, VF, T son reales;
+  
+inicio
+  escribir "Introduzca el valor de la velocidad inicial: ";
+  leer V0;
+  escribir "Introduzca el valor del tiempo: ";
+  leer T;
+  VF = V0 + (Gravedad * T);
+  escribir "La velocidad final es: ", VF, " m/s", nl;
+final
+
+
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     

@@ -1,0 +1,53 @@
+{
+ Escribir un algoritmo que calcule el factorial de un número 
+}
+
+algoritmo REP14;
+
+variables 
+  N, T, Factorial son reales;
+  
+inicio
+  escribir "Introduzca un número: ";
+  leer N;
+  // Inicializar las variables
+  Factorial = 1;
+  // Guardar el valor de N para el mensaje final
+  T = N;
+  // Determinar el factorial
+  mientras N >= 1 hacer
+  inicio
+    Factorial = Factorial * N; 
+    N = N - 1;
+  final
+  // Escribir el resultado
+  escribir "El factorial de ", T, " es: ", Factorial, nl;
+final
+
+
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     

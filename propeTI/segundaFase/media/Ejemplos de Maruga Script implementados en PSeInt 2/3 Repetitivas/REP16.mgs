@@ -1,0 +1,82 @@
+{
+ Escribir un algoritmo que detecte si un número es primo o no. 
+ Un número es primo si sólo es divisible por sí mismo y por la unidad.
+
+ Ejemplo:   2,3,5,7,11,17,19 son números primos
+            9 no es número primo, es divisible por 1, 9, 3
+ El algoritmo para resolver este problema pasa por dividir sucesivamente el 
+ número estudiado por 2,3,4, etc., hasta el propio número.
+ Los numeros primos son enteros mayores que 1 sin divisores enteros positivos, 
+ exceptuando el 1 y ellos mismos. Todos los primos son impares, excepto el 2.
+ Solo es necesario comprobar la divisibilidad por numeros superiores a la raiz 
+ cuadrada del numero.
+}
+
+algoritmo REP16;
+
+variables 
+  N es entero;         // Guardamos el valor del numero introducido
+  Raiz es entero;      // Guardamos el valor de la raiz del numero
+  NoEsPrimo es logico; // Variable para decir que un numero no es primo
+  EsPar es logico;     // Nos sirve para marcar los numeros que son pares
+  I es entero;         // Variable que usamos dentro del bucle
+  
+inicio
+  // Pedimos un número y no lo aceptamos hasta que sea > 1
+  repetir
+    escribir "Introduzca un número entero mayor que 1: ";
+    leer N;
+  hasta N > 1; 
+  // EsPar va a ser verdadero cuando el numero sea par
+  EsPar = N % 2 == 0; 
+  // 2 es el unico número par que lo es
+  si N == 2 entonces
+    escribir "El 2 es primo, es el único número par que lo es.", nl
+  sino si EsPar entonces
+    escribir "Todo numero par no es primo, excepto el 2.", nl
+  // Analizar los números impares  
+  sino
+  inicio
+    // Almacenamos la raiz del número, redondeada
+    Raiz = redondear (N^1/2); 
+    // Comprobamos la divisibilidad de los nómeros superiores a la raiz cuadrada 
+    // del número introducido. Si algun número divide al número, NoEsPrimo toma 
+    // el valor verdadero
+    para I = Raiz hasta N - 1 hacer
+      si N % I == 0 entonces
+        NoEsPrimo = verdadero; 
+    // Mostramos en la consola si el número es primo o no
+    si NoEsPrimo entonces
+      escribir N, " no es un número primo", nl
+    sino
+      escribir N, " es un número primo", nl
+  final
+final
+
+
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     

@@ -1,0 +1,48 @@
+{
+ Escribir un algoritmo que lea una temperatura en la escala Fahrenheit, la 
+ convierta en la correspondiente temperatura en la escala Celsius.
+}
+
+algoritmo REP24;
+
+variables 
+  F son enteros;
+  Respuesta es literal;
+  
+inicio
+  repetir
+    escribir "Escribe la temperatura en Fahrenheit: ";
+    leer F;
+    escribir "CONVERSION DE TEMPERATURAS", nl;
+    escribir "Fahrenheit: ", F, nl;
+    escribir "Celsius: ", redondear(5/9 * (F - 32.0)), nl;
+    escribir "¿Desea continuar (S/N)?: ";
+    leer Respuesta;
+  hasta mayuscula(Respuesta) == "N";
+final
+   
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     

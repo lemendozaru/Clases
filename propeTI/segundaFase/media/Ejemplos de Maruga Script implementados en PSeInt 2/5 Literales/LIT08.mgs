@@ -1,0 +1,54 @@
+{
+ Escribir un algoritmo para que determine si una palabra es palíndromo. 
+ Una palabra es palíndromo si se lee igual de derecha a a izquierda que 
+ de izquierda a derecha.
+}
+
+algoritmo LIT08;
+
+variables 
+  Palabra, Inversa es literal;
+  I es entero;
+  
+inicio
+  escribir "Introduzca una palabra: ";
+  leer Palabra;
+  // Recorrer la literal desde el final hasta el inicio e ir asignado los 
+  // caracteres en ese orden en la literal Inversa
+  Inversa = "";
+  para I = longitud(Palabra) hasta 1 hacer
+    Inversa = Inversa + Palabra[I];
+  // Determinar si es palíndroma
+  si Inversa == Palabra entonces  
+    escribir "La palabra '", Palabra , "' es palíndromo", nl
+  sino  
+    escribir "La palabra '", Palabra , "' no es palíndromo. Su inversa es '", Inversa, "'", nl
+final
+
+
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     

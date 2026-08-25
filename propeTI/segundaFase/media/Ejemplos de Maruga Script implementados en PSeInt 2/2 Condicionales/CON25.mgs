@@ -1,0 +1,56 @@
+{
+ Escriba un algoritmo que lea tres números diferentes entre sí y los muestre
+ ordenados en orden ascendente y en orden descendente. Si los números no son 
+ diferentes entre sí, imprima un mensaje de error.
+}
+
+algoritmo CON25;
+
+constantes
+  P = 89;
+  
+variables 
+  N1, N2, N3, Mayor, Menor, Medio son reales; 
+
+inicio
+  escribir "Introduzca un número: ";
+  leer N1;
+  escribir "Introduzca un número: ";
+  leer N2;
+  escribir "Introduzca un número: ";
+  leer N3;
+  
+  // Si los números son diferentes entre sí
+  si (N1 <> N2) y (N2 <> N3) entonces
+  inicio
+    // Determina el menor
+    Menor = N1;
+    si N2 < Menor entonces
+      Menor = N2;
+    si N3 < Menor entonces
+      Menor = N3;
+    // Determina el mayor
+    Mayor = N1;
+    si N2 > Mayor entonces
+      Mayor = N2;
+    si N3 > Mayor entonces
+      Mayor = N3;
+    // Determina el medio
+    Medio = N1 + N2 + N3 - Mayor - Menor;
+
+    // Imprime en orden ascendente
+    escribir "ASCENDENTE ", nl;
+    escribir "Mayor = ", Mayor, nl;
+    escribir "Medio = ", Medio, nl;
+    escribir "Menor = ", Menor, nl;
+
+    // Imprime en orden descendente
+    escribir "DESCENDENTE ", nl;
+    escribir "Menor = ", Menor, nl;
+    escribir "Medio = ", Medio, nl;
+    escribir "Mayor = ", Mayor, nl;
+  final
+  // Si los números no son diferentes entre sí
+  sino
+    escribir "Error. Los números deben ser diferentes entre sí";
+final

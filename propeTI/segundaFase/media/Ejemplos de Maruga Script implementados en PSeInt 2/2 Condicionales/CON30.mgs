@@ -1,0 +1,55 @@
+{
+ Escriba un algoritmo que lea un número entero de 2 dígitos y si termina 
+ en 1 mostrar su primer dígito, si termina en 2 mostrar la suma de sus 
+ dígitos y si termina en 3 mostrar el producto de sus dos dígitos.
+} 
+
+algoritmo CON30;
+
+variables 
+  N es entero; 
+  Decenas, Unidades son enteros;
+  
+inicio
+  escribir "Introduzca un número entero de 2 dígitos: ";
+  leer N;
+  Decenas = N \ 10;
+  Unidades = N % 10;
+  
+  // Determinar la salida en dependencia del último dígito
+  si Unidades == 1 entonces
+    escribir "El primer dígito es: ", Decenas, nl;
+  sino si Unidades == 2 entonces
+    escribir "La suma de los dígitos es: ", Decenas + Unidades, nl;
+  sino si Unidades == 3 entonces
+    escribir "El producto de los dígitos es: ", Decenas * Unidades, nl;
+  sino
+    escribir "El último dígito del número no termina en 1, 2 o 3", nl;
+final     
+
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     

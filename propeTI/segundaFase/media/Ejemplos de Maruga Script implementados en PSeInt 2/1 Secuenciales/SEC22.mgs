@@ -1,0 +1,49 @@
+{
+ Escribir un algoritmo que calcule el capital producido por un capital expresado
+ en pesos, al cabo de un tiempo depositado a un interés de un X porciento.
+}
+
+algoritmo SEC22;
+
+variables 
+  Capital, Tiempo, Interes son reales;
+  CapitalProducido es real;
+
+inicio
+  escribir "Introduzca el capital: ";
+  leer Capital;
+  escribir "Introduzca el tiempo: ";
+  leer Tiempo;
+  escribir "Introduzca el interés: ";
+  leer Interes;
+  CapitalProducido = (Capital * (Interes/100) * Tiempo);
+  escribir "En estos años se producira un capital de: ", CapitalProducido, " pesos";
+final
+
+
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     

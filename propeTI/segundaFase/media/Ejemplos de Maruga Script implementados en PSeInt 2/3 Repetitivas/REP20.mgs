@@ -1,0 +1,66 @@
+{
+ Escribir un algoritmo que calcule, independientemente, la suma y la media de los 
+ números pares e impares comprendidos entre 1 y 200.
+}
+
+algoritmo REP20;
+
+variables 
+  CantidadPar, CantidadImpar, SumaPar, SumaImpar son enteros;
+  I es entero;
+  
+inicio
+  // Inicializa las variables contadoras y sumadoras
+  CantidadPar = 0;
+  CantidadImpar = 0; 
+  SumaPar = 0; 
+  SumaImpar = 0;
+  para I  = 1 hasta 200 hacer
+  inicio
+    si I % 2 == 0 entonces
+    inicio
+      SumaPar = SumaPar + I;
+      CantidadPar = CantidadPar + 1;
+    final
+    sino
+    inicio
+      SumaImpar = SumaImpar + I;
+      CantidadImpar = CantidadImpar + 1;
+    final
+  final
+  // Escribir los resultados 
+  escribir "La suma de los pares es: ", SumaPar, nl;
+  escribir "La media de los pares es: ", SumaPar \ CantidadPar, nl;
+  escribir "La suma de los impares es: ", SumaImpar, nl;
+  escribir "La media de los impares es: ", SumaImpar \ CantidadImpar, nl;
+final
+  
+final
+
+
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     

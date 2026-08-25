@@ -1,0 +1,18 @@
+{
+ Escribir un algoritmo que calcule el volumen de una esfera:
+ Volumen de la esfera = 4/3 * PI * radio^3
+}
+
+algoritmo SEC09;
+
+variable 
+  Radio es real;
+
+inicio
+  escribir "Introduzca el radio: ";
+  leer Radio;
+  // Mostrar el resultado del cáculo en la consola
+  escribir "El volumen de la esfera es: ", 4/3 * PI * (Radio^3), nl;
+final
+
+

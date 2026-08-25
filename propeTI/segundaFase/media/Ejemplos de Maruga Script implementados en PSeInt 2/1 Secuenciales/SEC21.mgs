@@ -1,0 +1,20 @@
+{
+ Escribir un algoritmo que calcule el número de horas, minutos y segundos 
+ que hay en una X cantidad de segundos.
+}
+
+algoritmo SEC21;
+
+variables 
+  X, Horas, Minutos, Segundos son enteros;
+
+inicio
+  escribir "Introduzca los segundos para transformarlo a horas: ";
+  leer X;
+  Horas = X \ 3600;
+  Minutos = (X % 3600) \ 60;
+  Segundos = (X % 3600) - (Minutos * 60);
+  escribir "En 3700 segundos hay: ", Horas, " Hora y ", Minutos, " Minutos con ", Segundos, " segundos";
+final
+
+

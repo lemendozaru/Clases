@@ -1,0 +1,17 @@
+{
+  Escribir un algoritmo que sume dos números entrados por el usuario
+}
+
+algoritmo SEC02;
+
+variables 
+ A, B son enteros;
+
+inicio
+  escribir "Introduzca un número: ";
+  leer A;
+  escribir "Introduzca otro número: ";
+  leer B;
+  // Muestra el valor de la suma  en la consola
+  escribir "El resultado es: ", A + B;
+final

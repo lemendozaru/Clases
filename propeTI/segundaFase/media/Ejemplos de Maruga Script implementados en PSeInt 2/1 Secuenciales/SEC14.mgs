@@ -1,0 +1,24 @@
+{
+ Escribir un algoritmo que calcule el área y el volumen de un hexaedro:
+ Área = (l*l) * 6
+ Volumen = l^3
+
+}
+
+algoritmo SEC14;
+
+variables 
+  Lado, Area, Volumen son reales;
+
+inicio
+  escribir "Introduzca el lado del hexaedro: ";
+  leer Lado;
+  // Area del hexaedro
+  Area = (Lado^2)*6;
+  escribir "El área del hexaedro es: ", Area, nl;
+  // Volumen del hexaedro
+  Volumen = Lado^3; 
+  escribir "El volumen del hexaedro es: ", Volumen, nl;
+final
+
+

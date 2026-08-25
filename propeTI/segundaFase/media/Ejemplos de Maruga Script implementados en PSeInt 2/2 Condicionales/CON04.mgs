@@ -1,0 +1,46 @@
+{
+ Escribir un algoritmo que determine si un número leído desde 
+ el teclado es par o impar
+}
+
+algoritmo CON04;
+
+variables 
+  Numero es entero;
+  
+inicio
+  escribir "Introduzca un número entero: ";
+  leer Numero;
+  si Numero % 2 == 0 entonces 
+    escribir "El número introducido es par"
+  sino
+    escribir "El número introducido es impar"
+final
+
+
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     

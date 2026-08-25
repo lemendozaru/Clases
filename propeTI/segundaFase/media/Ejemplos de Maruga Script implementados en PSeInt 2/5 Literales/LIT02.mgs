@@ -1,0 +1,45 @@
+{
+ Escribir un algoritmo que a partir de un numero 711124 y una literal JAL, 
+ construya y visualce en la consola la cadena 711124-JAL.
+}
+
+algoritmo LIT02;
+
+variables 
+  Siglas es literal;
+  ID es literal;
+
+inicio
+  Siglas = "JAL"; 
+  ID = convertir (711124) + "-" + Siglas;
+  escribir "EL NÚMERO DE ID", nl;
+  escribir ID, nl;
+final
+
+
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     

@@ -1,0 +1,41 @@
+{
+ Escribir un algoritmo que almacene en una matriz los números primos comprendidos 
+ entre 1 y 100.
+}
+
+algoritmo MAT03;
+
+constante
+  MaxNumeros = 100;
+
+variables
+  Numeros es matriz[MaxNumeros] de enteros;
+  Indice, Divisor, Numero son enteros;
+  Bandera es logico;
+
+inicio
+  Indice = 1;
+  para Numero = 2 hasta 100 hacer
+  inicio
+    Bandera = verdadero;
+    para Divisor = 2 hasta Numero - 1 hacer
+       si Numero % Divisor == 0 entonces
+         Bandera = falso;
+    si Bandera entonces
+    inicio
+      Numeros[Indice] = Numero;
+      Indice = Indice + 1;
+    final
+  final
+  Numeros[Indice] = 0;
+
+  // Los valores desigual de 0 son los números primos
+  Indice = 1;                  
+  mientras Numeros[Indice] <> 0 hacer
+  inicio
+    escribir Numeros[Indice], ",  ";
+    Indice = Indice + 1;
+  final;
+final
+
+

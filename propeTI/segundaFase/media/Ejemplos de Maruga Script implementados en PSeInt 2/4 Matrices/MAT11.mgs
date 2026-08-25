@@ -1,0 +1,38 @@
+{
+ Escribir un algoritmo que genera la matriz transpuesta de una matriz de 3 filas 
+ y 4 columnas. La matriz transpuesta de una matriz M(m,n) se obtiene intercambiando 
+ filas por columnas y viceversa; el resultado se tiene que almacenar en una nueva 
+ matriz TRANSPUESTA(n,m).
+}
+
+algoritmo MAT11;
+
+variables
+  // Matriz de 3x4
+  M es matriz[3, 4] de enteros;
+  // Matriz de 4x3
+  Transpuesta es matriz[4, 3] de enteros;
+  Fila, Columna son enteros;
+   
+inicio
+  // Entrar los elemento de la matriz M
+  escribir "INTRODUZCA LOS ELEMENTOS DE LA MATRIZ", nl;
+  para Fila = 1 hasta 3 hacer
+    para Columna = 1 hasta 4 hacer
+    inicio
+      escribir "(", Fila, ", ", Columna, "): ";
+      leer M[Fila, Columna];
+    final;  
+
+  // Crear la matriz transpuesta de M
+  escribir "LA MARTRIZ TRANSPUESTA ES:", nl;
+  para Fila = 1 hasta 4 hacer
+    para Columna = 1 hasta 3 hacer
+    inicio
+      Transpuesta[Fila, Columna] = M[Columna, Fila];
+      escribir "(", Fila, ", ", Columna, ") = ", Transpuesta[Fila, Columna], nl;
+    final;  
+final
+
+
+

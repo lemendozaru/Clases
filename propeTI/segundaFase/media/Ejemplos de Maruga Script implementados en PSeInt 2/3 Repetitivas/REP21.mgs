@@ -1,0 +1,66 @@
+{
+ Escribir un algoritmo que calcule la suma de los cuadrados de los 100 primeros 
+ números enteros.
+}
+
+algoritmo REP21;
+variables 
+  I es entero;
+  SumaPar, CantidadPar son enteros;
+  SumaImpar, CantidadImpar son enteros;
+      
+inicio
+  // Inicializa las variables 
+  SumaPar = 0;
+  SumaImpar = 0;
+  CantidadImpar = 0;
+  CantidadPar = 0;
+  
+  para I  = 1 hasta 100 hacer
+  inicio
+    si I % 2 == 0 entonces
+    inicio
+      SumaPar = SumaPar + I;
+      CantidadPar = CantidadPar + 1;
+    final
+    sino
+    inicio
+      SumaImpar = SumaImpar + I;
+      CantidadImpar = CantidadImpar + 1;
+    final
+  final                         
+  // Escribir los resultados 
+  escribir "La suma de los pares es: ", SumaPar, nl;
+  escribir "La media de los pares es: ", SumaPar \ CantidadPar, nl;
+  escribir "La suma de los impares es: ", SumaImpar, nl;
+  escribir "La media de los impares es: ", SumaImpar \ CantidadImpar, nl;
+final
+  
+
+
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     

@@ -1,0 +1,45 @@
+{
+ Escribir un algoritmo que determine si un número es positivo o negativo.
+}
+
+algoritmo CON01;
+
+variable 
+  Numero es entero;
+  
+inicio
+  escribir "Introduzca un número entero: ";
+  leer Numero;
+  si Numero > 0 entonces 
+    escribir "El número es positivo"
+  sino
+    escribir "El número es negativo"
+final
+
+
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     

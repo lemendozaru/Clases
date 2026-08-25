@@ -1,0 +1,29 @@
+{
+ Escribir un algoritmo que permita realizar las operaciones de suma, resta, 
+ divisió o multiplicación, dado dos operando introducidos por el usuario. 
+}
+
+algoritmo Calculadora;
+
+variables
+  Operando1, Operando2 son enteros;
+  Operador es literal;
+  
+inicio
+   escribir "Entre el primer operando: ";
+   leer Operando1;
+   escribir "Entre el segundo operando: ";
+   leer Operando2;
+   escribir "Entre el operador: ";
+   leer Operador;
+   // Realizar el cálculo en dependencia del operador
+   en caso Operador sea
+      "+":  escribir Operando1 +  Operando2;
+       "-":  escribir Operando1 -  Operando2;
+       "*":escribir Operando1 *  Operando2;
+       "/":escribir Operando1 /  Operando2;
+   sino
+     escribir "Operador no válido";
+   final;
+final
+

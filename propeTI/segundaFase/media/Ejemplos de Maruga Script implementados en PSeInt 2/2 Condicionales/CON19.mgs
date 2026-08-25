@@ -1,0 +1,42 @@
+{
+ Diseñe un algoritmo que determine el número de elementos de la intersección 
+ de dos conjuntos de números enteros consecutivos. Así, el número de elementos 
+ de la intersección de los conjuntos: A = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11] y 
+ B = [8, 9, 10, 11, 12, 13, 14, 15, 16, 17 ] es 4.
+
+ En general:
+
+ Conjunto A = [MinA, MinA+1,..., MaxA-1, MaxA ] 
+ Conjunto B = [MinB, MinB+1,..., MaxB-1, MaxB ]
+
+}
+
+algoritmo CON19;
+
+variables 
+  MinA, MinB, MaxA, MaxB, NumInters son enteros; 
+
+inicio
+  escribir "Introduzca el mínimo de A: ";
+  leer MinA;
+  escribir "Introduzca el máximo de A: ";
+  leer MaxA;
+  escribir "Introduzca el mínimo de B: ";
+  leer MinB;
+  escribir "Introduzca el máximo de B: ";
+  leer MaxB;
+  
+  // DeterMinAción del número de elementos de la intersección de A y B
+  si (MinB <= MaxA) y (MaxA <= MaxB) entonces
+    NumInters = MaxA - MinB + 1
+  sino si (MinB <= MaxA) y (MaxA > MaxB) entonces
+    NumInters = MaxB - MinB + 1
+  sino si (MinA <= MaxB) y (MaxB <= MaxA ) entonces
+    NumInters = MaxB - MinA + 1        
+  sino si (MinA <= MaxB) y (MaxB > MaxA ) entonces
+    NumInters = MaxA - MinA + 1
+  sino 
+    NumInters = 0;
+  // Mostrar el resultado  
+  escribir "Número de intersecciones: ", NumInters, nl;   
+final

@@ -1,0 +1,49 @@
+{
+ Escribir un algoritmo que sume los valores que hay por encima de la
+ diagonal principal de una matriz de 4x4. Por ejemplo:
+ 
+ 1, 2, 3, 4
+ 5, 6, 7, 8
+ 9,10,11,12
+ 13,14,15,16
+
+ Los valores de la diagonal principal son (1,1) (2, 2) (3, 3) (4, 4).
+ Como este ejercicio consiste en sumar los valores que hay encima de
+ la diagonal principal, sumares: 2 + 3 + 4 + 7 + 8 + 12.
+}
+
+algoritmo MAT08;
+
+constantes
+  DDimension = 4;
+
+variables
+  // Matriz de 4x4
+  M es matriz[DDimension, DDimension] de enteros;
+  Fila, Columna son enteros;
+  Suma es entero;
+   
+inicio
+  // Entrar los elemento de la matriz M
+  escribir "INTRODUZCA LOS ELEMENTOS DE LA MATRIZ", nl;
+  para Fila = 1 hasta DDimension hacer
+    para Columna = 1 hasta DDimension hacer
+    inicio
+      escribir "(", Fila, ", ", Columna, "): ";
+      leer M[Fila, Columna];
+    final;  
+  
+  // Inicializa la variable que almacena la Suma
+  Suma = 0;  
+    
+  // Realizar la suma
+  para Fila = 1 hasta DDimension - 1 hacer
+    para Columna = Fila + 1 hasta DDimension hacer
+      Suma = Suma + M[Fila, Columna];
+
+  // Escribir la suma en la consola
+  escribir "La suma es: ", Suma;
+final
+
+
+

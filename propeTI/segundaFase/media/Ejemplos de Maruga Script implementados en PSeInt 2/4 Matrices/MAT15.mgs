@@ -1,0 +1,89 @@
+{
+ Escribir un algoritmo que almacene la nota y el nombre de N estudiantes y 
+ permita determinar la cantidad de aprobados y desaprobados. Además saber la 
+ nota de un estudiante dado su nombre. Las notas en base a 100, con menores 
+ de 60 están desaprobados.
+ }
+
+algoritmo MAT15;
+
+variables
+  // Almacenar las notas de los 5 estudiantes
+  Notas es matriz de enteros;
+  // Almacenar los nombres de los 5 estudiantes
+  Nombres es matriz de literal;
+  // Almacenar el nombre que se buscará
+  Nombre es literal;
+  // Contadores de aprobados y desaprobados
+  Aprobados, Desaprobados son enteros;
+  Indice, Pos son enteros;
+  N es entero;
+   
+inicio
+  // Pedir la cantidad de estudiantes
+  escribir "Introduzca la cantidad de estudiantes: ";
+  leer N;
+  // Fijar la dimensión de la matriz
+  Dimension(Notas, N);
+  Dimension(Nombres, N);
+ 
+  escribir "INTRODUZCA LAS NOTAS", nl;
+  para Indice = 1 hasta N hacer
+  inicio
+    escribir "Introduzca el nombre del estudiante ", Indice, ": ";
+    leer Nombres[Indice];
+    escribir "Introduzca la nota del estudiante ", Indice, ": ";
+    leer Notas[Indice];
+  final;  
+  
+  // Inicializar los contadores
+  Aprobados = 0; 
+  Desaprobados = 0;
+ 
+  // Realizar el conteo
+  para Indice = 1 hasta N hacer
+    si Notas[Indice] >= 60 entonces
+      Aprobados = Aprobados + 1
+    sino
+      Desaprobados = Desaprobados + 1;
+
+  // Escribir las cantidades en la consola
+  si Aprobados == 1 entonces
+    escribir "Hay ", Aprobados, " aprobado y ";
+  sino  
+    escribir "Hay ", Aprobados, " aprobados y ";
+    
+  si Desaprobados == 1 entonces  
+    escribir Desaprobados, " desaprobado", nl
+  sino  
+    escribir Desaprobados, " desaprobados", nl;
+    
+  // Buscar la nota de estudiantes por su nombre
+  escribir nl, "BUSCAR UN ESTUDIANTE POR SU NOMBRE", nl;
+  // Repetir la busqueda hasta que el usuario desee terminar
+  repetir
+    escribir "Introduzca un nombre o 'T' para terminar: ";
+    leer Nombre;
+    // Si no es terminar, se busca el nombre
+    si mayuscula(Nombre) <> "T" entonces
+    inicio
+      // Buscar el nombre
+      Indice = 1;
+      Pos = -1;
+      mientras (Indice <= N) y (Pos == -1) hacer  
+      inicio
+        si Nombres[Indice] == Nombre entonces
+          Pos = Indice;
+        Indice = Indice + 1;  
+      final  
+      // Mostrar la nota si fue encontrado el nombre
+      si Pos <> -1 entonces
+        escribir "LA NOTA DEL ESTUDIANTE ", mayuscula(Nombre), " ES ", Notas[Pos], nl
+      sino
+        escribir "EL ESTUDIANTE ", mayuscula(Nombre), " NO ESTÁ EN LA LISTA", nl
+    final    
+  hasta mayuscula(Nombre) ==  "T"
+final
+
+
+

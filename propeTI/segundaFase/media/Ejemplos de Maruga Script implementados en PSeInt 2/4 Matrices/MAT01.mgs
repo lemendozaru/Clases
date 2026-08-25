@@ -1,0 +1,44 @@
+{
+ Escribir un algoritmo que sume dos matrices bidimensionales. Las matrices para 
+ que puedan sumarse deben tener las mismas dimensiones.
+}
+
+algoritmo MAT01;
+
+constante
+  // Dimensión de la matriz
+  dDimension = 2;
+
+variables
+  // Matriz cuadrada de 2x2
+  M1, M2 son matrices[dDimension, dDimension] de enteros;
+  Fila, Columna son enteros;
+   
+inicio
+  // Entrar los elemento de la matriz M1
+  escribir "INTRODUZCA LOS ELEMENTOS DE LA MATRIZ 1", nl;
+  para Fila = 1 hasta dDimension hacer
+    para Columna = 1 hasta dDimension hacer
+    inicio
+      escribir "(", Fila, ", ", Columna, "): ";
+      leer M1[Fila, Columna];
+    final;  
+
+  // Entrar los elemento de la matriz M2
+  escribir "INTRODUZCA LOS ELEMENTOS DE LA MATRIZ 2", nl;
+  para Fila = 1 hasta dDimension hacer
+    para Columna = 1 hasta dDimension hacer
+    inicio
+      escribir "(", Fila, ", ", Columna, "): ";
+      leer M2[Fila, Columna];
+    final;  
+
+  // Realizar la suma de la matrices M1 y M2 
+  escribir "RESULTADO DE LA SUMA DE M1 Y M2", nl;
+  para Fila = 1 hasta dDimension hacer
+    para Columna = 1 hasta dDimension hacer
+      escribir "(", Fila, ", ", Columna, ") = ", M1[Fila, Columna] + M2[Fila, Columna], nl;
+final
+
+
+

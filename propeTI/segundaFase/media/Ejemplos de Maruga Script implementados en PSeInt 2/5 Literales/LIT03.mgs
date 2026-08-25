@@ -1,0 +1,42 @@
+{
+ Escribir un algoritmo que transforme la cadena "Esto es una prueba", en la 
+ cadena "Esto es prueba". 
+}
+
+algoritmo LIT03;
+
+variable 
+  L es literal;
+  
+inicio
+  L = "Esto es una prueba"; 
+  escribir eliminar (L, posicion ("una", L), 3), nl;
+final
+
+
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     

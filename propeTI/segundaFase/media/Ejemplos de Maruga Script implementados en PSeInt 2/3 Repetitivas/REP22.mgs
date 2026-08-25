@@ -1,0 +1,54 @@
+{
+ Escribir un algoritmo que lea 10 datos desde el teclado y sume sólo aquellos 
+ que sean negativos.
+}
+
+algoritmo REP22;
+
+variables 
+  N, Suma son reales;
+  I es entero;
+  
+inicio
+  escribir "DEBE INTRODUCIR 10 DATOS, SE SUMARAN SOLO LOS NEGATIVOS", nl;
+  // Inicializa la variable que almacena la suma
+  Suma = 0;
+  para I  = 1 hasta 10 hacer
+  inicio
+    escribir "Introduzca el dato ", I, ": "; 
+    leer N;
+    si N < 0 entonces
+      Suma = Suma + N;
+  final
+  escribir "El resultado de la suma de los numeros negativos es: ", Suma, nl;
+final
+  
+final
+
+
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     

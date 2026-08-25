@@ -1,0 +1,54 @@
+{
+ Escribir un algoritmo que calcule la media de 5 números introducidos 
+ por el teclado.
+}
+
+algoritmo REP15;
+
+variables 
+  N, Suma son reales;
+  I es entero;
+  
+inicio
+  // Inicializar las variables
+  I = 0;
+  Suma = 0;
+  // Introducir y sumar los números
+  repetir
+    escribir "Introduzca el número ", I + 1, ": ";
+    leer N;
+    Suma = Suma + N;
+    I = I + 1; 
+  hasta I == 5;
+  // Escribir el resultado
+  escribir "La suma de los 5 números es: ", Suma, nl;
+  escribir "El promedio de los 5 números es: ", Suma/5, nl;
+final
+
+
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     

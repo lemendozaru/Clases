@@ -1,0 +1,51 @@
+{
+ Escribir un algoritmo que lea un número entero menor o igual a mil y determinar 
+ cuántos dígitos tiene.
+}
+
+algoritmo CON26;
+
+variables 
+  N, C es entero;
+  
+inicio
+  escribir "Introduzca un número entero menor que 1000: ";
+  leer N;
+  si N \ 1000 <> 0 entonces
+    C = 4; 
+  sino si N \ 100 <> 0 entonces
+    C = 3; 
+  sino si N \ 10 <> 0 entonces
+    C = 2
+  sino
+    C = 1;   
+  escribir "Tiene ", C, " dígitos", nl;
+final
+
+
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     

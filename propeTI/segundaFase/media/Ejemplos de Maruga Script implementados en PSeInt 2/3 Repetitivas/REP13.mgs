@@ -1,0 +1,44 @@
+{
+ Escribir un algoritmo que pida un número y si el que se introduce por el 
+ teclado es menor de 100 que vuelva a solicitarlo.
+}
+
+algoritmo REP13;
+
+variable 
+  N es real;
+  
+inicio
+  repetir
+    escribir "Introduzca un número: ";
+    leer N;
+  hasta N > 100;  
+final
+
+
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     

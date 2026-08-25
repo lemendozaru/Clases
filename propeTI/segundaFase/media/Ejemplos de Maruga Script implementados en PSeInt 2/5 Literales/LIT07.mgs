@@ -1,0 +1,44 @@
+{
+ Escribir un algoritmo para transformar la literal "Maruga Script" en la 
+ literal "MARUGA SCRIPT" y "maruga script. Utilizar las funciones
+  MAYUSCULA(Literal) y MINUSCULA(Literal)
+}
+
+algoritmo LIT07;
+
+variables 
+  L, SL son literales;
+  
+inicio
+  L = "Maruga Script";
+  escribir "Este lenguaje es: ", mayuscula(L) , nl;
+  escribir "Este lenguaje es: ", minuscula(L) , nl;
+final
+
+
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     

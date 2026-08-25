@@ -1,0 +1,29 @@
+{
+ Escribir un algoritmo que sume, reste, multiplique y divida dos números ENTEROS
+}
+
+algoritmo SEC03;
+
+variables 
+  A, B son enteros;
+  S, R, D, M son enteros;
+ 
+inicio
+  escribir "Introduzca un número entero: ";
+  leer A;
+  escribir "Introduzca otro número entero: ";
+  leer B;
+  // Realizar las operaciones
+  S = A + B;
+  R = A - B;
+  M = A * B;
+  // División entera
+  D = A \ B;
+  // Muestra en la consola los resultados de las operaciones
+  escribir "La suma es: ", S, nl;
+  escribir "La resta es: ", R, nl;
+  escribir "La multiplicación es : ", M, nl;
+  escribir "La división es: ", D, nl;
+final
+
+

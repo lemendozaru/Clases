@@ -1,0 +1,22 @@
+{
+ Escribir un algoritmo que calcule el área de un triángulo:
+ Area del triángulo = (Base * Altura)/2
+}
+
+algoritmo SEC06;
+
+variables 
+  Base, Altura, Area son reales;
+
+inicio
+  escribir "Introduzca la base: ";
+  leer Base;
+  escribir "Introduzca la altura: ";
+  leer Altura;
+  // Realizar las operaciones
+  Area = (Base * Altura)/2;
+  // Muestra  el resultado en la consola
+  escribir "El área del triángulo es: ", Area, nl;
+final
+
+

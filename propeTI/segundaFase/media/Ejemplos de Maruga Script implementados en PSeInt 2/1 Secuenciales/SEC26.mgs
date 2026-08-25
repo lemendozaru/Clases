@@ -1,0 +1,58 @@
+{
+  Un coche se mueve con una aceleración constante de A m/s2.
+  Escribir un algoritmo que calcule:
+
+  a)  La velocidad instantánea al cabo de T segundos.
+  b)  La velocidad media durante los primeros T segundos del recorrido.
+
+  Velocidad instantánea = Velocidad inicial + Aceleración * Tiempo
+  Velocidad media = (Velocidad inicial + Velocidad final)/2
+}
+
+algoritmo SEC26;
+
+variables 
+  V0, VF, T, A son reales;
+  
+inicio
+  escribir "Introduzca el valor de la velocidad inicial: ";
+  leer V0;
+  escribir "Introduzca el valor de la velocidad final: ";
+  leer VF;
+  escribir "Introduzca el valor de la aceleración: ";
+  leer A;
+  escribir "Introduzca el valor del tiempo: ";
+  leer T;
+  escribir "La velocidad instantánea es: ", V0 + (A * T), " m/s", nl;
+  // Salida de los números reales con 4 lugares decimales
+  precision = 4;
+  escribir "La velocidad media es: ", (V0 + VF)/2, " m/s", nl;
+final
+
+
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     

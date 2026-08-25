@@ -1,0 +1,62 @@
+{
+ Escriba un algoritmo que lea un número entero de cuatro dígitos y determinar 
+ cuántos dígitos pares tiene.
+}
+
+algoritmo CON28;
+
+variables 
+  N, C son enteros; 
+  Millares, Centenas, Decenas, Unidades, Resto son enteros;
+  
+inicio
+  escribir "Introduzca un número entero de 4 dígitos: ";
+  leer N;
+  Millares = N \ 1000;
+  Resto = N % 1000;
+  Centenas = Resto \ 100;
+  Resto = Resto % 100;
+  Decenas = Resto \ 10;
+  Resto = Resto % 10;
+  Unidades = Resto;
+  // Inicializar el contador
+  C = 0;
+  // Determinar la paridad de los dígitos
+  si Millares % 2 == 0 entonces
+    C = C + 1;
+  si Centenas % 2 == 0 entonces
+    C = C + 1;
+  si Decenas % 2 == 0 entonces
+    C = C + 1;
+  si Unidades % 2 == 0 entonces
+    C = C + 1;
+  // Escribir el resultado  
+  escribir "El número tiene ", C, " dígitos pares", nl;
+final     
+
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     

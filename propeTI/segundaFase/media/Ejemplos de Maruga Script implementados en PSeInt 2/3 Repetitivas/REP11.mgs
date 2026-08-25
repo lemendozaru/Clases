@@ -1,0 +1,60 @@
+{
+ Escribir un algoritmo que calcule cuantos años tarda en duplicarse un capital 
+ depositado al 2% de interés anual.
+}
+
+algoritmo REP11;
+
+constantes
+  INTERES = 0.2;
+
+variables 
+  CapitalInicial, CapitalFinal, Tiempo son reales;
+  
+inicio
+  escribir "Introduzca el capital: ";
+  leer CapitalInicial;
+  // El saldo no puede ser negativo
+  si CapitalInicial > 0 entonces
+  inicio
+    Tiempo = 0;
+    CapitalFinal = CapitalInicial;
+    repetir
+      CapitalFinal = CapitalFinal + (CapitalFinal * INTERES);
+      Tiempo = Tiempo + 1;
+    hasta CapitalFinal > CapitalInicial * 2;
+    // Ecribir resultado
+    escribir "Tardará ", Tiempo, " años en duplicarse", nl;
+    escribir "Capital final: ", CapitalFinal, " pesos", nl;
+  final
+  sino
+    escribir "No se puede introducir un capital negativo ";
+final
+
+
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     

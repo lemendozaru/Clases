@@ -1,0 +1,61 @@
+{
+ Escribir un algoritmo que calcule la depreciación de un objeto según el método 
+ de la línea recta. Calcular el número de años que tarda en hacerse 0. En este 
+ método el valor original del objeto se divide por su vida (número de años). 
+ El cociente resultante será la cantidad en la que el objeto se deprecia 
+ anualmente. Por ejemplo, si un objeto se deprecia 8000 dólares en diez años, 
+ entonces la depreciación anual será 8000/10=800 dólares. Por tanto, el valor 
+ del objeto habrá disminuido en 800 dólares cada año. Nótese que la depreciación 
+ anual es la misma cada año cuando se utiliza este método.
+}
+
+algoritmo REP17;
+
+variables 
+  Vida, Valor, Depreciacion son reales;
+  Cantidad es entero;
+  
+inicio
+  escribir "Valor original del objeto: ";
+  leer Valor;
+  escribir "Cantidad de años: ";
+  leer Vida;
+  // Calcular la depreciación
+  Depreciacion = Valor / Vida;
+  // Determinar la depreciación por años
+  Cantidad = 0;
+  mientras Valor > 0.1 hacer
+  inicio
+    Valor = Valor - Depreciacion;
+    Cantidad = Cantidad + 1;
+    escribir "Año: ", Cantidad, "     Valor = ", Valor, " pesos", nl;
+  final
+final
+
+
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     

@@ -1,0 +1,28 @@
+{
+ Escribir un algoritmo que permita realizar divisiones hasta que el usuario 
+ desee terminar.
+}
+
+algoritmo REP01;
+
+variables
+  Dividendo, Divisor son enteros;
+  Ch es literal;
+inicio
+   repetir
+      escribir "Entre el dividendo: ";
+      leer Dividendo;
+      escribir "Entre el divisor: ";
+      leer Divisor;
+      si Divisor <> 0 entonces
+      inicio
+        escribir "La división es: ", Dividendo / Divisor, nl;
+        escribir "El resto de la división es: ", Dividendo % Divisor, nl;
+      final
+      sino  
+        escribir "División por cero", nl;
+      escribir "Desea hacer otra división ?: (S/N): ", nl;
+      leer Ch;
+   hasta mayuscula(Ch) == "N";
+final
+

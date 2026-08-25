@@ -1,0 +1,25 @@
+{
+ Escribir un algoritmo que calcule el área y el volumen de un cilindro:
+ Área = (2 * (PI * (R^2))) + ((2 * PI * R) * H)
+ Volumen = (PI * (R^2)) * H
+}
+
+algoritmo SEC13;
+
+variables 
+  Radio, Altura, Area, Volumen son reales;
+
+inicio
+  escribir "Introduzca el radio: ";
+  leer Radio;
+  escribir "Introduzca la altura: ";
+  leer Altura;
+  // Area del cilindro
+  Area = (2 * (PI * (Radio^2))) + ((2 * PI * Radio) * Altura);
+  escribir "El área del cilindro es: ", Area, nl;
+  // Volumen del cilindro
+  Volumen = (PI * (Radio^2)) * Altura; 
+  escribir "El volumen del cilindro es: ", Volumen, nl;
+final
+
+

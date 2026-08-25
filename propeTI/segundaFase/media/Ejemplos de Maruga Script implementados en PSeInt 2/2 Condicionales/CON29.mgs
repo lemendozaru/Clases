@@ -1,0 +1,51 @@
+{
+ Escriba un algoritmo que lea dos números enteros y determinar cuál 
+ es múltiplo de cuál.
+}
+
+algoritmo CON29;
+
+variables 
+  N1, N2 son enteros; 
+  
+inicio
+  escribir "Introduzca un número entero: ";
+  leer N1;
+  escribir "Introduzca otro número entero: ";
+  leer N2;
+  
+  // Determinar la multiplicidad de los dos números
+  si N1 % N2 == 0 entonces
+    escribir "El número ", N1, " es multiplo de ", N2, nl;
+  sino si N2 % N1 == 0 entonces
+    escribir "El número ", N2, " es multiplo de ", N1, nl
+  sino  
+    escribir "Los numeros no son multiplos", nl;
+final     
+
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     

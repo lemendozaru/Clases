@@ -1,0 +1,61 @@
+{
+ Escribir un algoritmo que lea dos números desde el teclado y si el primero 
+ es mayor que el segundo intercambie sus valores
+}
+
+algoritmo CON08;
+
+variables 
+  N1, N2, T son enteros;
+  
+inicio
+  escribir "Introduzca el número 1: ";
+  leer N1;
+  escribir "Introduzca el número 2: ";
+  leer N2;
+  // Determinar el nombre del dia de la semana
+  si N1 > N2 entonces 
+  inicio
+    T = N1;
+    N1 = N2;
+    N2 = T;
+    escribir "Números intercambiados", nl;
+    escribir "Número 1 : ", N1, nl;
+    escribir "Número 2 : ", N2, nl;
+  final
+  sino
+  inicio
+    escribir "Números sin intercambiar", nl;
+    escribir "Número 1 : ", N1, nl;
+    escribir "Número 2 : ", N2, nl;
+  final
+  
+final
+
+
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     

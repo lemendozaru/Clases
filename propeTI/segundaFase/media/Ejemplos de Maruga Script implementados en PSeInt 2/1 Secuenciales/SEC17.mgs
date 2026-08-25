@@ -1,0 +1,27 @@
+{
+ Escribir un algoritmo que calcule el área y el volumen de un cono
+ Área = (PI * R * L)+ (PI * R^2)
+ Volumen =  (PI * R^2 * H) / 3
+}
+
+algoritmo SEC17;
+
+variables 
+  Radio, Lado, Altura, Area, Volumen son reales;
+
+inicio
+  escribir "Introduzca el valor del radio: ";
+  leer Radio;
+  escribir "Introduzca el valor del lado: ";
+  leer Lado;
+  escribir "Introduzca el valor de la altura: ";
+  leer Altura;
+  // Area del cono
+  Area = (PI * Radio * Lado) + (PI * (Radio^2));
+  escribir "El área del cono es: ", Area, nl;
+  // Volumen del cono
+  Volumen = (PI * (Radio^2) * Altura) / 3;
+  escribir "El volumen del cono es: ", Volumen, nl;
+final
+
+

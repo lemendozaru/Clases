@@ -1,0 +1,59 @@
+{
+ Escribir un algoritmo que escriba los números comprendidos entre 1 y 100. 
+ El programa escribirá en la pantalla los números en grupos de 20, solicitando 
+ al usuario si quiere o no continuar visualizando el siguiente grupo de números.
+}
+
+algoritmo REP19;
+
+variables 
+  I, N, F es entero;
+  Respuesta es literal;
+  
+inicio
+  // Inicializar las variables
+  N = 1;
+  I = 1;
+  Respuesta = "S";
+  mientras (I <= 100) y (mayuscula(Respuesta) == "S") hacer
+  inicio
+    si I % 20 == 0 entonces
+      F = N;
+    escribir I, nl;  
+    si F == N entonces 
+    inicio
+      escribir "Desea continuar (S/N) ";
+      leer Respuesta;
+    final
+    N = N + 20; 
+    I = I + 1;
+  final
+final
+
+
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     

@@ -1,0 +1,62 @@
+{
+ Escribir un algoritmo que muestre la media de los elementos que se encuentran 
+ en las posiciones pares y la media de los elementos que se encuentran en las 
+ posiciones impares de un vector numérico de N elementos.
+}
+
+algoritmo MAT09;
+
+variables
+  Numeros es matriz de reales;
+  Indice, Pares, Impares, N son enteros;
+  MediaImpar, MediaPar, SumaImpar, SumaPar: real;
+
+inicio
+  // Inicializar las variables
+  SumaImpar = 0;   {Acumulador de impares}
+  SumaPar = 0;     {Acumulador de pares}
+  Pares = 0;       {Contador de pares}
+  Impares = 0;     {Contador de impares}
+
+  // Captar la cantidad de notas
+  escribir "Entre la cantidad de notas: ";
+  leer N;
+  
+  // Fijar la dimensión de la matriz
+  Dimension(Numeros, N);
+  
+  // Captar los valores y almacenarlos en el vector
+  para Indice = 1 hasta N hacer
+  inicio
+    escribir "Elemento ", Indice,": ";  
+    leer Numeros[Indice];
+  final;
+  
+  // Contar y sumar los valores de las posiciones par e impar
+  para Indice = 1 hasta N hacer
+    // si el indice ocupa una posición impar
+    si Indice % 2 <> 0 entonces 
+    inicio          
+      SumaImpar = SumaImpar + Numeros[Indice];   
+      Impares = Impares + 1;
+    final  
+    // sino, es par
+    sino
+    inicio
+      SumaPar = SumaPar + Numeros[Indice];     
+      Pares = Pares + 1;
+    final
+  
+  // Calcular las medias
+  MediaImpar = SumaImpar / Impares; 
+  MediaPar = SumaPar / Pares;   
+  
+  // Escribir los resultados en la consola
+  precision = 5;   
+  escribir nl;   
+  escribir "Media de los elementos impares: ", MediaImpar, nl;
+  escribir "Media de los elementos pares: ", MediaPar, nl;
+final
+
+
+                                       

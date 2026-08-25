@@ -1,0 +1,73 @@
+{
+ Escribir un algoritmo que realice un juego de dados entre 2 jugadores.
+}
+
+algoritmo REP25;
+
+variables 
+  Dado1, Dado2, Pos son enteros;
+  Suma1, Suma2, Sumat1, Sumat2, Tirada son enteros;
+  Nombre es literal;
+  
+inicio
+   // Inicializar las variables
+   Dado1 = 0;
+   Dado2 = 0;
+   Suma1 = 0;
+   Suma2 = 0;
+   Tirada = 1;
+   Pos = 0;
+   // Captar el nombre del jugardo. El jugador 2 es la maquina
+   escribir "Introduzca su nombre: "; 
+   leer Nombre;
+   // Hacer los tiros de los dados
+   repetir
+      Dado1 = aleatorio(6) + 1;
+      Dado2 = aleatorio(6) + 1;
+      escribir Dado1, ", ", Dado2, nl;
+      Suma1 = Dado1 + Dado2;
+      Sumat1 = Sumat1 + Suma1;
+      Dado1 = aleatorio(6) + 1;
+      Dado2 = aleatorio(6) + 1;
+      escribir Dado1, ", ", Dado2, nl;
+      Suma2 = Dado1 + Dado2;
+      Sumat2 = Sumat2 + Suma2;
+      Tirada = Tirada + 1;
+      pos = pos + 2;
+   hasta Tirada == 4;
+   // Escribir el resultado del juego
+   si Sumat1 > Sumat2 entonces
+     escribir "Ha ganado ", Nombre, nl;
+   sino si Sumat1 < Sumat2 entonces
+     escribir "Ha ganado el jugador 2, usted pierde", nl
+   sino  
+       escribir "Han empatado", nl;
+   escribir "La suma del jugador 1 es: " , sumat1, nl;
+   escribir "La suma del jugador 2 es: " , sumat2, nl;
+final
+   
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     

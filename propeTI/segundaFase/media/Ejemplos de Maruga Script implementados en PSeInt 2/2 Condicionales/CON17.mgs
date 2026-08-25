@@ -1,0 +1,33 @@
+{
+ Una empresa ha decidido clasificar a sus empleados en cuatro grupos
+ 
+ Grupo 1: Solteros con menos de 25 años.
+ Grupo 2: Solteros con 25 años a mas.
+ Grupo 3: Casados con menos de 34 años.
+ Grupo 4: Casados con 34 años a mas.
+ 
+ Escriba un algoritmo que determine el grupo que le corresponde a un empleado.
+}
+
+algoritmo CON17;
+
+variables 
+  Edad es entero; 
+  EstadoCivil es literal;
+
+inicio
+  escribir "Introduzca la edad: ";
+  leer Edad;
+  escribir "Introduzca el estado civil: ";
+  leer EstadoCivil;
+  
+  si mayuscula(EstadoCivil) == "S"  entonces
+    si Edad < 25 entonces        
+      escribir "Grupo 1"
+    sino
+      escribir "Grupo 2"
+  sino si Edad < 34 entonces        
+    escribir "Grupo 3"
+  sino
+    escribir "Grupo 4"
+final     

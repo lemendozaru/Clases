@@ -1,0 +1,46 @@
+{
+ Escribir un algoritmo para obtener la primera posición en la que comienza la 
+ subliteral "fragi" en la literal "supercalifragilisticoexpialidoso". 
+ Utilizar la función POSICION(SUBLITERAL, LITERAL) que devuelve la posición de 
+ la primera aparición de la subliteral en la literal.
+}
+
+algoritmo LIT06;
+
+variables 
+  L, SL son literales;
+  
+inicio
+  L = "supercalifragilisticoexpialidoso";        
+  SL = "fragi";
+  escribir "En la frase " + L + ". La palabra " + SL + " ocupa "; 
+  escribir "la posición: ", posicion(SL, L), nl;
+final
+
+
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     

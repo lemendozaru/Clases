@@ -1,0 +1,42 @@
+{
+ Escribir un algoritmo que realice un bucle con "PARA" y muestre en pantalla 
+ los números del 1 al 10.
+}
+
+algoritmo REP03;
+
+variable 
+  I es entero;
+  
+inicio
+  para I = 1 hasta 10 hacer
+    escribir "I = ", I, nl;
+final
+
+
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     

@@ -1,0 +1,59 @@
+{
+ Escribir un algoritmo que lea 5 valores de temperatura, y escriba el número 
+ de veces que estuvo bajo 0º.
+}
+
+algoritmo REP23;
+
+variables 
+  Temperatura, Cantidad son enteros;
+  I es entero;
+  
+inicio
+  escribir "INTRODUZCA 5 VALORES DE TEMPERATURA:", nl;
+  // Inicializa la variable de conteo
+  Cantidad = 0;
+  para I  = 1 hasta 5 hacer
+  inicio
+    escribir "Temperatura ", I, ": "; 
+    leer Temperatura;
+    si Temperatura < 0 entonces
+      Cantidad = Cantidad + 1;
+  final
+  // Escribir el mensaje en la consola
+  escribir "La temperatura ha estado  ", Cantidad;
+  si Cantidad == 1 entonces
+    escribir " ves bajo 0º", nl
+  sino
+    escribir " veces bajo 0º", nl
+final
+  
+final
+
+
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     

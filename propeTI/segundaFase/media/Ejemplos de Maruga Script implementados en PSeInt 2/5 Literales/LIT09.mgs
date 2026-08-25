@@ -1,0 +1,52 @@
+{
+ Escribir un algoritmo que cuente la cantida de veces que aparece un carácter 
+ en una frase, ambos introducido por el usuario.
+}
+
+algoritmo LIT09;
+
+variables 
+  Caracter, Frase son literales;
+  I, C es entero;
+  
+inicio
+  escribir "Introduzca una frase: ";
+  leer Frase;
+  escribir "Introduzca un carácter: ";
+  leer Caracter;
+  // Inicializar el contador
+  C = 0;
+  para I = 1 hasta longitud(Frase) hacer
+    si mayuscula(Frase[I]) == mayuscula(Caracter) entonces
+      C = C + 1;
+  // Escribir en la consola el resultado    
+  escribir "El carácter '", Caracter , "' aparece ", C, " veces en la frase", nl
+final
+
+
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     

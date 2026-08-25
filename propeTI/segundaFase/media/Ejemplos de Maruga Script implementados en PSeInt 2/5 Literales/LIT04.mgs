@@ -1,0 +1,43 @@
+{
+ Escribir un algoritmo que extraiga la literal "MATICA" de la literal "INFORMATICA". 
+ Utilizar la función COPIAR(L,P,C), que devuelve una subliteral de L, de C caracteres, 
+ el primero de los cuales ocupa la posición P de L.
+}
+
+algoritmo LIT04;
+
+variables 
+  L es literal;
+  
+inicio
+  L = "INFORMATICA"; 
+  escribir copiar(L, 6, longitud(L)), nl;
+final
+
+
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     

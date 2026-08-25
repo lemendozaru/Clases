@@ -1,0 +1,43 @@
+{
+ Escribir un algoritmo que calcula la siguiente expresión trigonométrica 
+ para un valor angular dado: (Sen X * Cos X)/(Tan X)
+}
+
+algoritmo SEC23;
+
+variables 
+  X, Resultado son reales;
+inicio
+  escribir "Introduzca el valor del ángulo en radianes: ";
+  leer X;
+  Resultado = (Seno(X) * Coseno(X))/(Seno(X) / Coseno(X));
+  escribir "El resultado de la expresión (Sin X * Cos X / Tan X) es igual a: ", Resultado, nl;
+final
+
+
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     

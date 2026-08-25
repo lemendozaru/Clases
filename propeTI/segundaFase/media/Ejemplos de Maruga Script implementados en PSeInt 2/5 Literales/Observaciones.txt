@@ -1,0 +1,13 @@
+Programas con fallas parciales 2 (pueden ejecutarse pero haciendo ligeras variaciones del original)
+LIT1.psc
+LIT2.psc
+
+   Programas con adiciones para que funcione 2 (Por ejemplo, definiendo las funciones posicion y/o remover que en PSeInt no son funciones predefinida
+   (no existen como tal en el programa pero se pueden definir)
+   LIT03.psc
+   LIT06.psc
+
+Programas con adaptación a PSeInt 2
+LIT08.psc
+LIT09.psc
+LIT10.psc

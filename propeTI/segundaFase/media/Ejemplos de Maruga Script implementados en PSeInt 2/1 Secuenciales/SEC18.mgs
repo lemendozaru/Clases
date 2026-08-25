@@ -1,0 +1,22 @@
+{
+ Escribir un algoritmo que calcule el volumen de un elipsoide
+ Volumen =  (4/3) * PI * A * B * C
+}
+
+algoritmo SEC18;
+
+variables 
+  A, B, C son reales;
+
+inicio
+  escribir "Introduzca el valor de A: ";
+  leer A;
+  escribir "Introduzca el valor de B: ";
+  leer B;
+  escribir "Introduzca el valor de C: ";
+  leer C;
+  // Volumen del elipsoide
+  escribir "El volumen del elipsoide es: ", (4/3) * PI * A * B * C, nl;
+final
+
+

@@ -1,0 +1,21 @@
+{
+ Escribir un algoritmo que calcule la hipotenusa de un triángulo rectángulo
+ H = RaízCuadrada(Cateto1^2 + Cateto2^2)
+}
+
+algoritmo SEC19;
+
+variables 
+  Cateto1, Cateto2, Hipotenusa son reales;
+
+inicio
+  escribir "Introduzca el valor del cateto 1: ";
+  leer Cateto1;
+  escribir "Introduzca el valor del cateto 2: ";
+  leer Cateto2;
+  // Cálculo de la hipotenusa
+  Hipotenusa = (Cateto1^2 + Cateto2^2)^1/2;
+  escribir "La hipotenusa es igual a: ", Hipotenusa, nl;
+final
+
+

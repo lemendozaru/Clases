@@ -1,0 +1,48 @@
+{
+ Escribir un algoritmo que detecte si un número leído desde el teclado 
+ es mayor, menor o igual que 100
+}
+
+algoritmo CON05;
+
+variables 
+  Numero es entero;
+  
+inicio
+  escribir "Introduzca un número entero: ";
+  leer Numero;
+  si Numero < 100 entonces 
+    escribir "El número es menor que 100"
+  sino si Numero > 100 entonces
+    escribir "El número es mayor que 100"
+  sino
+    escribir "El número es igual 100"
+final
+
+
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     

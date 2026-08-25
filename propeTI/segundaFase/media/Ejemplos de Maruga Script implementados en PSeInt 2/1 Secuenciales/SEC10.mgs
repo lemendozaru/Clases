@@ -1,0 +1,22 @@
+{
+ Escribir un algoritmo que evalúe la siguiente expresión:
+ (A+7*C)/(B+2-A)+2*B
+}
+
+algoritmo SEC10;
+
+variables 
+  A, B, C son enteros;
+
+inicio
+  escribir "Introduzca el valor de A: ";
+  leer A;
+  escribir "Introduzca el valor de B: ";
+  leer B;
+  escribir "Introduzca el valor de C: ";
+  leer C;
+  // Mostrar el resultado de la evaluación 
+  escribir "(A+7*C)/(B+2-A)+2*B = ", (A+7*C)/(B+2-A)+2*B, nl;
+final
+
+

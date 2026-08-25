@@ -1,0 +1,51 @@
+{
+ Escribir un programa en Pascal que calcule el área de un rectángulo a partir 
+ de sus coordenadas.
+}
+
+algoritmo SEC25;
+
+variables 
+  X1, X2, Y1, Y2 son reales;
+  
+inicio
+  escribir "Introduzca el valor de X1: ";
+  leer X1;
+  escribir "Introduzca el valor de Y1: ";
+  leer Y1;
+  escribir "Introduzca el valor de X2: ";
+  leer X2;
+  escribir "Introduzca el valor de Y2: ";
+  leer Y2;
+  // Se restan las coordenadas de X e Y para sacar los lados y 
+  // luego se multiplican
+  escribir "El área del rectangulo es de: ", (X2 - X1) * (Y2 - Y1), nl;
+final
+
+
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     

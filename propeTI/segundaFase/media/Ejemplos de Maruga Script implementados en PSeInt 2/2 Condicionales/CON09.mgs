@@ -1,0 +1,53 @@
+{
+ Escribir un algoritmo que dada una calificación en valor numérico (1, 2,3,4 ó 5)
+ indique su equivalente en valor alfabético (A,B,C,D ó E)  
+}
+
+algoritmo CON09;
+
+variable 
+  N es entero;
+  
+inicio
+  escribir "Introduzca un número (1 a 5): ";
+  leer N;
+  // Determinar el equivalente en letra
+  en caso N sea   
+    1: escribir "Calificación alfabético: A";
+    2: escribir "Calificación alfabético: B";
+    3: escribir "Calificación alfabético: C";
+    4: escribir "Calificación alfabético: D";
+    5: escribir "Calificación alfabético: E";
+  sino       
+    escribir "El número no está en el rango (1 - 5)";
+  final
+  
+final
+
+
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     

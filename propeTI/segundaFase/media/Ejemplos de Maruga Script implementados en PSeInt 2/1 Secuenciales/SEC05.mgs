@@ -1,0 +1,19 @@
+{
+ Escribir un algoritmo que calcule el área de un rectángulo
+}
+
+algoritmo SEC05;
+
+variables 
+  Largo, Ancho son reales;
+ 
+inicio
+  escribir "Introduzca el largo: ";
+  leer Largo;
+  escribir "Introduzca el ancho: ";
+  leer Ancho;
+  // Muestra el resultado en la consola 
+  escribir "El área del rectángulo es: ", Largo * Ancho, nl;
+final
+
+

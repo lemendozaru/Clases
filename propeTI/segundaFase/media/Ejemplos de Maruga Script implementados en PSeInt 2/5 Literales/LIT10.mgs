@@ -1,0 +1,70 @@
+{
+ Escribir un algoritmo que determine la posición de una palabra en una frase
+ sin usar la función POSICION.
+}
+
+algoritmo LIT10;
+
+variables 
+  Palabra, Frase son literales;
+  Pos, I es entero;
+  Encontro, Igual son logicos;
+  
+inicio
+  escribir "Introduzca una frase: ";
+  leer Frase;
+  escribir "Introduzca la palabra: ";
+  leer Palabra;
+  // Inicializar las variables
+  Encontro = falso;
+  Pos = 0;
+  mientras (Pos < longitud(Frase)) y no Encontro hacer
+  inicio
+    Pos = Pos + 1;
+    si Frase[Pos] == Palabra[1] entonces
+    inicio
+      I = 1;
+      Igual = verdadero;
+      mientras (I < longitud(Palabra)) y (Pos + I < longitud(Frase)) y Igual hacer
+      inicio
+        si Frase[Pos + I] <> Palabra[I + 1] entonces
+          Igual = falso;
+        I = I + 1;  
+      final    
+      Encontro = Igual y (I == longitud(Palabra));
+    final  
+  final
+  // Escribir en la consola el resultado si Encontro
+  si Encontro entonces   
+    escribir "La palabra se encuentra en la posición: ", Pos, nl
+  sino  
+    escribir "La palabra no se encuentra en la frase", nl
+final
+
+
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     

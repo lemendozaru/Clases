@@ -1,0 +1,44 @@
+{
+ Escribir un algoritmo que genere la tabla de multiplicar de un número 
+ introducido por el teclado.
+}
+
+algoritmo REP09;
+
+variables 
+  I, N son enteros;
+  
+inicio
+  escribir "Introduzca un numero para hacer su tabla de multiplicar: ";
+  leer N;
+  para I = 1 hasta 10 hacer
+    escribir N, " * ", I, " = ", I * N, nl;
+final
+
+
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     

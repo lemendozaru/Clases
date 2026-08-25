@@ -1,0 +1,53 @@
+{
+ Escribir un algoritmo que determine el mayor de tres números. 
+ Considere que los tres números son diferentes entre si. 
+}
+
+algoritmo CON13;
+
+variables 
+  A, B, C, Mayor son enteros;
+  
+inicio
+  escribir "Introduzca el valor de A: ";
+  leer A;
+  escribir "Introduzca el valor de B: ";
+  leer B;
+  escribir "Introduzca el valor de C: ";
+  leer C;
+  // Predeterminar a "A" como el mayor
+  Mayor = A;
+  si B > Mayor entonces
+    Mayor = B;
+  si C > Mayor entonces
+    Mayor = C;
+  escribir "El mayor es: ", Mayor, nl;
+final
+
+
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     

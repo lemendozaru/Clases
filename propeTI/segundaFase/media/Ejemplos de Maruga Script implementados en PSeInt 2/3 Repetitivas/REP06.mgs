@@ -1,0 +1,43 @@
+{
+ Escribir un algoritmo que visualice en pantalla los números múltiplos de 5 
+ comprendidos entre 1 y 100
+}
+
+algoritmo REP06;
+
+variable 
+  I es entero;
+  
+inicio
+  para I = 1 hasta 100 hacer
+    si I % 5 == 0 entonces
+      escribir I, nl;
+final
+
+
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     

@@ -1,0 +1,53 @@
+{
+ Escribir un algoritmo que dada una calificación en valor alfabético (A,B,C,D ó E)  
+ indique su equivalente en valor numérico (1, 2,3,4 ó 5)
+}
+
+algoritmo CON010;
+
+variable 
+  L es literal;
+  
+inicio
+  escribir "Introduzca una letra (A a E): ";
+  leer L;
+  // Determinar el equivalente en número
+  en caso L sea   
+    "a", "A" : escribir "Calificación numérica: 1";
+    "b", "B" : escribir "Calificación numérica: 2";
+    "c", "C" : escribir "Calificación numérica: 3";
+    "d", "D" : escribir "Calificación numérica: 4";
+    "e", "E" : escribir "Calificación numérica: 5";
+  sino   
+    escribir "La letra no está en el rango (A - E)";
+  final
+  
+final
+
+
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     

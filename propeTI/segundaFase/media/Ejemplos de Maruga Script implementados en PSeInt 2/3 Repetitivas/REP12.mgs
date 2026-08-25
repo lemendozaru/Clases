@@ -1,0 +1,51 @@
+{
+ Escribir un algoritmo que calcule la suma de los números hasta un número dado. 
+}
+
+algoritmo REP12;
+
+variables 
+  N, I, Suma son enteros;
+  
+inicio
+  escribir "Introduzca un número: ";
+  leer N;
+  // Inicializar la variable para la suma
+  Suma = 0;
+  // Se guarda el valor de N, para el mensaje final
+  I = N;
+  mientras I >= 0 hacer
+  inicio
+    Suma = Suma + I;
+    I = I - 1;
+  final
+  escribir "La suma de los números desde 1 hasta ", N, " es: ", Suma, nl;
+final
+
+
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     

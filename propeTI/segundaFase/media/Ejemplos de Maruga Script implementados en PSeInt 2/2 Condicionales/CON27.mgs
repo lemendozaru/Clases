@@ -1,0 +1,50 @@
+{
+  Escribir un algorimo que lea un número entero de tres dígitos y determinar si 
+  al menos dos de sus tres dígitos son iguales.
+}
+
+algoritmo CON27;
+
+variables 
+  N, Centenas, Decenas, Unidades, Resto son enteros;
+  
+inicio
+  escribir "Introduzca un número entero de 3 dígitos: ", nl;
+  leer N;
+  Centenas = N \ 100;
+  Resto = N % 100;
+  Decenas = Resto \ 10;
+  Resto = Resto % 10;
+  Unidades = Resto;
+  si (Centenas == Decenas) o (Centenas == Unidades) o (Decenas == Unidades) entonces
+    escribir "El número tiene al menos dos dígitos iguales", nl
+  sino  
+    escribir "El número no tiene dos dígitos iguales", nl;
+final     
+
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     

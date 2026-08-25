@@ -1,0 +1,54 @@
+{
+ Escribir un algoritmo que dado un número del 1 a 7 escriba el correspondiente 
+ nombre del día de la semana 
+}
+
+algoritmo CON07;
+
+variable 
+  Dia es entero;
+  
+inicio
+  escribir "Introduzca un número para ver con día corresponde: ";
+  leer Dia;
+  // Determinar el nombre del día de la semana
+  en caso Dia sea   
+    1: escribir "Lunes";
+    2: escribir "Martes";
+    3: escribir "Miércoles";
+    4: escribir "Jueves";
+    5: escribir "Viernes";
+    6: escribir "Sábado";
+    7: escribir "Domindo";
+  sino
+    escribir "El número debe estar entre 1 y 7"
+  final    
+final
+
+
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     

@@ -1,0 +1,43 @@
+{
+ Escriba un algoritmo que lea tres longitudes y determine si forman o no un 
+ triángulo. Si es un triángulo determine de que tipo de triángulo se trata entre: 
+ equilátero (si tiene tres lados iguales), isósceles (si tiene dos lados iguales) 
+ o escaleno (si tiene tres lados desiguales). 
+ Considere que para formar un triángulo se requiere que: 
+ "el lado mayor sea Mayor que la suma de los otros dos".
+}
+
+algoritmo CON23;
+
+variables 
+  L1, L2, L3, Mayor, Suma son reales; 
+
+inicio
+  escribir "Introduzca la longitud 1: ";
+  leer L1;
+  escribir "Introduzca la longitud 2: ";
+  leer L2;
+  escribir "Introduzca la longitud 3: ";
+  leer L3;
+ 
+  // Determina la mayor longitud
+  Mayor = L1;
+  si L2 > Mayor entonces
+    Mayor = L2;
+  si L3 > Mayor entonces
+    Mayor = L3;
+    
+  // Determina la suma de los otros dos lados
+  Suma = L1 + L2 + L3 - Mayor;
+  
+ // Determina si las longitudes forman o no un triángulo
+ si Mayor < Suma entonces
+   si (L1 == L2) y (L2 == L3) entonces
+     escribir "Triángulo equilátero"
+   sino si (L1 == L2) o (L1 == L3) o (L2 == L3) entonces 
+    escribir "Triángulo isósceles"
+   sino
+     escribir "Triángulo escaleno"
+ sino
+   escribir "No es un triángulo"
+final

@@ -1,0 +1,44 @@
+{
+ Escribir un algoritmo que almacene las notas de N estudiantes y permita 
+ ordenarlas de menor a mayor, usando el método de la burbuja.
+ }
+
+algoritmo MAT14;
+
+
+variables
+  Notas es matriz de enteros;
+  I, J, Temporal,N son enteros;
+   
+inicio
+  // pedir la cantidad de notas
+  escribir "Introduzca la cantidad de notas: ";
+  leer N;
+  // Fijar la dimensión de la matriz
+  Dimension(Notas, N);
+   
+  escribir "INTRODUZCA LAS NOTAS", nl;  
+  para I = 1 hasta N hacer
+  inicio
+    escribir "Introduzca la nota ", I, ": ";
+    leer Notas[I];
+  final;  
+  
+  // Ordenar las notas
+  para I = 1 hasta N - 1 hacer
+    para J = I + 1 hasta N hacer
+      si Notas[I] > Notas[J] entonces 
+      inicio
+        Temporal = Notas[I];
+        Notas[I] = Notas[J];
+        Notas[J] = Temporal;
+      final
+      
+  // Mostrar las notas ordenadas
+  escribir nl, "NOTAS ORDENADAS", nl;
+  para I = 1 hasta N hacer
+    escribir Notas[I], nl;      
+final
+
+
+

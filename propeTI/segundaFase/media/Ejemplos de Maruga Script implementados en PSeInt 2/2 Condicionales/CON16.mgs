@@ -1,0 +1,60 @@
+{
+ Una tienda ha puesto en oferta la venta al por mayor de cierto producto, 
+ ofreciendo un descuento del 15% por la compra de un mínimo de tres docenas. 
+ El costo del producto es de S/.25 por docena. Escriba un algoritmo que determine 
+ el importe de la compra, el importe del descuento y el importe a pagar por la compra 
+ de cierta cantidad de docenas del producto. 
+}
+
+algoritmo CON16;
+
+variables 
+  Pagar, Compra, Descuento son reales; 
+  Docenas es entero;
+  
+inicio
+  escribir "Introduzca la cantidad de docenas: ";
+  leer Docenas;
+  
+  // Cálculo del importe de la compra
+  Compra = Docenas * 25;    
+  // Cálculo del importe del descuento
+  si Docenas >= 3 entonces
+    Descuento = 0.15 * Compra
+  sino
+    Descuento = 0;
+  // Cálculo del importe a pagar
+  Pagar = Compra - Descuento;
+  // Salida de resultados 
+  escribir "Importe de la compra: ", Compra, nl;
+  escribir "Importe del descuento: ", Descuento, nl;
+  escribir "Importe a pagar: ", Pagar, nl;
+final
+
+
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     

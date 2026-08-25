@@ -1,0 +1,39 @@
+{
+ Una compañía dedicada al alquiler de automoviles cobra $30 hasta un máximo de 
+ 300 km de distancia recorrida. Para más de 300 km y hasta 1000 km, cobra $30 
+ más un importe adicional de $0.15 por cada kilómetro en exceso sobre 300. 
+ Para más de 1000 km cobra $30 más un importe adicional de $ 0.10 por cada 
+ kilómetro en exceso sobre 1000. Los precios ya incluyen el 18% del impuesto 
+ general a las ventas, IGV. 
+ 
+ Escriba un algoritmo que determine el importe a pagar por el alquiler de un 
+ vehículo y el importe incluído del impuesto.
+}
+
+algoritmo CON20;
+
+constantes
+  IGV = 0.18; 
+
+variables 
+  Recorrido, ImporteFijo, ImporteAdicional, ImportePagar, ImporteIGV  son reales; 
+
+inicio
+  escribir "Introduzca el recorrido: ";
+  leer Recorrido;
+  // Cáculo del importe fijo, por el total de kilómetros recorridos
+  ImporteFijo = 30 * Recorrido;
+  // Cálculo del importe adicional, por los kilómetros excedidos
+  si Recorrido <= 300 entonces    
+    ImporteAdicional = 0
+  sino si Recorrido <= 1000 entonces
+    ImporteAdicional = 0.15 * (Recorrido - 300)
+  sino
+    ImporteAdicional = 0.15 * 700 + 0.10 * (Recorrido - 1000);
+  // Cálculo del importe a pagar y del importe del impuesto
+  ImportePagar = ImporteFijo + ImporteAdicional;
+  ImporteIGV = IGV * ImportePagar / (1 + IGV);
+  // Salida de resultados
+  escribir "Importe a pagar: ", ImportePagar, nl;
+  escribir "Importe incluído del impuesto: ", ImporteIGV, nl;
+final

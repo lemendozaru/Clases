@@ -1,0 +1,43 @@
+{
+ Escribir un algoritmo para obtener la longitud de una literal utilizando la 
+ función LONGITUD(L), que devuelve la longitud de la literal L.
+}
+
+algoritmo LIT05;
+
+variables 
+  L es literal;
+  
+inicio
+  escribir "Introduzca una frase: ";
+  leer L;
+  escribir "La longitud de la frase es: ", longitud(L), nl;
+final
+
+
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     

@@ -1,0 +1,47 @@
+{
+ Escribir un algoritmo que sume los números comprendidos entre 1 y 10
+}
+
+algoritmo REP07;
+
+variable 
+  N, Suma son enteros;
+  
+inicio
+  N = 1;
+  Suma = 0;
+  mientras N <= 10 hacer
+  inicio
+     Suma = Suma + N;
+     N = N + 1;
+  final
+  escribir "La suma de los números comprendidos entre 1 y 10 es: ", Suma, nl;
+final
+
+
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     

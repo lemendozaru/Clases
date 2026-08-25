@@ -1,0 +1,46 @@
+{
+ Escribir un algoritmo que muestre un mensaje afirmativo si el número 
+ introducido es múltiplo de 5
+}
+
+algoritmo CON03;
+
+variable 
+  Numero es entero;
+  
+inicio
+  escribir "Introduzca un número entero: ";
+  leer Numero;
+  si Numero % 5 == 0 entonces 
+    escribir "El número introducido es múltiplo de 5"
+  sino
+    escribir "El número introducido no es múltiplo de 5"
+final
+
+
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
