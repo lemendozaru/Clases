@@ -1,0 +1,15 @@
+escribir("Escribe un número: ")
+num = leer()
+primo = verdadero
+divisor = 2
+mientras divisor < num
+    si num % divisor == 0
+        primo = falso
+    fin
+    divisor = divisor + 1
+fin
+si primo == verdadero
+    escribir("Es número primo")
+sino
+    escribir("No es número primo")
+fin

@@ -1,0 +1,8 @@
+escribir("Escribe el número del que quieres la tabla de multiplicar: ")
+num = leer()
+i = 1
+mientras i <= 10
+    producto = num * i
+    escribir(num.. "x"..i.. "="..producto)
+    i = i + 1
+fin

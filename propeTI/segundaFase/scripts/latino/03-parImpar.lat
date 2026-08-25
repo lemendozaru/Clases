@@ -1,0 +1,8 @@
+escribir("Escribe un número")
+num = leer()
+residuo = num % 2
+si residuo == 0
+    escribir("Es par")
+sino
+    escribir("Es impar")
+fin

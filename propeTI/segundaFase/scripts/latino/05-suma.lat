@@ -1,0 +1,10 @@
+escribir("Escribe un número")
+num = leer()
+suma = 0
+i = 1
+mientras i <= num
+    suma = suma + i
+    i = i + 1
+fin
+
+escribir("La suma es: "..suma)

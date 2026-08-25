@@ -1,5 +1,4 @@
 Algoritmo positivo
-	Definir numero Como Entero
 	Escribir "¿Cuál número? "
 	Leer numero
 	Si numero > 0 Entonces

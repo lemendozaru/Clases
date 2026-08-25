@@ -1,0 +1,7 @@
+escribir("Escribe un número: ")
+numero = leer()
+si numero > 0
+    escribir("Positivo")
+sino
+    escribir("Negativo")
+fin
