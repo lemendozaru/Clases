@@ -6,9 +6,7 @@
 <script src="clase_files/libs/quarto-html/tippy.umd.min.js"></script>
 <link href="clase_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="clase_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="clase_files/libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="clase_files/libs/quarto-contrib/kbd/kbd.js"></script>
-<link href="clase_files/libs/quarto-contrib/kbd/kbd.css" rel="stylesheet"><meta charset="utf-8">
+<link href="clase_files/libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.10.18">
 
   <meta name="author" content="Luis Mendoza">
@@ -244,30 +242,50 @@ f(5)=3(5)^2+4(5)=75+20=95
 f(-7)=3(-7)^2+4(-7)=147-28=119
 \]</span></p>
 </section>
-<section id="intro-a-maxima" class="slide level2">
-<h2>Intro a Maxima</h2>
-<p>Maxima es un paquete informático para realizar operaciones matemáticas simbólicas de alto nivel. Puede instalarse tras descargarlo desde el listado disponible en <a href="https://maxima.sourceforge.io/">https://maxima.sourceforge.io/</a>.</p>
-<p>Al ejecutar Maxima veremos que aparece el <em>prompt</em> <code>(%i1)</code>, lo cual significa <em>input 1</em>. Cada que debamos introducir un comando, se mostrará dicho prompt.</p>
-<p>Cuando Maxima devuelva algún resultado, lo mostrará con <code>(%o1)</code>, el cual implica naturalmente <em>output 1</em>.</p>
+<section id="intro-a-sympy" class="slide level2">
+<h2>Intro a Sympy</h2>
+<p>Sympy es una librería de <em>Python</em> que sirve para realizar operaciones matemáticas simbólicas de alto nivel. Puede instalarse utilizando el comando recomendado para el sistema operativo que usemos. Por ejemplo, para Windows:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="" aria-label="1"></a><span class="ex">pip</span> install sympy</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Al tenerla instalada, podemos cargar Sympy de la manera usual:</p>
+<div id="703fb381" class="cell" data-execution_count="1">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="" aria-label="1"></a><span class="im">import</span> sympy</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 </section>
 <section class="slide level2">
 
-<p>El comando para definir una función simple se muestra enseguida (debemos presionar <kbd title="Enter" aria-hidden="true">Enter</kbd><span class="visually-hidden">Enter</span> o <kbd title="Ctrl+Enter" aria-hidden="true">Ctrl+Enter</kbd><span class="visually-hidden">Ctrl+Enter</span> para ejecutar cada comando):</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource maxima number-lines code-with-copy"><code class="sourceCode maxima"><span id="cb1-1"><a href="" aria-label="1"></a>(%<span class="cn">i1</span>)   <span class="cn">f</span>(<span class="cn">x</span>) := <span class="dv">3</span>*<span class="cn">x</span>^<span class="dv">2</span> + <span class="dv">4</span>*<span class="cn">x</span>;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Maxima devuelve lo que entiende, lo cual nos permite corroborar que se corresponda con lo que quisimos decirle:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource maxima number-lines code-with-copy"><code class="sourceCode maxima"><span id="cb2-1"><a href="" aria-label="1"></a>                                         <span class="dv">2</span></span>
-<span id="cb2-2"><a href="" aria-label="2"></a>(%<span class="cn">o1</span>)                         <span class="cn">f</span>(<span class="cn">x</span>) := <span class="dv">3</span> <span class="cn">x</span>  + <span class="dv">4</span> <span class="cn">x</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Y para valuar la función, escribimos:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource maxima number-lines code-with-copy"><code class="sourceCode maxima"><span id="cb3-1"><a href="" aria-label="1"></a>(%<span class="cn">i2</span>)   <span class="cn">f</span>(<span class="dv">5</span>);</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Obteniendo:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource maxima number-lines code-with-copy"><code class="sourceCode maxima"><span id="cb4-1"><a href="" aria-label="1"></a>(%<span class="cn">o2</span>)   <span class="dv">95</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Los comandos necesarios para crear una función en Sympy pasan por crear primero la variable simbólica. Para ello, primero:</p>
+<div id="afd56e4e" class="cell" data-execution_count="2">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="" aria-label="1"></a><span class="co"># Importamos lo necesario</span></span>
+<span id="cb3-2"><a href="" aria-label="2"></a><span class="im">from</span> sympy <span class="im">import</span> symbols</span>
+<span id="cb3-3"><a href="" aria-label="3"></a></span>
+<span id="cb3-4"><a href="" aria-label="4"></a><span class="co"># Creamos la variable simbólica</span></span>
+<span id="cb3-5"><a href="" aria-label="5"></a>x <span class="op">=</span> sympy.symbols(<span class="st">'x'</span>)</span>
+<span id="cb3-6"><a href="" aria-label="6"></a></span>
+<span id="cb3-7"><a href="" aria-label="7"></a><span class="co"># Creamos la expresión matemática</span></span>
+<span id="cb3-8"><a href="" aria-label="8"></a>expr_f <span class="op">=</span> <span class="dv">5</span> <span class="op">/</span> x</span>
+<span id="cb3-9"><a href="" aria-label="9"></a></span>
+<span id="cb3-10"><a href="" aria-label="10"></a><span class="co"># Y la volvemos función</span></span>
+<span id="cb3-11"><a href="" aria-label="11"></a>f <span class="op">=</span> sympy.Lambda(x, expr_f)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 </section>
 <section class="slide level2">
 
-<p>Si en algún momento deseamos borrar una asignación, debemos <em>matar</em> la función o variable:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource maxima number-lines code-with-copy"><code class="sourceCode maxima"><span id="cb5-1"><a href="" aria-label="1"></a>(%<span class="cn">i3</span>)   <span class="fu">kill</span>(<span class="cn">f</span>);</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>O si deseamos directamente borrar toda asignación:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource maxima number-lines code-with-copy"><code class="sourceCode maxima"><span id="cb6-1"><a href="" aria-label="1"></a>(%<span class="cn">i4</span>)   <span class="fu">kill</span>(<span class="cn">all</span>);</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Y para valuar la función, escribimos su nombre con el valor de la variable independiente como argumento:</p>
+<div id="ecf45b5e" class="cell" data-execution_count="3">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="" aria-label="1"></a><span class="co"># Valúemos para f(15)</span></span>
+<span id="cb4-2"><a href="" aria-label="2"></a>f(<span class="dv">15</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="42">
+<p><span class="math inline">\(\displaystyle \frac{1}{3}\)</span></p>
+</div>
+</div>
+<p>Podemos expresar el resultado sin que sea una fracción:</p>
+<div id="226b6db5" class="cell" data-execution_count="4">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="" aria-label="1"></a><span class="co"># Escribimos el resultado con tres decimales</span></span>
+<span id="cb5-2"><a href="" aria-label="2"></a>sympy.N(f(<span class="dv">15</span>),<span class="dv">3</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="43">
+<p><span class="math inline">\(\displaystyle 0.333\)</span></p>
+</div>
+</div>
 </section>
 <section id="dominio-y-rango-de-una-función-bivariable" class="slide level2">
 <h2>Dominio y rango de una función bivariable</h2>
@@ -280,23 +298,23 @@ f(-7)=3(-7)^2+4(-7)=147-28=119
 <section class="slide level2">
 
 <p>R1. Escribimos en Maxima lo siguiente:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode numberSource maxima number-lines code-with-copy"><code class="sourceCode maxima"><span id="cb7-1"><a href="" aria-label="1"></a>(%<span class="cn">i1</span>) <span class="cn">f</span>(<span class="cn">x</span>,<span class="cn">y</span>) := <span class="dv">4</span>+<span class="fu">sqrt</span>(<span class="cn">x</span>^<span class="dv">2</span> - <span class="cn">y</span>^<span class="dv">2</span>);</span>
-<span id="cb7-2"><a href="" aria-label="2"></a>                                              <span class="dv">2</span>    <span class="dv">2</span></span>
-<span id="cb7-3"><a href="" aria-label="3"></a>(%<span class="cn">o1</span>)                    <span class="cn">f</span>(<span class="cn">x</span>, <span class="cn">y</span>) := <span class="dv">4</span> + <span class="fu">sqrt</span>(<span class="cn">x</span>  - <span class="cn">y</span> )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource maxima number-lines code-with-copy"><code class="sourceCode maxima"><span id="cb6-1"><a href="" aria-label="1"></a>(%<span class="cn">i1</span>) <span class="cn">f</span>(<span class="cn">x</span>,<span class="cn">y</span>) := <span class="dv">4</span>+<span class="fu">sqrt</span>(<span class="cn">x</span>^<span class="dv">2</span> - <span class="cn">y</span>^<span class="dv">2</span>);</span>
+<span id="cb6-2"><a href="" aria-label="2"></a>                                              <span class="dv">2</span>    <span class="dv">2</span></span>
+<span id="cb6-3"><a href="" aria-label="3"></a>(%<span class="cn">o1</span>)                    <span class="cn">f</span>(<span class="cn">x</span>, <span class="cn">y</span>) := <span class="dv">4</span> + <span class="fu">sqrt</span>(<span class="cn">x</span>  - <span class="cn">y</span> )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Y vamos resolviendo para cada par:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode numberSource maxima number-lines code-with-copy"><code class="sourceCode maxima"><span id="cb8-1"><a href="" aria-label="1"></a>(%<span class="cn">i2</span>) <span class="cn">f</span>(<span class="dv">1</span>,<span class="dv">0</span>);</span>
-<span id="cb8-2"><a href="" aria-label="2"></a>(%<span class="cn">o2</span>)                                  <span class="dv">5</span></span>
-<span id="cb8-3"><a href="" aria-label="3"></a>(%<span class="cn">i3</span>) <span class="cn">f</span>(<span class="dv">5</span>,<span class="dv">3</span>);</span>
-<span id="cb8-4"><a href="" aria-label="4"></a>(%<span class="cn">o3</span>)                                  <span class="dv">8</span></span>
-<span id="cb8-5"><a href="" aria-label="5"></a>(%<span class="cn">i4</span>) <span class="cn">f</span>(<span class="dv">4</span>,<span class="dv">-2</span>);</span>
-<span id="cb8-6"><a href="" aria-label="6"></a>(%<span class="cn">o4</span>)                            <span class="dv">2</span> <span class="fu">sqrt</span>(<span class="dv">3</span>) + <span class="dv">4</span></span>
-<span id="cb8-7"><a href="" aria-label="7"></a>(%<span class="cn">i5</span>) <span class="cn">f</span>(<span class="dv">4</span>,<span class="dv">-2</span>), <span class="cn">numer</span>;</span>
-<span id="cb8-8"><a href="" aria-label="8"></a>(%<span class="cn">o5</span>)                          <span class="fl">7.464101615137754</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode numberSource maxima number-lines code-with-copy"><code class="sourceCode maxima"><span id="cb7-1"><a href="" aria-label="1"></a>(%<span class="cn">i2</span>) <span class="cn">f</span>(<span class="dv">1</span>,<span class="dv">0</span>);</span>
+<span id="cb7-2"><a href="" aria-label="2"></a>(%<span class="cn">o2</span>)                                  <span class="dv">5</span></span>
+<span id="cb7-3"><a href="" aria-label="3"></a>(%<span class="cn">i3</span>) <span class="cn">f</span>(<span class="dv">5</span>,<span class="dv">3</span>);</span>
+<span id="cb7-4"><a href="" aria-label="4"></a>(%<span class="cn">o3</span>)                                  <span class="dv">8</span></span>
+<span id="cb7-5"><a href="" aria-label="5"></a>(%<span class="cn">i4</span>) <span class="cn">f</span>(<span class="dv">4</span>,<span class="dv">-2</span>);</span>
+<span id="cb7-6"><a href="" aria-label="6"></a>(%<span class="cn">o4</span>)                            <span class="dv">2</span> <span class="fu">sqrt</span>(<span class="dv">3</span>) + <span class="dv">4</span></span>
+<span id="cb7-7"><a href="" aria-label="7"></a>(%<span class="cn">i5</span>) <span class="cn">f</span>(<span class="dv">4</span>,<span class="dv">-2</span>), <span class="cn">numer</span>;</span>
+<span id="cb7-8"><a href="" aria-label="8"></a>(%<span class="cn">o5</span>)                          <span class="fl">7.464101615137754</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section class="slide level2">
 
 <p>R2. Para representar gráficamente el dominio de la función, generaremos el gráfico pero lo visualizaremos solo desde la perspectiva de las variables independientes (<span class="math inline">\(x,y\)</span>).</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode numberSource maxima number-lines code-with-copy"><code class="sourceCode maxima"><span id="cb9-1"><a href="" aria-label="1"></a>(%<span class="cn">i6</span>)   <span class="fu">plot3d</span>(<span class="cn">f</span>(<span class="cn">x</span>,<span class="cn">y</span>), [<span class="cn">x</span>,<span class="dv">-10</span>,<span class="dv">10</span>], [<span class="cn">y</span>,<span class="dv">-10</span>,<span class="dv">10</span>], [<span class="cn">plot_format</span>, <span class="cn">xmaxima</span>]);</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode numberSource maxima number-lines code-with-copy"><code class="sourceCode maxima"><span id="cb8-1"><a href="" aria-label="1"></a>(%<span class="cn">i6</span>)   <span class="fu">plot3d</span>(<span class="cn">f</span>(<span class="cn">x</span>,<span class="cn">y</span>), [<span class="cn">x</span>,<span class="dv">-10</span>,<span class="dv">10</span>], [<span class="cn">y</span>,<span class="dv">-10</span>,<span class="dv">10</span>], [<span class="cn">plot_format</span>, <span class="cn">xmaxima</span>]);</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Aparecerá una ventana nueva en la que podremos rotar el gráfico hasta visualizar solo los ejes <span class="math inline">\(x\)</span> y <span class="math inline">\(y\)</span> o bien, presionar el botón <code>Config</code> y modificar <code>Azimuth</code> y <code>Elevation</code> a 0 para conseguir la vista deseada.</p>
 </section>
 <section class="slide level2">

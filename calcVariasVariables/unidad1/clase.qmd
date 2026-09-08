@@ -46,53 +46,57 @@ $$
 f(-7)=3(-7)^2+4(-7)=147-28=119
 $$
 
-## Intro a Maxima
+## Intro a Sympy
 
-Maxima es un paquete informático para realizar operaciones matemáticas simbólicas de alto nivel. Puede instalarse tras descargarlo desde el listado disponible en [https://maxima.sourceforge.io/](https://maxima.sourceforge.io/).
+Sympy es una librería de *Python* que sirve para realizar operaciones matemáticas simbólicas de alto nivel. Puede instalarse utilizando el comando recomendado para el sistema operativo que usemos. Por ejemplo, para Windows:
 
-Al ejecutar Maxima veremos que aparece el *prompt* `(%i1)`, lo cual significa *input 1*. Cada que debamos introducir un comando, se mostrará dicho prompt.
-
-Cuando Maxima devuelva algún resultado, lo mostrará con `(%o1)`, el cual implica naturalmente *output 1*.
-
----
-
-El comando para definir una función simple se muestra enseguida (debemos presionar {{<kbd Enter>}} o {{<kbd Ctrl+Enter>}} para ejecutar cada comando):
-
-```maxima
-(%i1)   f(x) := 3*x^2 + 4*x;
+```bash
+pip install sympy
 ```
 
-Maxima devuelve lo que entiende, lo cual nos permite corroborar que se corresponda con lo que quisimos decirle:
+Al tenerla instalada, podemos cargar Sympy de la manera usual:
 
-```maxima
-                                         2
-(%o1)                         f(x) := 3 x  + 4 x
-```
-
-Y para valuar la función, escribimos:
-
-```maxima
-(%i2)   f(5);
-```
-
-Obteniendo:
-
-```maxima
-(%o2)   95
+```{python}
+#| echo: True
+import sympy
 ```
 
 ---
 
-Si en algún momento deseamos borrar una asignación, debemos *matar* la función o variable:
+Los comandos necesarios para crear una función en Sympy pasan por crear primero la variable simbólica. Para ello, primero:
 
-```maxima
-(%i3)   kill(f);
+```{python}
+#| echo: True
+# Importamos lo necesario
+from sympy import symbols
+
+# Creamos la variable simbólica
+x = sympy.symbols('x')
+
+# Creamos la expresión matemática
+expr_f = 5 / x
+
+# Y la volvemos función
+f = sympy.Lambda(x, expr_f)
 ```
 
-O si deseamos directamente borrar toda asignación:
+---
 
-```maxima
-(%i4)   kill(all);
+Y para valuar la función, escribimos su nombre con el valor de la variable independiente como argumento:
+
+```{python}
+#| echo: True
+# Valúemos para f(15)
+f(15)
+```
+
+Podemos expresar el resultado sin que sea una fracción:
+
+```{python}
+#| echo: True
+# Escribimos el resultado con tres decimales
+sympy.N(f(15),3)
+
 ```
 
 ## Dominio y rango de una función bivariable
