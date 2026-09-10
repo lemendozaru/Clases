@@ -247,14 +247,14 @@ f(-7)=3(-7)^2+4(-7)=147-28=119
 <p>Sympy es una librería de <em>Python</em> que sirve para realizar operaciones matemáticas simbólicas de alto nivel. Puede instalarse utilizando el comando recomendado para el sistema operativo que usemos. Por ejemplo, para Windows:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="" aria-label="1"></a><span class="ex">pip</span> install sympy</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Al tenerla instalada, podemos cargar Sympy de la manera usual:</p>
-<div id="703fb381" class="cell" data-execution_count="1">
+<div id="fda0673f" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="" aria-label="1"></a><span class="im">import</span> sympy</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section class="slide level2">
 
 <p>Los comandos necesarios para crear una función en Sympy pasan por crear primero la variable simbólica. Para ello, primero:</p>
-<div id="afd56e4e" class="cell" data-execution_count="2">
+<div id="f51f8676" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="" aria-label="1"></a><span class="co"># Importamos lo necesario</span></span>
 <span id="cb3-2"><a href="" aria-label="2"></a><span class="im">from</span> sympy <span class="im">import</span> symbols</span>
 <span id="cb3-3"><a href="" aria-label="3"></a></span>
@@ -271,18 +271,18 @@ f(-7)=3(-7)^2+4(-7)=147-28=119
 <section class="slide level2">
 
 <p>Y para valuar la función, escribimos su nombre con el valor de la variable independiente como argumento:</p>
-<div id="ecf45b5e" class="cell" data-execution_count="3">
+<div id="e26c6d0d" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="" aria-label="1"></a><span class="co"># Valúemos para f(15)</span></span>
 <span id="cb4-2"><a href="" aria-label="2"></a>f(<span class="dv">15</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="42">
+<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="8">
 <p><span class="math inline">\(\displaystyle \frac{1}{3}\)</span></p>
 </div>
 </div>
 <p>Podemos expresar el resultado sin que sea una fracción:</p>
-<div id="226b6db5" class="cell" data-execution_count="4">
+<div id="298eca37" class="cell" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="" aria-label="1"></a><span class="co"># Escribimos el resultado con tres decimales</span></span>
 <span id="cb5-2"><a href="" aria-label="2"></a>sympy.N(f(<span class="dv">15</span>),<span class="dv">3</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="43">
+<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="9">
 <p><span class="math inline">\(\displaystyle 0.333\)</span></p>
 </div>
 </div>
@@ -291,42 +291,35 @@ f(-7)=3(-7)^2+4(-7)=147-28=119
 <h2>Dominio y rango de una función bivariable</h2>
 <ol type="1">
 <li>Dada <span class="math inline">\(f(x,y) = 4 + \sqrt{x^2 - y^2}\)</span>, encontremos <span class="math inline">\(f(1,0)\)</span>, <span class="math inline">\(f(5,3)\)</span> y <span class="math inline">\(f(4,-2)\)</span>.</li>
-<li>Grafiquemos el dominio de la función.</li>
+<li>Encontremos el dominio de la función.</li>
 <li>Obtengamos el rango de la función.</li>
 </ol>
 </section>
 <section class="slide level2">
 
-<p>R1. Escribimos en Maxima lo siguiente:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource maxima number-lines code-with-copy"><code class="sourceCode maxima"><span id="cb6-1"><a href="" aria-label="1"></a>(%<span class="cn">i1</span>) <span class="cn">f</span>(<span class="cn">x</span>,<span class="cn">y</span>) := <span class="dv">4</span>+<span class="fu">sqrt</span>(<span class="cn">x</span>^<span class="dv">2</span> - <span class="cn">y</span>^<span class="dv">2</span>);</span>
-<span id="cb6-2"><a href="" aria-label="2"></a>                                              <span class="dv">2</span>    <span class="dv">2</span></span>
-<span id="cb6-3"><a href="" aria-label="3"></a>(%<span class="cn">o1</span>)                    <span class="cn">f</span>(<span class="cn">x</span>, <span class="cn">y</span>) := <span class="dv">4</span> + <span class="fu">sqrt</span>(<span class="cn">x</span>  - <span class="cn">y</span> )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Y vamos resolviendo para cada par:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode numberSource maxima number-lines code-with-copy"><code class="sourceCode maxima"><span id="cb7-1"><a href="" aria-label="1"></a>(%<span class="cn">i2</span>) <span class="cn">f</span>(<span class="dv">1</span>,<span class="dv">0</span>);</span>
-<span id="cb7-2"><a href="" aria-label="2"></a>(%<span class="cn">o2</span>)                                  <span class="dv">5</span></span>
-<span id="cb7-3"><a href="" aria-label="3"></a>(%<span class="cn">i3</span>) <span class="cn">f</span>(<span class="dv">5</span>,<span class="dv">3</span>);</span>
-<span id="cb7-4"><a href="" aria-label="4"></a>(%<span class="cn">o3</span>)                                  <span class="dv">8</span></span>
-<span id="cb7-5"><a href="" aria-label="5"></a>(%<span class="cn">i4</span>) <span class="cn">f</span>(<span class="dv">4</span>,<span class="dv">-2</span>);</span>
-<span id="cb7-6"><a href="" aria-label="6"></a>(%<span class="cn">o4</span>)                            <span class="dv">2</span> <span class="fu">sqrt</span>(<span class="dv">3</span>) + <span class="dv">4</span></span>
-<span id="cb7-7"><a href="" aria-label="7"></a>(%<span class="cn">i5</span>) <span class="cn">f</span>(<span class="dv">4</span>,<span class="dv">-2</span>), <span class="cn">numer</span>;</span>
-<span id="cb7-8"><a href="" aria-label="8"></a>(%<span class="cn">o5</span>)                          <span class="fl">7.464101615137754</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Utilicemos Sympy para dar respuesta a los tres puntos:</p>
+<div id="35308111" class="cell" data-execution_count="5">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="" aria-label="1"></a><span class="co"># Cargamos lo necesario</span></span>
+<span id="cb6-2"><a href="" aria-label="2"></a><span class="im">import</span> sympy <span class="im">as</span> sp</span>
+<span id="cb6-3"><a href="" aria-label="3"></a></span>
+<span id="cb6-4"><a href="" aria-label="4"></a><span class="co"># Creamos las variables simbólicas</span></span>
+<span id="cb6-5"><a href="" aria-label="5"></a>x <span class="op">=</span> sp.symbols(<span class="st">'x'</span>)</span>
+<span id="cb6-6"><a href="" aria-label="6"></a>y <span class="op">=</span> sp.symbols(<span class="st">'y'</span>)</span>
+<span id="cb6-7"><a href="" aria-label="7"></a></span>
+<span id="cb6-8"><a href="" aria-label="8"></a><span class="co"># Creamos la expresión</span></span>
+<span id="cb6-9"><a href="" aria-label="9"></a>expr <span class="op">=</span> <span class="dv">4</span> <span class="op">+</span> sp.sqrt(x<span class="op">**</span><span class="dv">2</span> <span class="op">-</span> y<span class="op">**</span><span class="dv">2</span>)</span>
+<span id="cb6-10"><a href="" aria-label="10"></a></span>
+<span id="cb6-11"><a href="" aria-label="11"></a><span class="co"># Creamos la función simbólica</span></span>
+<span id="cb6-12"><a href="" aria-label="12"></a>f <span class="op">=</span> sp.Lambda((x,y), expr)</span>
+<span id="cb6-13"><a href="" aria-label="13"></a></span>
+<span id="cb6-14"><a href="" aria-label="14"></a><span class="co"># Valuamos para f(1,0)</span></span>
+<span id="cb6-15"><a href="" aria-label="15"></a>f(<span class="dv">1</span>,<span class="dv">0</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="10">
+<p><span class="math inline">\(\displaystyle 5\)</span></p>
+</div>
+</div>
+
 </section>
-<section class="slide level2">
-
-<p>R2. Para representar gráficamente el dominio de la función, generaremos el gráfico pero lo visualizaremos solo desde la perspectiva de las variables independientes (<span class="math inline">\(x,y\)</span>).</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode numberSource maxima number-lines code-with-copy"><code class="sourceCode maxima"><span id="cb8-1"><a href="" aria-label="1"></a>(%<span class="cn">i6</span>)   <span class="fu">plot3d</span>(<span class="cn">f</span>(<span class="cn">x</span>,<span class="cn">y</span>), [<span class="cn">x</span>,<span class="dv">-10</span>,<span class="dv">10</span>], [<span class="cn">y</span>,<span class="dv">-10</span>,<span class="dv">10</span>], [<span class="cn">plot_format</span>, <span class="cn">xmaxima</span>]);</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Aparecerá una ventana nueva en la que podremos rotar el gráfico hasta visualizar solo los ejes <span class="math inline">\(x\)</span> y <span class="math inline">\(y\)</span> o bien, presionar el botón <code>Config</code> y modificar <code>Azimuth</code> y <code>Elevation</code> a 0 para conseguir la vista deseada.</p>
-</section>
-<section class="slide level2">
-
-
-<img data-src="media/grafico01.png" class="r-stretch"></section>
-<section class="slide level2">
-
-<p>R3. Para representar el rango de la función, basta con rotar el gráfico obtenido anteriormente de manera que veamos la forma tridimensional.</p>
-
-
-<img data-src="media/grafico02.png" class="r-stretch"></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
