@@ -107,7 +107,7 @@ sympy.N(f(15),3)
 
 ---
 
-Utilicemos Sympy para dar respuesta a los tres puntos:
+Primero preparemos la función simbólica:
 
 ```{python}
 #| echo: True
@@ -123,7 +123,48 @@ expr = 4 + sp.sqrt(x**2 - y**2)
 
 # Creamos la función simbólica
 f = sp.Lambda((x,y), expr)
+```
+---
 
+Valuemos la función para los tres pares de valores propuestos:
+
+```{python}
+#| echo: True
 # Valuamos para f(1,0)
 f(1,0)
 ```
+
+```{python}
+#| echo: True
+# Para f(5,3)
+f(5,3)
+```
+
+```{python}
+#| echo: True
+# Y para f(4,-2)
+sp.N(f(4,-2),3)
+```
+
+---
+
+Para los puntos 2 y 3, tendremos que confiar en nuestra capacidad de análisis, ya que Sympy no puede graficar funciones bivariables ni calcular el dominio y rango de estas funciones.
+
+---
+
+Lo que sí puede es encontrar las singularidades de la función para cada variable:
+
+```{python}
+#| echo: True
+print("Singularidades respecto x: ", sp.calculus.singularities(f(x,y), x))
+print("Singularidades respecto y: ", sp.calculus.singularities(f(x,y), y))
+
+Rx = sp.calculus.util.function_range(f(x,1), x, sp.Reals)
+Ry = sp.calculus.util.function_range(f(1,y), y, sp.Reals)
+Ryn = sp.calculus.util.function_range(f(-1,y), y, sp.Reals)
+display(Rx)
+display(Ry)
+display(Ryn)
+```
+
+
