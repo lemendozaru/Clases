@@ -6,6 +6,8 @@ format:
     transition: slide
 ---
 
+# Fundamentos de las funciones
+
 ## Introducción
 
 Una función de una variable es una regla de correspondencia que asigna a cada elemento $x$ en el subconjunto $X$ de números reales (llamado *dominio* de $f$), uno y solo un número real $y$ en otro conjunto de números reales $Y$ (llamado *rango* de $f$).
@@ -167,4 +169,143 @@ display(Ry)
 display(Ryn)
 ```
 
+---
+
+## Intro a Maxima
+
+Contrario a Python, Maxima es un paquete especializado en cálculo simbólico, por lo que sí puede calcular dominios y rangos para funciones multivariable. Veamos una breve introducción con los comandos más útiles.
+
+Para definir una función y valuarla, hacemos lo siguiente:
+
+```maxima
+f(x,y) := 4 + sqrt(x^2 - y^2);
+```
+
+Y al ejecutar la orden Maxima nos devolverá lo que entendió. Notemos que si estamos en *wxMaxima* (lo más común si trabajamos en Windows), el comando es {{<kbd Ctrl+Intro>}}. Si coincide con lo que queremos decir, estamos listos.
+
+---
+
+Para ver cómo valuar funciones en Maxima, hagámoslo con uno de los propuestos anteriormente, encontremos $f(4,-2)$.
+
+```maxima
+f(4,-2);
+```
+
+Al ejecutar nos devolverá $2\sqrt{3}+4$. Si deseamos que Maxima nos dé valores *numéricos*, debemos agregar el argumento `numer`:
+
+```maxima
+f(4,-2), numer;
+```
+
+---
+
+Si deseamos modificar una función, solo debemos volver a ejecutarla. Si deseamos borrar una función de memoria, debemos *matarla*:
+
+```maxima
+kill(f);
+```
+
+Y si deseamos borrar el entorno completo, lo *matamos* todo:
+
+```maxima
+kill(all);
+```
+
+## Gráficas en Maxima
+
+Muy útiles para deducir el dominio y rango de funciones. Para nuestro ejemplo, podríamos probar con
+
+```maxima
+plot3d(f(x,y), [x, -10, 10], [y, -10, 10]);
+```
+
+Devolviendo:
+
+![](media/grafica-01.svg)
+
+
+# Límites
+
+## Introducción
+
+En funciones simples, la existencia del límite puede calcularse de varias formas, dependiendo de si la función es continua o no. Si lo es, la mera sustitución de valores funciona para confirmar (o no) su existencia.
+
+Recordemos que la existencia de un límite se confirma si la aproximación *por todas trayectorias* da el mismo valor $L$.
+
+## Límites de funciones bivariables
+
+En funciones bivariables, la definición de la existencia de un límite implica comprobar que obtenemos un mismo valor $L$ tras *acercarnos* siguiendo dos trayectorias diferentes. Un par de rutas aceptable, pero no el único, es seguir los ejes $x$ y $y$. Veamos un ejemplo.
+
+Ejemplo 1. Demostremos que no existe el límite:
+
+$$
+\lim_{(x,y) \to (0,0)} \frac{x^2-3y^2}{x^2+2y^2}
+$$
+
+---
+
+Sustituyendo los valores a los que tiende cada variable obtenemos:
+
+$$
+\lim_{(x,y) \to (0,0)} \frac{x^2-3y^2}{x^2+2y^2}=\frac{0}{0}
+$$
+
+Esto, aunque parezca cumplir la condición, no lo hace. Recordemos que la división por cero no existe, por lo que este resultado no nos permite una conclusión.
+
+Cambiemos el enfoque.
+
+---
+
+Hagamos la sustitución de una variable a la vez, es decir, acercarnos siguiendo los ejes coordenados. Primero con $y$:
+
+$$
+\lim_{(x,0) \to (0,0)} f(x,0) = \lim_{(x,0) \to (0,0)} \frac{x^2-0}{x^2+0}=1
+$$
+
+Ahora con $x$:
+
+$$
+\lim_{(0,y) \to (0,0)} f(0,y) = \lim_{(0,y) \to (0,0)} \frac{0-3y^2}{0+2y^2}=-\frac{3}{2}
+$$
+
+Podemos confirmar que el límite no existe, pues ambos resultados son diferentes.
+
+---
+
+Confirmando con Maxima (ejecutar cada comando individualmente):
+
+```maxima
+g(x,y) := (x^2 - 3*y^2) / (x^2 + 2*y^2);
+limit(g(x,y),y,0);
+limit(g(x,y),x,0);
+plot3d(g(x,y), [x,-5,5],[y,-5,5]);
+```
+
+![](media/grafica-02.svg)
+
+## Ejemplo 2 (sustitución)
+
+Demostremos que el límite no existe
+
+$$
+\lim_{(x,y) \to (0,0)} \frac{xy}{x^2+y^2}
+$$
+
+Podemos probar con el enfoque anterior. No funcionará. Recordemos que una recta se define por $y=mx$.
+
+## Ejemplo 3
+
+Demostremos que el límite no existe
+
+$$
+\lim_{(x,y) \to (0,0)} \frac{x^3y}{x^6+y^2}
+$$
+
+## Ejemplo 4
+
+Evalúe:
+
+$$
+\lim_{(x,y) \to (2,3)} f(x+y^2)
+$$
 

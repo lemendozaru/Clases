@@ -6,7 +6,9 @@
 <script src="clase_files/libs/quarto-html/tippy.umd.min.js"></script>
 <link href="clase_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="clase_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="clase_files/libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<link href="clase_files/libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="clase_files/libs/quarto-contrib/kbd/kbd.js"></script>
+<link href="clase_files/libs/quarto-contrib/kbd/kbd.css" rel="stylesheet"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.10.18">
 
   <meta name="author" content="Luis Mendoza">
@@ -210,6 +212,11 @@ Luis Mendoza
 </div>
 
 </section>
+<section>
+<section id="fundamentos-de-las-funciones" class="title-slide slide level1 center">
+<h1>Fundamentos de las funciones</h1>
+
+</section>
 <section id="introducción" class="slide level2">
 <h2>Introducción</h2>
 <p>Una función de una variable es una regla de correspondencia que asigna a cada elemento <span class="math inline">\(x\)</span> en el subconjunto <span class="math inline">\(X\)</span> de números reales (llamado <em>dominio</em> de <span class="math inline">\(f\)</span>), uno y solo un número real <span class="math inline">\(y\)</span> en otro conjunto de números reales <span class="math inline">\(Y\)</span> (llamado <em>rango</em> de <span class="math inline">\(f\)</span>).</p>
@@ -247,14 +254,14 @@ f(-7)=3(-7)^2+4(-7)=147-28=119
 <p>Sympy es una librería de <em>Python</em> que sirve para realizar operaciones matemáticas simbólicas de alto nivel. Puede instalarse utilizando el comando recomendado para el sistema operativo que usemos. Por ejemplo, para Windows:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="" aria-label="1"></a><span class="ex">pip</span> install sympy</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Al tenerla instalada, podemos cargar Sympy de la manera usual:</p>
-<div id="5988151a" class="cell" data-execution_count="1">
+<div id="61e2d684" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="" aria-label="1"></a><span class="im">import</span> sympy</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section class="slide level2">
 
 <p>Los comandos necesarios para crear una función en Sympy pasan por crear primero la variable simbólica. Para ello, primero:</p>
-<div id="e4cc2b48" class="cell" data-execution_count="2">
+<div id="0975d08f" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="" aria-label="1"></a><span class="co"># Importamos lo necesario</span></span>
 <span id="cb3-2"><a href="" aria-label="2"></a><span class="im">from</span> sympy <span class="im">import</span> symbols</span>
 <span id="cb3-3"><a href="" aria-label="3"></a></span>
@@ -271,7 +278,7 @@ f(-7)=3(-7)^2+4(-7)=147-28=119
 <section class="slide level2">
 
 <p>Y para valuar la función, escribimos su nombre con el valor de la variable independiente como argumento:</p>
-<div id="26640b44" class="cell" data-execution_count="3">
+<div id="da617067" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="" aria-label="1"></a><span class="co"># Valúemos para f(15)</span></span>
 <span id="cb4-2"><a href="" aria-label="2"></a>f(<span class="dv">15</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display cell-output-markdown" data-execution_count="3">
@@ -279,7 +286,7 @@ f(-7)=3(-7)^2+4(-7)=147-28=119
 </div>
 </div>
 <p>Podemos expresar el resultado sin que sea una fracción:</p>
-<div id="4c2d51f0" class="cell" data-execution_count="4">
+<div id="75e1100c" class="cell" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="" aria-label="1"></a><span class="co"># Escribimos el resultado con tres decimales</span></span>
 <span id="cb5-2"><a href="" aria-label="2"></a>sympy.N(f(<span class="dv">15</span>),<span class="dv">3</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display cell-output-markdown" data-execution_count="4">
@@ -298,7 +305,7 @@ f(-7)=3(-7)^2+4(-7)=147-28=119
 <section class="slide level2">
 
 <p>Primero preparemos la función simbólica:</p>
-<div id="3a1429b6" class="cell" data-execution_count="5">
+<div id="5359534b" class="cell" data-execution_count="5">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="" aria-label="1"></a><span class="co"># Cargamos lo necesario</span></span>
 <span id="cb6-2"><a href="" aria-label="2"></a><span class="im">import</span> sympy <span class="im">as</span> sp</span>
 <span id="cb6-3"><a href="" aria-label="3"></a></span>
@@ -316,21 +323,21 @@ f(-7)=3(-7)^2+4(-7)=147-28=119
 <section class="slide level2">
 
 <p>Valuemos la función para los tres pares de valores propuestos:</p>
-<div id="cc78f493" class="cell" data-execution_count="6">
+<div id="cbad8cc9" class="cell" data-execution_count="6">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="" aria-label="1"></a><span class="co"># Valuamos para f(1,0)</span></span>
 <span id="cb7-2"><a href="" aria-label="2"></a>f(<span class="dv">1</span>,<span class="dv">0</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display cell-output-markdown" data-execution_count="6">
 <p><span class="math inline">\(\displaystyle 5\)</span></p>
 </div>
 </div>
-<div id="221e2fa2" class="cell" data-execution_count="7">
+<div id="76d5c888" class="cell" data-execution_count="7">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="" aria-label="1"></a><span class="co"># Para f(5,3)</span></span>
 <span id="cb8-2"><a href="" aria-label="2"></a>f(<span class="dv">5</span>,<span class="dv">3</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display cell-output-markdown" data-execution_count="7">
 <p><span class="math inline">\(\displaystyle 8\)</span></p>
 </div>
 </div>
-<div id="6e255a6a" class="cell" data-execution_count="8">
+<div id="576981c8" class="cell" data-execution_count="8">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="" aria-label="1"></a><span class="co"># Y para f(4,-2)</span></span>
 <span id="cb9-2"><a href="" aria-label="2"></a>sp.N(f(<span class="dv">4</span>,<span class="op">-</span><span class="dv">2</span>),<span class="dv">3</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display cell-output-markdown" data-execution_count="8">
@@ -345,7 +352,7 @@ f(-7)=3(-7)^2+4(-7)=147-28=119
 <section class="slide level2">
 
 <p>Lo que sí puede es encontrar las singularidades de la función para cada variable:</p>
-<div id="a810d5ce" class="cell" data-execution_count="9">
+<div id="bf19c91e" class="cell" data-execution_count="9">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="" aria-label="1"></a><span class="bu">print</span>(<span class="st">"Singularidades respecto x: "</span>, sp.calculus.singularities(f(x,y), x))</span>
 <span id="cb10-2"><a href="" aria-label="2"></a><span class="bu">print</span>(<span class="st">"Singularidades respecto y: "</span>, sp.calculus.singularities(f(x,y), y))</span>
 <span id="cb10-3"><a href="" aria-label="3"></a></span>
@@ -369,8 +376,106 @@ Singularidades respecto y:  EmptySet</code></pre>
 <p><span class="math inline">\(\displaystyle \left[4, 5\right]\)</span></p>
 </div>
 </div>
+</section>
+<section id="intro-a-maxima" class="slide level2">
+<h2>Intro a Maxima</h2>
+<p>Contrario a Python, Maxima es un paquete especializado en cálculo simbólico, por lo que sí puede calcular dominios y rangos para funciones multivariable. Veamos una breve introducción con los comandos más útiles.</p>
+<p>Para definir una función y valuarla, hacemos lo siguiente:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode numberSource maxima number-lines code-with-copy"><code class="sourceCode maxima"><span id="cb12-1"><a href="" aria-label="1"></a><span class="cn">f</span>(<span class="cn">x</span>,<span class="cn">y</span>) := <span class="dv">4</span> + <span class="fu">sqrt</span>(<span class="cn">x</span>^<span class="dv">2</span> - <span class="cn">y</span>^<span class="dv">2</span>);</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Y al ejecutar la orden Maxima nos devolverá lo que entendió. Notemos que si estamos en <em>wxMaxima</em> (lo más común si trabajamos en Windows), el comando es <kbd title="Ctrl+Intro" aria-hidden="true">Ctrl+Intro</kbd><span class="visually-hidden">Ctrl+Intro</span>. Si coincide con lo que queremos decir, estamos listos.</p>
+</section>
+<section class="slide level2">
+
+<p>Para ver cómo valuar funciones en Maxima, hagámoslo con uno de los propuestos anteriormente, encontremos <span class="math inline">\(f(4,-2)\)</span>.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode numberSource maxima number-lines code-with-copy"><code class="sourceCode maxima"><span id="cb13-1"><a href="" aria-label="1"></a><span class="cn">f</span>(<span class="dv">4</span>,<span class="dv">-2</span>);</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Al ejecutar nos devolverá <span class="math inline">\(2\sqrt{3}+4\)</span>. Si deseamos que Maxima nos dé valores <em>numéricos</em>, debemos agregar el argumento <code>numer</code>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode numberSource maxima number-lines code-with-copy"><code class="sourceCode maxima"><span id="cb14-1"><a href="" aria-label="1"></a><span class="cn">f</span>(<span class="dv">4</span>,<span class="dv">-2</span>), <span class="cn">numer</span>;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section class="slide level2">
+
+<p>Si deseamos modificar una función, solo debemos volver a ejecutarla. Si deseamos borrar una función de memoria, debemos <em>matarla</em>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode numberSource maxima number-lines code-with-copy"><code class="sourceCode maxima"><span id="cb15-1"><a href="" aria-label="1"></a><span class="fu">kill</span>(<span class="cn">f</span>);</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Y si deseamos borrar el entorno completo, lo <em>matamos</em> todo:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode numberSource maxima number-lines code-with-copy"><code class="sourceCode maxima"><span id="cb16-1"><a href="" aria-label="1"></a><span class="fu">kill</span>(<span class="cn">all</span>);</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="gráficas-en-maxima" class="slide level2">
+<h2>Gráficas en Maxima</h2>
+<p>Muy útiles para deducir el dominio y rango de funciones. Para nuestro ejemplo, podríamos probar con</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode numberSource maxima number-lines code-with-copy"><code class="sourceCode maxima"><span id="cb17-1"><a href="" aria-label="1"></a><span class="fu">plot3d</span>(<span class="cn">f</span>(<span class="cn">x</span>,<span class="cn">y</span>), [<span class="cn">x</span>, <span class="dv">-10</span>, <span class="dv">10</span>], [<span class="cn">y</span>, <span class="dv">-10</span>, <span class="dv">10</span>]);</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Devolviendo:</p>
+
+<img data-src="media/grafica-01.svg" class="r-stretch"></section></section>
+<section>
+<section id="límites" class="title-slide slide level1 center">
+<h1>Límites</h1>
 
 </section>
+<section id="introducción-1" class="slide level2">
+<h2>Introducción</h2>
+<p>En funciones simples, la existencia del límite puede calcularse de varias formas, dependiendo de si la función es continua o no. Si lo es, la mera sustitución de valores funciona para confirmar (o no) su existencia.</p>
+<p>Recordemos que la existencia de un límite se confirma si la aproximación <em>por todas trayectorias</em> da el mismo valor <span class="math inline">\(L\)</span>.</p>
+</section>
+<section id="límites-de-funciones-bivariables" class="slide level2">
+<h2>Límites de funciones bivariables</h2>
+<p>En funciones bivariables, la definición de la existencia de un límite implica comprobar que obtenemos un mismo valor <span class="math inline">\(L\)</span> tras <em>acercarnos</em> siguiendo dos trayectorias diferentes. Un par de rutas aceptable, pero no el único, es seguir los ejes <span class="math inline">\(x\)</span> y <span class="math inline">\(y\)</span>. Veamos un ejemplo.</p>
+<p>Ejemplo 1. Demostremos que no existe el límite:</p>
+<p><span class="math display">\[
+\lim_{(x,y) \to (0,0)} \frac{x^2-3y^2}{x^2+2y^2}
+\]</span></p>
+</section>
+<section class="slide level2">
+
+<p>Sustituyendo los valores a los que tiende cada variable obtenemos:</p>
+<p><span class="math display">\[
+\lim_{(x,y) \to (0,0)} \frac{x^2-3y^2}{x^2+2y^2}=\frac{0}{0}
+\]</span></p>
+<p>Esto, aunque parezca cumplir la condición, no lo hace. Recordemos que la división por cero no existe, por lo que este resultado no nos permite una conclusión.</p>
+<p>Cambiemos el enfoque.</p>
+</section>
+<section class="slide level2">
+
+<p>Hagamos la sustitución de una variable a la vez, es decir, acercarnos siguiendo los ejes coordenados. Primero con <span class="math inline">\(y\)</span>:</p>
+<p><span class="math display">\[
+\lim_{(x,0) \to (0,0)} f(x,0) = \lim_{(x,0) \to (0,0)} \frac{x^2-0}{x^2+0}=1
+\]</span></p>
+<p>Ahora con <span class="math inline">\(x\)</span>:</p>
+<p><span class="math display">\[
+\lim_{(0,y) \to (0,0)} f(0,y) = \lim_{(0,y) \to (0,0)} \frac{0-3y^2}{0+2y^2}=-\frac{3}{2}
+\]</span></p>
+<p>Podemos confirmar que el límite no existe, pues ambos resultados son diferentes.</p>
+</section>
+<section class="slide level2">
+
+<p>Confirmando con Maxima (ejecutar cada comando individualmente):</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode numberSource maxima number-lines code-with-copy"><code class="sourceCode maxima"><span id="cb18-1"><a href="" aria-label="1"></a><span class="cn">g</span>(<span class="cn">x</span>,<span class="cn">y</span>) := (<span class="cn">x</span>^<span class="dv">2</span> - <span class="dv">3</span>*<span class="cn">y</span>^<span class="dv">2</span>) / (<span class="cn">x</span>^<span class="dv">2</span> + <span class="dv">2</span>*<span class="cn">y</span>^<span class="dv">2</span>);</span>
+<span id="cb18-2"><a href="" aria-label="2"></a><span class="fu">limit</span>(<span class="cn">g</span>(<span class="cn">x</span>,<span class="cn">y</span>),<span class="cn">y</span>,<span class="dv">0</span>);</span>
+<span id="cb18-3"><a href="" aria-label="3"></a><span class="fu">limit</span>(<span class="cn">g</span>(<span class="cn">x</span>,<span class="cn">y</span>),<span class="cn">x</span>,<span class="dv">0</span>);</span>
+<span id="cb18-4"><a href="" aria-label="4"></a><span class="fu">plot3d</span>(<span class="cn">g</span>(<span class="cn">x</span>,<span class="cn">y</span>), [<span class="cn">x</span>,<span class="dv">-5</span>,<span class="dv">5</span>],[<span class="cn">y</span>,<span class="dv">-5</span>,<span class="dv">5</span>]);</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+
+<img data-src="media/grafica-02.svg" class="r-stretch"></section>
+<section id="ejemplo-2-sustitución" class="slide level2">
+<h2>Ejemplo 2 (sustitución)</h2>
+<p>Demostremos que el límite no existe</p>
+<p><span class="math display">\[
+\lim_{(x,y) \to (0,0)} \frac{xy}{x^2+y^2}
+\]</span></p>
+<p>Podemos probar con el enfoque anterior. No funcionará. Recordemos que una recta se define por <span class="math inline">\(y=mx\)</span>.</p>
+</section>
+<section id="ejemplo-3" class="slide level2">
+<h2>Ejemplo 3</h2>
+<p>Demostremos que el límite no existe</p>
+<p><span class="math display">\[
+\lim_{(x,y) \to (0,0)} \frac{x^3y}{x^6+y^2}
+\]</span></p>
+</section>
+<section id="ejemplo-4" class="slide level2">
+<h2>Ejemplo 4</h2>
+<p>Evalúe:</p>
+<p><span class="math display">\[
+\lim_{(x,y) \to (2,3)} f(x+y^2)
+\]</span></p>
+
+</section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
