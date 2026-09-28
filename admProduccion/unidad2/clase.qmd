@@ -1,0 +1,370 @@
+---
+title: "Planeación de la Producción"
+author: "Luis Mendoza"
+format:
+  revealjs:
+    theme: solarized
+    transition: slide
+    logo: media/LogoUPG.png
+    footer: "Planeación de la Producción"
+    chalkboard: true
+    multiplex: false
+---
+
+# ¡Continuamos con la aventura! {.r-fit-text}
+
+En la Unidad 1 vimos algunas formas de producir (Feudal, Americano, Europeo).
+
+Ahora toca la pregunta:
+
+**¿Cómo decidimos QUÉ producir, CUÁNTO producir y CUÁNDO producir?**
+
+Eso es la **Planificación de la Producción**.
+
+---
+
+## ¿Qué veremos hoy?
+
+1.  **Sistemas de Producción:** Continuo, Lineal (en Línea) y en Masa. ¿Cómo se organiza el flujo?
+2.  **Formas de Planear la Producción:**
+    -   Make to Stock (MTS) vs. Make to Order (MTO)
+    -   Push vs. Pull
+    -   Safety Stock (Inventario de Seguridad)
+    -   Lotes Mínimos
+    -   Pronósticos
+
+**Objetivo:** Que puedas diagnosticar una empresa y decir: *"Ah, esta empresa usa un sistema X con una estrategia Y"*.
+
+---
+
+# Parte 1: Sistemas de Producción {.r-fit-text}
+
+## ¿Cómo fluye el producto a través de la fábrica?
+
+No todas las fábricas son iguales. La forma en que el material se mueve determina **cómo la planeamos**.
+
+Hay tres grandes categorías: **Continuo**, **Lineal** y **en Masa**.
+
+---
+
+### Sistema de Producción Continuo
+
+-   **Definición:** El producto fluye sin interrupción, 24/7, sin parar. Es un **flujo ininterrumpido**.
+-   **Característica clave:** **No se puede identificar una unidad individual.** El producto es inseparable (líquidos, gases, energía).
+-   **Ejemplos:**
+    -   Refinería de petróleo.
+    -   Planta de tratamiento de agua.
+    -   Generación de electricidad.
+    -   Producción de cerveza (fermentación continua).
+-   **Planeación:** Se planifica por **volumen total** (litros/día, MW/hora), no por unidades.
+
+---
+
+### Sistema de Producción Continuo: Factores {.r-fit-text}
+
+| Factor | Descripción |
+| :--- | :--- |
+| **Producto** | Uniforme, no diferenciado. |
+| **Volumen** | Altísimo (millones de litros). |
+| **Variedad** | Cero o casi cero. |
+| **Flexibilidad** | Nula. La planta está diseñada para UNA cosa. |
+| **Costo de paro** | **Catastrófico.** Parar una refinería cuesta millones por hora. |
+| **Mano de obra** | Mínima. Operadores de panel. |
+
+---
+
+### Sistema de Producción Lineal (o en Línea)
+
+-   **Definición:** El producto se mueve en **secuencia** a través de estaciones de trabajo. Cada estación hace una tarea y pasa al siguiente.
+-   **Característica clave:** **Flujo secuencial y rítmico.** Hay un "takt time" (ritmo).
+-   **Ejemplos:**
+    -   Línea de ensamble de autos (Ford).
+    -   Embotelladora de refrescos.
+    -   Línea de ensamble de celulares.
+    -   Procesamiento de pollos (desde desplume hasta empaque).
+-   **Diferencia con Continuo:** Aquí SÍ se puede identificar cada unidad (cada botella, cada auto). Pero el flujo es igual de rígido.
+
+---
+
+### Sistema de Producción Lineal: Factores {.r-fit-text}
+
+| Factor | Descripción |
+| :--- | :--- |
+| **Producto** | Estandarizado, pero discreto (unidades contables). |
+| **Volumen** | Alto (miles de unidades/día). |
+| **Variedad** | Baja. Pocos modelos. |
+| **Flexibilidad** | Baja. Cambiar la línea es caro y lento. |
+| **Costo de paro** | Alto. Pero menos que en continuo. |
+| **Mano de obra** | Especializada en UNA tarea. Repetitiva. |
+
+---
+
+### Sistema de Producción en Masa
+
+-   **Definición:** Producción de **grandes volúmenes** de productos **estandarizados** para un mercado amplio. Es el hijo directo de Ford.
+-   **Característica clave:** **Economías de escala.** Producir mucho para que cada unidad salga baratísima.
+-   **Ejemplos:**
+    -   Fábrica de juguetes (miles de muñecas idénticas).
+    -   Producción de electrodomésticos (licuadoras, planchas).
+    -   Ropa de fast fashion (Zara, H&M).
+    -   Alimentos enlatados.
+-   **Diferencia con Lineal:** La línea es el *método*. La masa es la *filosofía* (volumen + estandarización). Pueden usarse juntos, pero no son lo mismo.
+
+---
+
+### Sistema de Producción en Masa: Factores {.r-fit-text}
+
+| Factor | Descripción |
+| :--- | :--- |
+| **Producto** | Estandarizado, pero con algunas variantes (color, talla). |
+| **Volumen** | Muy alto (millones de unidades/año). |
+| **Variedad** | Media-Baja. Pero mayor que en línea pura. |
+| **Flexibilidad** | Media. Se puede cambiar el modelo con inversión. |
+| **Costo de paro** | Medio. Se puede recuperar con horas extra. |
+| **Mano de obra** | Semi-especializada. |
+
+---
+
+### Comparativa rápida: Continuo vs. Lineal vs. Masa {.r-fit-text}
+
+| Característica | Continuo | Lineal | Masa |
+| :--- | :--- | :--- | :--- |
+| **Flujo** | Ininterrumpido | Secuencial | Por lotes grandes |
+| **Unidad identificable** | No | Sí | Sí |
+| **Volumen** | Altísimo | Alto | Muy alto |
+| **Variedad** | Nula | Baja | Media-Baja |
+| **Ejemplo** | Refinería | Ensamble auto | Fábrica de juguetes |
+| **Planeación** | Por volumen total | Por takt time | Por lotes de producción |
+
+---
+
+# Parte 2: Formas de Planear la Producción {.r-fit-text}
+
+## Ahora que sabemos CÓMO fluye, ¿CÓMO decidimos QUÉ producir?
+
+Aquí entran las **estrategias de planeación**. Son las reglas del juego.
+
+---
+
+### Make to Stock (MTS) - "Fabricar para Almacenar"
+
+-   **Definición:** Produces **antes** de que el cliente pida. El producto va a un almacén y espera a ser vendido.
+-   **¿Cómo funciona?** Se basa en **pronósticos**. Produces lo que *crees* que vas a vender.
+-   **Ejemplos:**
+    -   Supermercado (leche, pan, latas).
+    -   Ropa de temporada (playeras de verano en invierno).
+    -   Electrodomésticos en tienda departamental.
+-   **Ventaja:** Entrega inmediata. El cliente llega y se lleva el producto.
+-   **Desventaja:** Si el pronóstico falla, te quedas con inventario **obsoleto** (y pierdes dinero).
+
+---
+
+### Make to Order (MTO) - "Fabricar bajo Pedido"
+
+-   **Definición:** Produces **después** de que el cliente pide. No hay producto terminado en almacén.
+-   **¿Cómo funciona?** El cliente ordena → Tú produces → Tú entregas.
+-   **Ejemplos:**
+    -   Muebles a medida (un ropero con medidas específicas).
+    -   Aviones (Boeing no fabrica un 747 "por si acaso").
+    -   Software personalizado.
+    -   Pastel de bodas con diseño único.
+-   **Ventaja:** Cero inventario obsoleto. El cliente paga antes (o al menos, compromete).
+-   **Desventaja:** **Tiempo de entrega largo.** El cliente espera semanas o meses.
+-   **Variante:** **Assemble to Order (ATO).** Tienes partes en stock, pero ensamblas cuando llega el pedido (ej: Dell, autos con opciones).
+
+---
+
+### MTS vs. MTO: ¿Cuál elegir? {.r-fit-text}
+
+| Criterio | MTS (Make to Stock) | MTO (Make to Order) |
+| :--- | :--- | :--- |
+| **Disparador** | Pronóstico | Pedido del cliente |
+| **Inventario** | Alto (producto terminado) | Bajo (materia prima) |
+| **Tiempo de entrega** | Inmediato | Largo |
+| **Riesgo** | Obsolescencia | Incumplimiento |
+| **Producto** | Estandarizado | Personalizado |
+| **Ejemplo** | Cereal en supermercado | Mueble a medida |
+
+---
+
+### Push vs. Pull: La gran batalla {.r-fit-text}
+
+Esta es la diferencia entre **"empujar"** y **"jalar"** la producción.
+
+---
+
+### Sistema Push (Empujar)
+
+-   **Definición:** Produces **basado en pronósticos** y empujas el producto al mercado. "Yo decido qué producir y lo mando a la tienda".
+-   **Flujo:** Materia prima → Producción → Almacén → Cliente.
+-   **Filosofía:** "Produce todo lo que puedas, ya se venderá".
+-   **Ejemplo clásico:** Ford en los años 20. "Puedes comprar cualquier color, siempre que sea negro".
+-   **Problema:** Si el mercado no compra, se acumula inventario. **Sobreproducción.**
+-   **Ventaja:** Altísima eficiencia en la fábrica. No hay paros por falta de pedidos.
+
+---
+
+### Sistema Pull (Jalar)
+
+-   **Definición:** Produces **basado en la demanda real**. El cliente "jala" el producto. "El cliente pide, yo produzco".
+-   **Flujo:** Cliente → Pedido → Producción → Materia prima.
+-   **Filosofía:** "Produce solo lo que se necesita, cuando se necesita".
+-   **Origen:** **Toyota (Justo a Tiempo - JIT)**. El famoso **Kanban**.
+-   **Ejemplo:** Amazon. Tú pides un libro, el sistema lo jala del almacén más cercano.
+-   **Ventaja:** Cero inventario innecesario. Menos desperdicio.
+-   **Desventaja:** Requiere **flexibilidad** y **proveedores confiables**. Si falla un eslabón, se para todo.
+
+---
+
+### Push vs. Pull: Comparativa {.r-fit-text}
+
+| Característica | Push | Pull |
+| :--- | :--- | :--- |
+| **Disparador** | Pronóstico | Demanda real |
+| **Flujo** | Empuja hacia el mercado | Jala desde el cliente |
+| **Inventario** | Alto (por si acaso) | Bajo (Justo a Tiempo) |
+| **Riesgo** | Sobreproducción | Desabasto |
+| **Flexibilidad** | Baja | Alta |
+| **Ejemplo** | Ford años 20 | Toyota / Amazon |
+| **Filosofía** | "Por si acaso" | "Justo a tiempo" |
+
+---
+
+### Safety Stock (Inventario de Seguridad) {.r-fit-text}
+
+-   **Definición:** Es ese **colchón** de inventario que guardas para emergencias. No lo usas en el día a día, pero está ahí por si acaso.
+-   **¿Para qué sirve?**
+    -   Cubrir **picos de demanda** inesperados.
+    -   Cubrir **retrasos de proveedores**.
+    -   Cubrir **fallas de producción**.
+-   **Ejemplo:** Tienes una tienda de paraguas. Sabes que en promedio vendes 10 al día. Pero si llueve torrencialmente, puedes vender 50. Tu safety stock son 40 paraguas extra.
+-   **Fórmula básica:**
+    `Safety Stock = (Demanda Máxima x Tiempo Máximo de Entrega) - (Demanda Promedio x Tiempo Promedio de Entrega)`
+
+---
+
+### Safety Stock: El dilema {.r-fit-text}
+
+-   **Si tienes MUCHO safety stock:**
+    -   ✅ Nunca te quedas sin producto.
+    -   ❌ Pagas almacenaje, seguro, y riesgo de obsolescencia.
+-   **Si tienes POCO safety stock:**
+    -   ✅ Ahorras costos.
+    -   ❌ Si hay un imprevisto, pierdes ventas y clientes.
+
+**La clave:** Encontrar el **punto óptimo** donde el costo de mantener el inventario = el costo de no tenerlo.
+
+---
+
+### Lotes Mínimos (Minimum Order Quantity - MOQ) {.r-fit-text}
+
+-   **Definición:** Es la **cantidad mínima** que puedes producir (o comprar) en un solo pedido. Producir menos no es rentable.
+-   **¿Por qué existen?**
+    -   **Costos de setup:** Preparar una máquina para producir X cuesta dinero y tiempo. Si produces 1 unidad, ese costo se dispara.
+    -   **Costos de compra:** El proveedor te vende más barato si compras en volumen.
+-   **Ejemplo:** Una imprenta necesita imprimir 1000 volantes como mínimo. Si solo quieres 10, te cobrarán como si fueran 1000 (o te rechazan).
+-   **En producción:** Se calcula el **Lote Económico de Producción (LEP o EOQ)** para minimizar costos.
+
+---
+
+### Lotes Mínimos: Fórmula EOQ (Economic Order Quantity) {.r-fit-text}
+
+La fórmula clásica para encontrar el lote óptimo:
+
+`EOQ = √( (2 * D * S) / H )`
+
+Donde:
+-   **D** = Demanda anual (unidades/año).
+-   **S** = Costo de preparar una orden (setup).
+-   **H** = Costo de mantener una unidad en inventario por año.
+
+**Interpretación:** El lote óptimo es donde el costo de ordenar = costo de mantener.
+
+---
+
+### Pronósticos: La bola de cristal de la producción {.r-fit-text}
+
+-   **Definición:** Es una **predicción** de la demanda futura. Es la base de TODO sistema Push y de MTS.
+-   **¿Por qué son importantes?**
+    -   Sin pronóstico, no sabes cuánto producir.
+    -   Si produces de más → inventario obsoleto.
+    -   Si produces de menos → desabasto y clientes enojados.
+-   **¿Son perfectos?** **NO.** Siempre hay error. La clave es **medir el error** y mejorar.
+
+---
+
+### Tipos de Pronósticos {.r-fit-text}
+
+| Tipo | Método | Ejemplo |
+| :--- | :--- | :--- |
+| **Cualitativo** | Opinión de expertos, encuestas. | "Creemos que venderemos más en Navidad". |
+| **Series de Tiempo** | Basado en datos históricos. | Promedio móvil, suavización exponencial. |
+| **Causal** | Relación con otras variables. | "Si sube el precio de la gasolina, bajan las ventas de camionetas". |
+| **Simulación** | Modelos computacionales. | Monte Carlo para escenarios. |
+
+---
+
+### Pronósticos: El error y cómo medirlo {.r-fit-text}
+
+Ningún pronóstico es perfecto. Pero podemos medir qué tan mal estamos.
+
+**Error de Pronóstico = Demanda Real - Pronóstico**
+
+**MAD (Mean Absolute Deviation):** Promedio de los errores absolutos. "En promedio, me equivoco por X unidades".
+
+**MAPE (Mean Absolute Percentage Error):** Error en porcentaje. "Me equivoco en un 5%".
+
+**Señal de Rastreo:** ¿El error se está acumulando? Si es así, el pronóstico está sesgado y hay que corregirlo.
+
+---
+
+### Integrando todo: ¿Cómo se conecta? {.r-fit-text}
+
+**Ejemplo: Una fábrica de playeras.**
+
+1.  **Sistema de Producción:** En Masa (miles de playeras idénticas).
+2.  **Estrategia:** Make to Stock (produces antes de que pidan).
+3.  **Flujo:** Push (empujas al mercado).
+4.  **Safety Stock:** 500 playeras extra por si hay un pico.
+5.  **Lote Mínimo:** 1000 playeras por corrida (MOQ).
+6.  **Pronóstico:** "Venderemos 10,000 playeras en verano".
+
+**Si el pronóstico falla:** Te quedas con 5,000 playeras que nadie quiere. Lección aprendida.
+
+---
+
+### Integrando todo: Ejemplo 2 (MTO) {.r-fit-text}
+
+**Ejemplo: Un taller de muebles a medida.**
+
+1.  **Sistema de Producción:** Lineal (cada mueble pasa por estaciones: corte, lijado, pintura).
+2.  **Estrategia:** Make to Order (el cliente pide primero).
+3.  **Flujo:** Pull (el cliente jala la producción).
+4.  **Safety Stock:** Mínimo (solo materia prima).
+5.  **Lote Mínimo:** 1 (un mueble único).
+6.  **Pronóstico:** No se usa. Se produce bajo pedido.
+
+**Ventaja:** Cero inventario obsoleto. **Desventaja:** El cliente espera 4 semanas.
+
+---
+
+## Resumen de la Unidad 2 {.r-fit-text}
+
+-   **Sistemas:** Continuo (flujo ininterrumpido), Lineal (secuencial), Masa (grandes volúmenes).
+-   **MTS:** Produces para almacén. **MTO:** Produces bajo pedido.
+-   **Push:** Empujas basado en pronóstico. **Pull:** Jalas basado en demanda.
+-   **Safety Stock:** Colchón para emergencias.
+-   **Lotes Mínimos:** Cantidad mínima rentable. **EOQ:** Fórmula para optimizar.
+-   **Pronósticos:** Predicción de demanda. Siempre tienen error.
+
+---
+
+## ¡Gracias! {.r-fit-text}
+
+**Pregunta para llevar a casa:**
+
+Piensa en tu empresa favorita (Apple, Zara, Toyota, Amazon)...
+
+¿Qué sistema de producción usan? ¿Push o Pull? ¿MTS o MTO?
+
+**¡Nos vemos en la próxima unidad!**

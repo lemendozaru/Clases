@@ -1,0 +1,48 @@
+---
+title: "Derivadas Parciales"
+author: "Luis Mendoza"
+format:
+  revealjs:
+    transition: slide
+---
+
+## Introducción
+
+La derivada de una función de una variable $y=f(x)$ está dada por el límite de un cociente de diferencia
+
+$$
+\frac{dy}{dx}=\lim_{h \to 0} \frac{f(x+h)-f(x)}{h}
+$$
+
+---
+
+Exactamente de la misma forma, podemos definir la derivada de primer orden de una función de dos variables $z=f(x,y)$ con respecto a cada variable.
+
+La derivada parcial con respecto a $x$ es:
+
+$$
+\frac{\partial{z}}{∂x}=\lim_{h→0} \frac{f(x+h,y)-f(x,y)}{h}
+$$
+
+y la derivada parcial con respecto a $y$ es:
+
+$$
+\frac{\partial{z}}{∂y}=\lim_{h→0} \frac{f(x, y+h)-f(x,y)}{h}
+$$
+
+---
+
+Dicho de otra manera, utilizaremos las reglas de *diferenciación ordinaria* a una de las variables de la función mientras consideramos a la otra como constante:
+
+- Para calcular $∂z/∂x$, derivamos mientras tratamos a $y$ como constante.
+- Para calcular $∂z/∂y$, derivamos mientras tratamos a $x$ como constante.
+
+## Ejemplos
+
+1. Derivemos parcialmente $z=4x^3y^2-4x^2+y^6+1$
+
+2. Si $f(x,y)=x^5y^{10} cos(xy^2)$, encontremos $f_y$
+
+
+
+
